@@ -52,11 +52,14 @@
         // Project showcase animation
         const projectCards = document.querySelectorAll('.project-card');
         let currentCard = 0;
-
-        function rotateProjects() {
-            projectCards[currentCard].classList.remove('active');
-            currentCard = (currentCard + 1) % projectCards.length;
-            projectCards[currentCard].classList.add('active');
+        if(projectCards?.length) {
+            function rotateProjects() {
+                if(projectCards[currentCard]) {
+                    projectCards[currentCard].classList.remove('active');
+                    currentCard = (currentCard + 1) % projectCards.length;
+                    projectCards[currentCard].classList.add('active');
+                }
+            }
         }
 
         // Rotate project cards every 3 seconds
