@@ -2,25 +2,21 @@
   "rewrites": [
     {
       "source": "/:path*",
-      "destination": "/:path*"
+      "destination": "/:path*.html"
     }
   ],
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/:path*.html",
       "destination": "/:path*",
-      "permanent": true,
-      "has": [
-        {
-          "type": "header",
-          "key": "next-router-prefetch"
-        }
-      ]
-    },
-    {
-      "source": "/404",
-      "destination": "/404",
       "permanent": true
+    }
+  ],
+  "routes": [
+    {
+      "handle": "error",
+      "src": "/.*",
+      "dest": "/404.html"
     }
   ]
 }
