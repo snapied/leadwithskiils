@@ -2,16 +2,6 @@
   "rewrites": [
     {
       "source": "/:path*",
-      "has": [
-        {
-          "type": "filesystem",
-          "missing": true
-        }
-      ],
-      "destination": "/404.html"
-    },
-    {
-      "source": "/:path*",
       "destination": "/:path*.html"
     }
   ],
@@ -19,6 +9,17 @@
     {
       "source": "/:path*.html",
       "destination": "/:path*",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "next-router-prefetch"
+        }
+      ]
+    },
+    {
+      "source": "/404.html",
+      "destination": "/404",
       "permanent": true
     }
   ]
