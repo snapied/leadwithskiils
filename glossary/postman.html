@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postman - Tech Glossary | Lead With Skills</title>
+    <meta name="description" content="Learn about Postman - a popular API development and testing platform that simplifies the process of building, testing, and documenting APIs.">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/postman">
+    <style>
+        
+
+        .breadcrumb {    
+            background-color: var(--card);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb-nav {width:fit-content;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .breadcrumb-nav a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb-nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        .term-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            display: inline-block;
+            background-color: var(--Primary-100);
+            color: var(--Primary-600);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .main-content {
+            background-color: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-card {
+            background-color: var(--card);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .sidebar-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .definition {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: var(--Primary-25);
+            border-left: 4px solid var(--Primary-600);
+            border-radius: var(--radius);
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .section h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+
+        .highlight-box {
+            background-color: var(--Primary-25);
+            border: 1px solid var(--Primary-100);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--Primary-25);
+            border-radius: var(--radius);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--Primary-600);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .related-terms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .related-term {
+            background-color: var(--Primary-100);
+            color: var(--Primary-600);
+            padding: 0.3rem 0.8rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .related-term:hover {
+            background-color: var(--Primary-600);
+            color: var(--primary-foreground);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--Primary-600) 100%);
+            color: var(--primary-foreground);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-foreground);
+            color: var(--primary);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-foreground);
+            border: 2px solid var(--primary-foreground);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .term-title {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <div class="breadcrumb margin-top-80">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index">Home</a>
+                <span>›</span>
+                <a href="index">Glossary</a>
+                <span>›</span>
+                <span>Postman</span>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="term-header">
+            <h1 class="term-title">Postman</h1>
+            <span class="term-category">API Testing Tool</span>
+        </div>
+
+        <div class="content-grid">
+            <div class="main-content">
+                <div class="definition">
+                    <strong>Postman</strong> is a comprehensive API development and testing platform that simplifies the process of building, testing, documenting, and sharing APIs. It provides a user-friendly interface for making HTTP requests and analyzing responses.
+                </div>
+
+                <div class="section">
+                    <h2>What is Postman?</h2>
+                    <p>Postman is the world's leading API platform used by millions of developers and companies to accelerate API development. It provides tools for every stage of the API lifecycle, from design and testing to documentation and monitoring.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Key Features</h2>
+                    <div class="highlight-box">
+                        <h3>Request Builder</h3>
+                        <p>Create and send HTTP requests (GET, POST, PUT, DELETE) with headers, parameters, and body data.</p>
+                        
+                        <h3>Collections</h3>
+                        <p>Organize related API requests into collections for better project management and sharing.</p>
+                        
+                        <h3>Environment Variables</h3>
+                        <p>Manage different environments (dev, staging, production) with variable substitution.</p>
+                        
+                        <h3>Automated Testing</h3>
+                        <p>Write JavaScript tests to validate API responses and automate testing workflows.</p>
+                        
+                        <h3>Documentation</h3>
+                        <p>Generate and publish beautiful API documentation automatically from your collections.</p>
+                        
+                        <h3>Mock Servers</h3>
+                        <p>Create mock APIs to simulate server responses during development.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Common Use Cases</h2>
+                    <ul style="margin-left: 2rem;">
+                        <li><strong>API Testing:</strong> Validate API endpoints and responses</li>
+                        <li><strong>Development:</strong> Test APIs during development process</li>
+                        <li><strong>Documentation:</strong> Create comprehensive API documentation</li>
+                        <li><strong>Collaboration:</strong> Share API collections with team members</li>
+                        <li><strong>Monitoring:</strong> Set up automated API health checks</li>
+                        <li><strong>Integration Testing:</strong> Test API integrations and workflows</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Example API Test</h2>
+                    <pre class="code-block">
+// Postman Test Script Example
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response time is less than 200ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(200);
+});
+
+pm.test("Response has user data", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData).to.have.property('user');
+    pm.expect(jsonData.user).to.have.property('id');
+    pm.expect(jsonData.user).to.have.property('email');
+});
+
+// Set environment variable from response
+var responseJson = pm.response.json();
+pm.environment.set("user_id", responseJson.user.id);
+                    </pre>
+                </div>
+
+                <div class="section">
+                    <h2>Career Impact</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">25M+</div>
+                            <div class="stat-label">Postman Users</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">75K+</div>
+                            <div class="stat-label">Companies Using Postman</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">$80K</div>
+                            <div class="stat-label">Average API Tester Salary</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="sidebar-card">
+                    <h3>Quick Facts</h3>
+                    <ul style="list-style: none;">
+                        <li><strong>Founded:</strong> 2012</li>
+                        <li><strong>Type:</strong> API Development Platform</li>
+                        <li><strong>Platform:</strong> Desktop, Web, Mobile</li>
+                        <li><strong>Pricing:</strong> Free & Paid Plans</li>
+                        <li><strong>Primary Use:</strong> API Testing</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>Learning Path</h3>
+                    <ol style="margin-left: 1.5rem;">
+                        <li>Install Postman App</li>
+                        <li>Learn Request Types</li>
+                        <li>Create Collections</li>
+                        <li>Use Environment Variables</li>
+                        <li>Write Test Scripts</li>
+                        <li>Automate Testing</li>
+                    </ol>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>Related Terms</h3>
+                    <div class="related-terms">
+                        <a href="rest-api" class="related-term">REST API</a>
+                        <a href="quality-assurance" class="related-term">Quality Assurance</a>
+                        <a href="javascript" class="related-term">JavaScript</a>
+                        <a href="nodejs" class="related-term">Node.js</a>
+                    </div>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>HTTP Methods</h3>
+                    <ul style="list-style: none;">
+                        <li>• GET (Retrieve data)</li>
+                        <li>• POST (Create data)</li>
+                        <li>• PUT (Update data)</li>
+                        <li>• DELETE (Remove data)</li>
+                        <li>• PATCH (Partial update)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Master API Testing with Postman</h2>
+                <p>Learn essential API testing skills and advance your QA career with our comprehensive courses</p>
+                <div class="cta-buttons">
+                    <a href="../courses" class="btn btn-primary">Explore Courses</a>
+                    <a href="../mentorship" class="btn btn-secondary">Get Mentorship</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

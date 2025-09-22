@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm - Tech Glossary | Lead With Skills</title>
+    <meta name="description" content="Learn about algorithms - step-by-step procedures for solving problems in programming. Master algorithmic thinking with Lead With Skills.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/algorithm">
+    <style>
+        /* Breadcrumb */
+        .breadcrumb {    
+            background: var(--card);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb-links {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb-links a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        .breadcrumb-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 3rem 0;
+        }
+
+        .term-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            display: inline-block;
+            background: var(--Primary-100);
+            color: var(--Primary-600);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .term-definition {
+            font-size: 1.25rem;
+            color: var(--muted);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .content-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .code-block {
+            background: #1f2937;
+            color: #f9fafb;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        .related-terms {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .related-term {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            text-decoration: none;
+            color: var(--foreground);
+            transition: all 0.3s ease;
+        }
+
+        .related-term:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 53, 59, 0.1);
+            border-color: var(--primary);
+        }
+
+        .related-term-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--Primary-600) 100%);
+            color: var(--primary-foreground);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-primary, .cta-secondary {
+            padding: 1rem 2rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-primary {
+            background: var(--primary-foreground);
+            color: var(--primary);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: var(--primary-foreground);
+            border: 2px solid var(--primary-foreground);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-secondary:hover {
+            background: var(--primary-foreground);
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--card);
+            border-top: 1px solid var(--border);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--muted);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .term-title {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+       <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <section class="breadcrumb margin-top-80">
+        <div class="container">
+            <div class="breadcrumb-links">
+                <a href="/">Home</a> / <a href="/glossary/">Glossary</a> / <span>Algorithm</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="term-header">
+                <h1 class="term-title">Algorithm</h1>
+                <span class="term-category">Programming</span>
+                <p class="term-definition">
+                    A step-by-step procedure or set of rules designed to solve a specific problem or perform a particular task in programming and computer science.
+                </p>
+            </div>
+
+            <section class="content-section">
+                <h2 class="section-title">What is an Algorithm?</h2>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3 class="card-title">Definition</h3>
+                        <p>An algorithm is a finite sequence of well-defined instructions that can be executed by a computer to solve a problem or complete a task. It's like a recipe that tells the computer exactly what steps to follow.</p>
+                    </div>
+                    <div class="content-card">
+                        <h3 class="card-title">Key Characteristics</h3>
+                        <ul>
+                            <li><strong>Finite:</strong> Must terminate after a finite number of steps</li>
+                            <li><strong>Definite:</strong> Each step must be clearly defined</li>
+                            <li><strong>Input:</strong> Takes zero or more inputs</li>
+                            <li><strong>Output:</strong> Produces at least one output</li>
+                            <li><strong>Effective:</strong> Steps must be basic enough to be carried out</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">Common Algorithm Examples</h2>
+                <div class="content-card">
+                    <h3 class="card-title">Binary Search Algorithm</h3>
+                    <p>Efficiently finds a target value in a sorted array by repeatedly dividing the search interval in half.</p>
+                    <pre class="code-block">
+function binarySearch(arr, target) {
+    let left = 0;
+    let right = arr.length - 1;
+    
+    while (left <= right) {
+        let mid = Math.floor((left + right) / 2);
+        
+        if (arr[mid] === target) {
+            return mid;
+        } else if (arr[mid] < target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+    
+    return -1; // Target not found
+}
+                    </pre>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">Algorithm Complexity</h2>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3 class="card-title">Time Complexity</h3>
+                        <p>Measures how the runtime of an algorithm grows with input size. Common complexities include:</p>
+                        <ul>
+                            <li><strong>O(1):</strong> Constant time</li>
+                            <li><strong>O(log n):</strong> Logarithmic time</li>
+                            <li><strong>O(n):</strong> Linear time</li>
+                            <li><strong>O(n²):</strong> Quadratic time</li>
+                        </ul>
+                    </div>
+                    <div class="content-card">
+                        <h3 class="card-title">Space Complexity</h3>
+                        <p>Measures how much additional memory an algorithm uses relative to input size. Important for optimizing memory usage in applications.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">Career Impact</h2>
+                <div class="content-card">
+                    <p>Understanding algorithms is crucial for:</p>
+                    <ul>
+                        <li><strong>Software Engineering:</strong> $95,000 - $180,000 annually</li>
+                        <li><strong>Data Science:</strong> $100,000 - $200,000 annually</li>
+                        <li><strong>Machine Learning Engineering:</strong> $120,000 - $250,000 annually</li>
+                        <li><strong>Technical Interviews:</strong> Essential for FAANG companies</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">Related Terms</h2>
+                <div class="related-terms">
+                    <a href="data-structure" class="related-term">
+                        <div class="related-term-title">Data Structure</div>
+                        <p>Ways of organizing and storing data efficiently</p>
+                    </a>
+                    <a href="big-o-notation" class="related-term">
+                        <div class="related-term-title">Big O Notation</div>
+                        <p>Mathematical notation for algorithm complexity</p>
+                    </a>
+                    <a href="recursion" class="related-term">
+                        <div class="related-term-title">Recursion</div>
+                        <p>Programming technique where function calls itself</p>
+                    </a>
+                    <a href="sorting" class="related-term">
+                        <div class="related-term-title">Sorting Algorithms</div>
+                        <p>Algorithms for arranging data in order</p>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Master Algorithms with Expert Guidance</h2>
+            <p>Build strong algorithmic thinking skills with our comprehensive programming courses and personalized mentorship</p>
+            <div class="cta-buttons">
+                <a href="/courses" class="cta-primary">Explore Programming Courses</a>
+                <a href="/mentorship" class="cta-secondary">Get 1-on-1 Mentorship</a>
+            </div>
+        </div>
+    </section>
+
+    
+    
+</body>
+</html>

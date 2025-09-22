@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenkins - CI/CD Automation | Lead With Skills Glossary</title>
+    <meta name="description" content="Learn about Jenkins, the leading open-source automation server for CI/CD pipelines. Master DevOps automation with Lead With Skills.">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/jenkins">
+    <style>
+        
+
+        .breadcrumb {    
+            padding: 1rem 0;
+            background-color: var(--card);
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem 0;
+        }
+
+        .term-header {
+            background: linear-gradient(135deg, var(--Primary-25) 0%, var(--Primary-100) 100%);
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 3rem;
+            border-radius: var(--radius);
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .main-content {
+            background-color: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-card {
+            background-color: var(--card);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .info-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+
+        .code-block code {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .related-terms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .related-term {
+            background-color: var(--Primary-25);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 1rem;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .related-term:hover {
+            background-color: var(--Primary-100);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--Primary-600) 100%);
+            color: var(--primary-foreground);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            background-color: var(--primary-foreground);
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-button.secondary {
+            background-color: transparent;
+            color: var(--primary-foreground);
+            border: 2px solid var(--primary-foreground);
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .term-title {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .cta-content h2 {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <div class="breadcrumb margin-top-80">
+        <div class="container">
+            <a href="../index">Home</a> > <a href="index">Glossary</a> > Jenkins
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="term-header">
+                <h1 class="term-title">Jenkins</h1>
+                <span class="term-category">CI/CD Automation</span>
+            </div>
+
+            <div class="content-grid">
+                <div class="main-content">
+                    <h2>What is Jenkins?</h2>
+                    <p>Jenkins is an open-source automation server that enables developers to build, test, and deploy their software projects continuously. It facilitates Continuous Integration (CI) and Continuous Deployment (CD) by automating the integration of code changes from multiple contributors into a shared repository. Jenkins supports hundreds of plugins to integrate with virtually any tool in the CI/CD toolchain.</p>
+
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li><strong>Pipeline as Code:</strong> Define build pipelines using Jenkinsfile</li>
+                        <li><strong>Plugin Ecosystem:</strong> 1800+ plugins for integration</li>
+                        <li><strong>Distributed Builds:</strong> Master-slave architecture for scalability</li>
+                        <li><strong>Easy Configuration:</strong> Web-based configuration interface</li>
+                        <li><strong>Version Control Integration:</strong> Git, SVN, Mercurial support</li>
+                        <li><strong>Notification System:</strong> Email, Slack, and other notifications</li>
+                    </ul>
+
+                    <h3>Jenkins Pipeline Example</h3>
+                    <pre class="code-block">
+                        <code>
+pipeline {<br>
+&nbsp;&nbsp;agent any<br>
+&nbsp;&nbsp;stages {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;stage('Build') {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;steps {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sh 'npm install'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sh 'npm run build'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;stage('Test') {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;steps {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sh 'npm test'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;stage('Deploy') {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;steps {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sh 'docker build -t myapp .'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sh 'docker push myapp'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;}<br>
+}
+                        </code>
+                    </pre>
+
+                    <h3>Jenkins Job Configuration</h3>
+                    <pre class="code-block">
+                        <code>
+// Freestyle Job Configuration<br>
+Source Code Management: Git<br>
+Repository URL: https://github.com/user/repo.git<br>
+Branch: */main<br><br>
+Build Triggers:<br>
+☑ Poll SCM: H/5 * * * *<br>
+☑ GitHub hook trigger<br><br>
+Build Steps:<br>
+1. Execute shell: npm install<br>
+2. Execute shell: npm test<br>
+3. Execute shell: npm run build<br><br>
+Post-build Actions:<br>
+☑ Archive artifacts: dist/**<br>
+☑ Publish test results: test-results.xml
+                        </code>
+                    </pre>
+
+                    <h3>Career Impact</h3>
+                    <p>Jenkins expertise is crucial for DevOps engineers and is highly valued across the software industry. Companies rely on Jenkins for automating their software delivery pipelines, making Jenkins skills essential for modern software development teams. Professionals with Jenkins knowledge often command higher salaries in DevOps and software engineering roles.</p>
+
+                    <h3>Learning Path</h3>
+                    <ol>
+                        <li>Learn basic CI/CD concepts and version control (Git)</li>
+                        <li>Install and configure Jenkins server</li>
+                        <li>Create and manage Jenkins jobs and pipelines</li>
+                        <li>Master Jenkins plugins and integrations</li>
+                        <li>Implement automated testing and deployment</li>
+                        <li>Scale Jenkins with distributed builds and security</li>
+                    </ol>
+                </div>
+
+                <div class="sidebar">
+                    <div class="info-card">
+                        <h3>Quick Facts</h3>
+                        <ul>
+                            <li><strong>First Release:</strong> 2011</li>
+                            <li><strong>Written In:</strong> Java</li>
+                            <li><strong>License:</strong> MIT License</li>
+                            <li><strong>Active Installations:</strong> 300,000+</li>
+                            <li><strong>Plugins Available:</strong> 1,800+</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Career Opportunities</h3>
+                        <ul>
+                            <li><strong>DevOps Engineer:</strong> $85,000 - $150,000</li>
+                            <li><strong>Build Engineer:</strong> $75,000 - $130,000</li>
+                            <li><strong>Release Manager:</strong> $90,000 - $160,000</li>
+                            <li><strong>Site Reliability Engineer:</strong> $100,000 - $180,000</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Related Terms</h3>
+                        <div class="related-terms">
+                            <a href="devops" class="related-term">DevOps</a>
+                            <a href="ci-cd" class="related-term">CI/CD</a>
+                            <a href="docker" class="related-term">Docker</a>
+                            <a href="git" class="related-term">Git</a>
+                            <a href="automation" class="related-term">Automation</a>
+                            <a href="pipeline" class="related-term">Pipeline</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Master Jenkins and DevOps with Lead With Skills</h2>
+                <p>Accelerate your DevOps career with comprehensive Jenkins training and expert mentorship in CI/CD automation.</p>
+                <div class="cta-buttons">
+                    <a href="../courses" class="cta-button">Explore DevOps Courses</a>
+                    <a href="../mentorship" class="cta-button secondary">Get Expert Mentorship</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Lead With Skills. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

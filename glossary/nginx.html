@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nginx - High-Performance Web Server | Lead With Skills Glossary</title>
+    <meta name="description" content="Learn about Nginx, a high-performance web server, reverse proxy, and load balancer. Master Nginx configuration with Lead With Skills.">
+    <meta name="keywords" content="Nginx, web server, reverse proxy, load balancer, HTTP server">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/nginx">
+    <style>
+        
+
+        .breadcrumb {    
+            padding: 1rem 0;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .term-header {
+            background: linear-gradient(135deg, var(--Primary-25) 0%, var(--Primary-100) 100%);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-subtitle {
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            padding: 3rem 0;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .main-content h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .main-content h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin: 1.5rem 0 0.5rem 0;
+        }
+
+        .main-content p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .code-block {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+        }
+
+        .code-block pre {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .sidebar {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 2rem;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: var(--Primary-600);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .cta-section {
+            background: var(--primary);
+            color: var(--primary-foreground);
+            padding: 4rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .cta-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--Primary-600);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-foreground);
+            border: 2px solid var(--primary-foreground);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            background: var(--card);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--muted);
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .term-title {
+                font-size: 2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumb margin-top-80">
+            <a href="/">Home</a> > <a href="/glossary/">Glossary</a> > Nginx
+        </div>
+    </div>
+
+    <section class="term-header">
+        <div class="container">
+            <h1 class="term-title">Nginx</h1>
+            <p class="term-subtitle">High-performance web server, reverse proxy, and load balancer</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="main-content">
+                    <h2>What is Nginx?</h2>
+                    <p>Nginx (pronounced "engine-x") is a high-performance, open-source web server, reverse proxy server, and load balancer. Created by Igor Sysoev in 2004, Nginx was designed to solve the C10K problem - handling 10,000 concurrent connections efficiently. It's known for its stability, rich feature set, simple configuration, and low resource consumption.</p>
+
+                    <p>Unlike traditional web servers that create a new process or thread for each request, Nginx uses an asynchronous, event-driven architecture that allows it to handle thousands of concurrent connections with minimal memory usage. This makes it ideal for high-traffic websites and applications.</p>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">400M+</div>
+                            <div class="stat-label">Websites Using Nginx</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">$110K</div>
+                            <div class="stat-label">Average Nginx Engineer Salary</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">#1</div>
+                            <div class="stat-label">Most Popular Web Server</div>
+                        </div>
+                    </div>
+
+                    <h2>Key Features</h2>
+                    <h3>Web Server</h3>
+                    <p>Serves static content (HTML, CSS, JavaScript, images) with exceptional performance and low memory usage.</p>
+
+                    <h3>Reverse Proxy</h3>
+                    <p>Acts as an intermediary between clients and backend servers, providing load balancing and SSL termination.</p>
+
+                    <h3>Load Balancer</h3>
+                    <p>Distributes incoming requests across multiple backend servers using various algorithms (round-robin, least connections, IP hash).</p>
+
+                    <h3>HTTP Cache</h3>
+                    <p>Caches responses from backend servers to improve performance and reduce server load.</p>
+
+                    <h2>Basic Nginx Configuration</h2>
+                    <div class="code-block">
+                        <pre>
+# /etc/nginx/nginx.conf
+user nginx;
+worker_processes auto;
+error_log /var/log/nginx/error.log;
+pid /run/nginx.pid;
+
+events {
+    worker_connections 1024;
+    use epoll;
+}
+
+http {
+    include /etc/nginx/mime.types;
+    default_type application/octet-stream;
+    
+    sendfile on;
+    tcp_nopush on;
+    tcp_nodelay on;
+    keepalive_timeout 65;
+    
+    # Gzip compression
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 1024;
+    gzip_types text/plain text/css application/json application/javascript;
+    
+    include /etc/nginx/conf.d/*.conf;
+}
+                        </pre>
+                    </div>
+
+                    <h2>Server Block Configuration</h2>
+                    <div class="code-block">
+                        <pre>
+# /etc/nginx/conf.d/example.conf
+server {
+    listen 80;
+    server_name example.com www.example.com;
+    root /var/www/html;
+    index index index.htm;
+    
+    # Static file serving
+    location / {
+        try_files $uri $uri/ =404;
+    }
+    
+    # API proxy
+    location /api/ {
+        proxy_pass http://backend_servers;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+    
+    # Static assets with long cache
+    location ~* \.(jpg|jpeg|png|gif|ico|css|js)$ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+    }
+}
+                        </pre>
+                    </div>
+
+                    <h2>Load Balancing Configuration</h2>
+                    <div class="code-block">
+                        <pre>
+# Upstream backend servers
+upstream backend_servers {
+    least_conn;  # Load balancing method
+    server 192.168.1.10:3000 weight=3;
+    server 192.168.1.11:3000 weight=2;
+    server 192.168.1.12:3000 weight=1 backup;
+    
+    # Health checks
+    keepalive 32;
+}
+
+server {
+    listen 80;
+    server_name api.example.com;
+    
+    location / {
+        proxy_pass http://backend_servers;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+        
+        # Timeouts
+        proxy_connect_timeout 5s;
+        proxy_send_timeout 10s;
+        proxy_read_timeout 10s;
+    }
+}
+                        </pre>
+                    </div>
+
+                    <h2>SSL/HTTPS Configuration</h2>
+                    <div class="code-block">
+                        <pre>
+server {
+    listen 443 ssl http2;
+    server_name example.com www.example.com;
+    
+    # SSL certificates
+    ssl_certificate /path/to/certificate.crt;
+    ssl_certificate_key /path/to/private.key;
+    
+    # SSL configuration
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers ECDHE-RSA-AES256-GCM-SHA512:DHE-RSA-AES256-GCM-SHA512;
+    ssl_prefer_server_ciphers off;
+    ssl_session_cache shared:SSL:10m;
+    ssl_session_timeout 10m;
+    
+    # Security headers
+    add_header Strict-Transport-Security "max-age=63072000" always;
+    add_header X-Frame-Options DENY;
+    add_header X-Content-Type-Options nosniff;
+    
+    location / {
+        root /var/www/html;
+        index index;
+    }
+}
+
+# Redirect HTTP to HTTPS
+server {
+    listen 80;
+    server_name example.com www.example.com;
+    return 301 https://$server_name$request_uri;
+}
+                        </pre>
+                    </div>
+
+                    <h2>Common Use Cases</h2>
+                    <ul>
+                        <li><strong>Static Content Serving:</strong> Efficiently serve HTML, CSS, JavaScript, and images</li>
+                        <li><strong>Reverse Proxy:</strong> Forward requests to application servers (Node.js, Python, PHP)</li>
+                        <li><strong>Load Balancing:</strong> Distribute traffic across multiple backend servers</li>
+                        <li><strong>SSL Termination:</strong> Handle SSL/TLS encryption and decryption</li>
+                        <li><strong>Caching:</strong> Cache responses to improve performance</li>
+                        <li><strong>Rate Limiting:</strong> Control request rates to prevent abuse</li>
+                    </ul>
+
+                    <h2>Career Opportunities</h2>
+                    <p>Nginx expertise is valuable for various infrastructure and development roles:</p>
+                    <ul>
+                        <li>DevOps Engineer ($95K - $150K annually)</li>
+                        <li>System Administrator ($70K - $120K annually)</li>
+                        <li>Site Reliability Engineer ($110K - $170K annually)</li>
+                        <li>Backend Developer ($80K - $130K annually)</li>
+                        <li>Infrastructure Engineer ($90K - $140K annually)</li>
+                    </ul>
+
+                    <h2>Learning Path</h2>
+                    <ol>
+                        <li>Understand web server fundamentals and HTTP protocol</li>
+                        <li>Learn Nginx installation and basic configuration</li>
+                        <li>Practice serving static content and virtual hosts</li>
+                        <li>Master reverse proxy and load balancing</li>
+                        <li>Learn SSL/TLS configuration and security</li>
+                        <li>Explore caching and performance optimization</li>
+                        <li>Study monitoring, logging, and troubleshooting</li>
+                        <li>Learn advanced features like rate limiting and modules</li>
+                    </ol>
+                </div>
+
+                <div class="sidebar">
+                    <h3>Related Terms</h3>
+                    <ul>
+                        <li><a href="/glossary/apache">Apache HTTP Server</a></li>
+                        <li><a href="/glossary/load-balancer">Load Balancer</a></li>
+                        <li><a href="/glossary/reverse-proxy">Reverse Proxy</a></li>
+                        <li><a href="/glossary/ssl-tls">SSL/TLS</a></li>
+                        <li><a href="/glossary/http-caching">HTTP Caching</a></li>
+                    </ul>
+
+                    <h3>Quick Facts</h3>
+                    <ul>
+                        <li><strong>Created:</strong> 2004 by Igor Sysoev</li>
+                        <li><strong>Language:</strong> C</li>
+                        <li><strong>License:</strong> 2-clause BSD</li>
+                        <li><strong>Latest Version:</strong> 1.25</li>
+                        <li><strong>Companies Using:</strong> Netflix, Airbnb, Pinterest, GitHub</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Master Nginx with Lead With Skills</h2>
+            <p class="cta-subtitle">Join thousands of engineers who've optimized their infrastructure with our comprehensive Nginx courses</p>
+            <div class="cta-buttons">
+                <a href="/courses" class="btn btn-primary">Explore Nginx Courses</a>
+                <a href="/mentorship" class="btn btn-secondary">Get 1:1 Mentorship</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Lead With Skills. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

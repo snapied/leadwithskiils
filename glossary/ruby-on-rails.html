@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruby on Rails - Complete Guide | Lead With Skills</title>
+    <meta name="description" content="Learn Ruby on Rails framework - web application development, MVC architecture, and career opportunities. Complete guide with examples and learning paths.">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/ruby-on-rails">
+    <style>
+        
+
+        .breadcrumb {    
+            background: var(--card);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb-nav {width:fit-content;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .breadcrumb-nav a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .main-content {
+            padding: 3rem 0;
+        }
+
+        .term-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            display: inline-block;
+            background: var(--Primary-100);
+            color: var(--Primary-600);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .main-article {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-card {
+            background: var(--card);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .definition {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--Primary-25);
+            border-left: 4px solid var(--Primary-600);
+            border-radius: var(--radius);
+        }
+
+        .code-block {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            margin: 1rem 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+        }
+
+        .highlight-box {
+            background: var(--Primary-25);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--Primary-600);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--Primary-25);
+            border-radius: var(--radius);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--Primary-600);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-top: 0.5rem;
+        }
+
+        .related-terms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .related-term {
+            background: var(--primary);
+            color: var(--primary-foreground);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: opacity 0.3s;
+        }
+
+        .related-term:hover {
+            opacity: 0.8;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--Primary-600) 100%);
+            color: var(--primary-foreground);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .cta-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            background: var(--primary-foreground);
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: var(--primary-foreground);
+            border: 2px solid var(--primary-foreground);
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .term-title {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <section class="breadcrumb margin-top-80">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index">Home</a>
+                <span>›</span>
+                <a href="index">Glossary</a>
+                <span>›</span>
+                <span>Ruby on Rails</span>
+            </nav>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="term-header">
+                <h1 class="term-title">Ruby on Rails</h1>
+                <span class="term-category">Web Framework</span>
+            </div>
+
+            <div class="content-grid">
+                <article class="main-article">
+                    <div class="definition">
+                        <strong>Ruby on Rails (Rails)</strong> is a server-side web application framework written in Ruby. It follows the Model-View-Controller (MVC) architectural pattern and emphasizes convention over configuration, making web development faster and more efficient.
+                    </div>
+
+                    <section>
+                        <h2 class="section-title">Key Features</h2>
+                        <ul style="margin-left: 2rem; margin-bottom: 2rem;">
+                            <li><strong>Convention over Configuration:</strong> Reduces decision-making and setup time</li>
+                            <li><strong>DRY Principle:</strong> Don't Repeat Yourself philosophy</li>
+                            <li><strong>MVC Architecture:</strong> Clean separation of concerns</li>
+                            <li><strong>Active Record:</strong> Built-in ORM for database operations</li>
+                            <li><strong>RESTful Design:</strong> Follows REST architectural principles</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="section-title">Basic Rails Application</h2>
+                        <pre class="code-block">
+# Create new Rails application
+rails new my_app
+cd my_app
+
+# Generate a controller
+rails generate controller Welcome index
+
+# Routes (config/routes.rb)
+Rails.application.routes.draw do
+  root 'welcome#index'
+  resources :articles
+end
+
+# Controller (app/controllers/welcome_controller.rb)
+class WelcomeController &lt; ApplicationController
+  def index
+    @message = "Welcome to Rails!"
+  end
+end
+
+# Model example
+class Article &lt; ApplicationRecord
+  validates :title, presence: true
+  validates :content, presence: true
+end
+                        </pre>
+                    </section>
+
+                    <section>
+                        <h2 class="section-title">Common Use Cases</h2>
+                        <div class="highlight-box">
+                            <ul style="margin-left: 1.5rem;">
+                                <li><strong>Web Applications:</strong> Full-featured web applications</li>
+                                <li><strong>APIs:</strong> RESTful web services and APIs</li>
+                                <li><strong>E-commerce:</strong> Online stores and marketplaces</li>
+                                <li><strong>Content Management:</strong> CMS and blogging platforms</li>
+                                <li><strong>Social Platforms:</strong> Social networking applications</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="section-title">Career Impact</h2>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-number">$95K</div>
+                                <div class="stat-label">Average Salary</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">50K+</div>
+                                <div class="stat-label">GitHub Stars</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">25K+</div>
+                                <div class="stat-label">Job Openings</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="section-title">Learning Path</h2>
+                        <ol style="margin-left: 2rem; line-height: 2;">
+                            <li>Learn Ruby programming language fundamentals</li>
+                            <li>Understand MVC architecture and Rails conventions</li>
+                            <li>Master Active Record and database operations</li>
+                            <li>Learn routing, controllers, and views</li>
+                            <li>Explore testing with RSpec and Minitest</li>
+                            <li>Build and deploy real-world applications</li>
+                        </ol>
+                    </section>
+                </article>
+
+                <aside class="sidebar">
+                    <div class="sidebar-card">
+                        <h3 class="section-title">Quick Facts</h3>
+                        <ul style="list-style: none; line-height: 2;">
+                            <li><strong>Created:</strong> 2003</li>
+                            <li><strong>Creator:</strong> David Heinemeier Hansson</li>
+                            <li><strong>Type:</strong> Web Framework</li>
+                            <li><strong>License:</strong> MIT</li>
+                            <li><strong>Latest Version:</strong> Rails 7.x</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3 class="section-title">Related Terms</h3>
+                        <div class="related-terms">
+                            <a href="mvc" class="related-term">MVC</a>
+                            <a href="rest-api" class="related-term">REST API</a>
+                            <a href="postgresql" class="related-term">PostgreSQL</a>
+                            <a href="heroku" class="related-term">Heroku</a>
+                            <a href="git" class="related-term">Git</a>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3 class="section-title">Skill Level</h3>
+                        <div style="background: var(--Primary-25); padding: 1rem; border-radius: var(--radius); text-align: center;">
+                            <div style="font-size: 1.2rem; font-weight: bold; color: var(--Primary-600);">Intermediate</div>
+                            <div style="font-size: 0.9rem; color: var(--muted); margin-top: 0.5rem;">Requires Ruby knowledge</div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Master Ruby on Rails</h2>
+            <p class="cta-subtitle">Build powerful web applications and advance your development career</p>
+            <div class="cta-buttons">
+                <a href="../courses" class="cta-button">Explore Rails Courses</a>
+                <a href="../mentorship" class="cta-button secondary">Get Mentorship</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostgreSQL - Advanced Database | Lead With Skills Glossary</title>
+    <meta name="description" content="Learn about PostgreSQL, a powerful open-source relational database management system known for its reliability, feature robustness, and performance.">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/postgresql">
+    <style>
+        
+
+        .breadcrumb {    
+            padding: 1rem 0;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .term-header {
+            background: linear-gradient(135deg, var(--Primary-25), var(--Primary-100));
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            background: var(--primary);
+            color: var(--primary-foreground);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            display: inline-block;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .term-summary {
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--Primary-100);
+            padding-bottom: 0.5rem;
+        }
+
+        .code-block {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+        }
+
+        .code-block pre {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--Primary-600);
+            display: block;
+        }
+
+        .related-terms {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .related-term {
+            background: var(--Primary-25);
+            padding: 1rem;
+            border-radius: var(--radius);
+            text-align: center;
+            text-decoration: none;
+            color: var(--primary);
+            transition: background-color 0.3s;
+        }
+
+        .related-term:hover {
+            background: var(--Primary-100);
+        }
+
+        .cta-section {
+            background: var(--primary);
+            color: var(--primary-foreground);
+            padding: 4rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--Primary-600);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-foreground);
+            border: 2px solid var(--primary-foreground);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            .term-title {
+                font-size: 2rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumb margin-top-80">
+            <a href="../index">Home</a> > <a href="index">Glossary</a> > PostgreSQL
+        </div>
+    </div>
+
+    <section class="term-header">
+        <div class="container">
+            <div class="term-category">Database Management</div>
+            <h1 class="term-title">PostgreSQL</h1>
+            <p class="term-summary">
+                PostgreSQL is a powerful, open-source object-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.
+            </p>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="content-section">
+            <h2 class="section-title">What is PostgreSQL?</h2>
+            <p>PostgreSQL is an advanced, enterprise-class, and open-source relational database system. It supports both SQL (relational) and JSON (non-relational) querying. PostgreSQL is a highly stable database backed by more than 20 years of community development which has contributed to its high levels of resilience, integrity, and correctness.</p>
+            
+            <div class="code-block">
+                <pre>
+-- Create a table
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    profile JSONB
+);
+
+-- Insert data
+INSERT INTO users (username, email, profile) VALUES 
+('john_doe', 'john@example.com', '{"age": 30, "city": "New York"}'),
+('jane_smith', 'jane@example.com', '{"age": 25, "city": "San Francisco"}');
+
+-- Query with JSON operations
+SELECT username, profile->>'city' as city 
+FROM users 
+WHERE (profile->>'age')::int > 25;
+
+-- Advanced query with window functions
+SELECT 
+    username,
+    email,
+    created_at,
+    ROW_NUMBER() OVER (ORDER BY created_at) as user_number
+FROM users;
+
+-- Create index for performance
+CREATE INDEX idx_users_profile_city 
+ON users USING GIN ((profile->>'city'));
+                </pre>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Key Features</h2>
+            <ul style="margin-left: 2rem; margin-bottom: 2rem;">
+                <li><strong>ACID Compliance:</strong> Ensures data integrity with Atomicity, Consistency, Isolation, Durability</li>
+                <li><strong>JSON Support:</strong> Native JSON and JSONB data types for flexible data storage</li>
+                <li><strong>Advanced Indexing:</strong> Multiple index types including B-tree, Hash, GiST, SP-GiST, GIN, and BRIN</li>
+                <li><strong>Full-Text Search:</strong> Built-in full-text search capabilities</li>
+                <li><strong>Extensibility:</strong> Support for custom functions, operators, and data types</li>
+                <li><strong>Concurrency:</strong> Multi-version concurrency control (MVCC)</li>
+                <li><strong>Replication:</strong> Built-in streaming replication and logical replication</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Career Impact</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">$85K</span>
+                    <p>Average salary for PostgreSQL developers</p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">#2</span>
+                    <p>Most loved database by developers</p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">60%</span>
+                    <p>Of enterprises use PostgreSQL</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Learning Path</h2>
+            <ol style="margin-left: 2rem;">
+                <li>Learn SQL fundamentals</li>
+                <li>Understand relational database concepts</li>
+                <li>Practice PostgreSQL-specific features</li>
+                <li>Learn performance optimization</li>
+                <li>Master backup and recovery</li>
+                <li>Explore advanced features (JSON, extensions)</li>
+            </ol>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Related Terms</h2>
+            <div class="related-terms">
+                <a href="sql" class="related-term">SQL</a>
+                <a href="database" class="related-term">Database</a>
+                <a href="backend-development" class="related-term">Backend Development</a>
+                <a href="nodejs" class="related-term">Node.js</a>
+            </div>
+        </section>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Master Database Development</h2>
+            <p class="cta-subtitle">Join thousands of developers who've accelerated their careers with Lead With Skills</p>
+            <div class="cta-buttons">
+                <a href="../courses" class="btn btn-primary">Explore Database Courses</a>
+                <a href="../mentorship" class="btn btn-secondary">Get Mentorship</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

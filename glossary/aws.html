@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS (Amazon Web Services) - Lead With Skills Glossary</title>
+    <meta name="description" content="Learn about AWS (Amazon Web Services), the world's most comprehensive cloud platform. Discover career opportunities and master cloud computing with Lead With Skills.">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/aws">
+    <style>
+        
+
+        .breadcrumb {    
+            background-color: var(--card);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb-nav {width:fit-content;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .breadcrumb-nav a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb-nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem 0;
+        }
+
+        .term-header {
+            background: linear-gradient(135deg, var(--Primary-25) 0%, var(--Primary-100) 100%);
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 3rem;
+            border-radius: var(--radius);
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .main-content {
+            background-color: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-card {
+            background-color: var(--card);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .info-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .definition {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: var(--Primary-25);
+            border-left: 4px solid var(--primary);
+            border-radius: var(--radius);
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--Primary-100);
+        }
+
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+
+        .highlight-box {
+            background-color: var(--Primary-25);
+            border: 1px solid var(--Primary-100);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--Primary-25);
+            border-radius: var(--radius);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .related-terms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .related-term {
+            background-color: var(--Primary-100);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 1rem;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .related-term:hover {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--Primary-600) 100%);
+            color: var(--primary-foreground);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 3rem;
+            border-radius: var(--radius);
+        }
+
+        .cta-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-description {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            background-color: var(--primary-foreground);
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button.secondary {
+            background-color: transparent;
+            color: var(--primary-foreground);
+            border: 2px solid var(--primary-foreground);
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .term-title {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <div class="breadcrumb margin-top-80">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index">Home</a>
+                <span>›</span>
+                <a href="index">Glossary</a>
+                <span>›</span>
+                <span>AWS</span>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="term-header">
+            <h1 class="term-title">AWS (Amazon Web Services)</h1>
+            <span class="term-category">Cloud Computing</span>
+        </div>
+
+        <div class="content-grid">
+            <div class="main-content">
+                <div class="definition">
+                    <strong>AWS (Amazon Web Services)</strong> is a comprehensive cloud computing platform provided by Amazon that offers over 200 fully featured services from data centers globally. It provides on-demand cloud computing platforms and APIs to individuals, companies, and governments on a metered pay-as-you-go basis.
+                </div>
+
+                <div class="section">
+                    <h2>Key AWS Services</h2>
+                    <p>AWS offers a vast array of services across different categories:</p>
+                    
+                    <div class="highlight-box">
+                        <h4>Core Services:</h4>
+                        <ul>
+                            <li><strong>EC2 (Elastic Compute Cloud):</strong> Virtual servers in the cloud</li>
+                            <li><strong>S3 (Simple Storage Service):</strong> Object storage service</li>
+                            <li><strong>RDS (Relational Database Service):</strong> Managed database service</li>
+                            <li><strong>Lambda:</strong> Serverless computing service</li>
+                            <li><strong>VPC (Virtual Private Cloud):</strong> Isolated cloud resources</li>
+                        </ul>
+                    </div>
+
+                    <pre class="code-block">
+# Example: Creating an S3 bucket using AWS CLI
+aws s3 mb s3://my-unique-bucket-name
+
+# Upload a file to S3
+aws s3 cp myfile.txt s3://my-unique-bucket-name/
+
+# List S3 buckets
+aws s3 ls
+                    </pre>
+                </div>
+
+                <div class="section">
+                    <h2>AWS Benefits</h2>
+                    <ul>
+                        <li><strong>Scalability:</strong> Scale up or down based on demand</li>
+                        <li><strong>Cost-Effective:</strong> Pay only for what you use</li>
+                        <li><strong>Reliability:</strong> 99.99% uptime SLA for many services</li>
+                        <li><strong>Security:</strong> Enterprise-grade security features</li>
+                        <li><strong>Global Reach:</strong> Data centers in multiple regions worldwide</li>
+                        <li><strong>Innovation:</strong> Continuous addition of new services and features</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Common Use Cases</h2>
+                    <div class="highlight-box">
+                        <ul>
+                            <li><strong>Web Applications:</strong> Host scalable web applications</li>
+                            <li><strong>Data Backup:</strong> Secure and reliable data storage</li>
+                            <li><strong>Big Data Analytics:</strong> Process and analyze large datasets</li>
+                            <li><strong>Machine Learning:</strong> Build and deploy ML models</li>
+                            <li><strong>Content Delivery:</strong> Global content distribution via CloudFront</li>
+                            <li><strong>Disaster Recovery:</strong> Business continuity solutions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Learning Path</h2>
+                    <ol>
+                        <li><strong>AWS Fundamentals:</strong> Understand cloud computing basics</li>
+                        <li><strong>Core Services:</strong> Master EC2, S3, RDS, and VPC</li>
+                        <li><strong>Security & IAM:</strong> Learn identity and access management</li>
+                        <li><strong>Networking:</strong> Understand VPC, subnets, and routing</li>
+                        <li><strong>Monitoring:</strong> Use CloudWatch for monitoring and logging</li>
+                        <li><strong>Automation:</strong> Infrastructure as Code with CloudFormation</li>
+                        <li><strong>Certification:</strong> Pursue AWS certifications</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="info-card">
+                    <h3>Career Impact</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">$130K</div>
+                            <div class="stat-label">Average Salary</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">85%</div>
+                            <div class="stat-label">Job Growth</div>
+                        </div>
+                    </div>
+                    <p>AWS skills are in high demand, with cloud architects and engineers commanding premium salaries in the tech industry.</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Difficulty Level</h3>
+                    <div style="background-color: var(--Primary-100); height: 10px; border-radius: 5px; margin: 10px 0;">
+                        <div style="background-color: var(--primary); height: 100%; width: 70%; border-radius: 5px;"></div>
+                    </div>
+                    <p><strong>Intermediate to Advanced</strong> - Requires understanding of cloud concepts, networking, and system administration.</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Prerequisites</h3>
+                    <ul>
+                        <li>Basic networking knowledge</li>
+                        <li>Understanding of operating systems</li>
+                        <li>Command line familiarity</li>
+                        <li>Basic programming skills</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>Related Terms</h3>
+                    <div class="related-terms">
+                        <a href="cloud-computing" class="related-term">Cloud Computing</a>
+                        <a href="devops" class="related-term">DevOps</a>
+                        <a href="docker" class="related-term">Docker</a>
+                        <a href="kubernetes" class="related-term">Kubernetes</a>
+                        <a href="microservices" class="related-term">Microservices</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">Master AWS and Advance Your Career</h2>
+                <p class="cta-description">Join thousands of professionals who have transformed their careers with our comprehensive AWS training programs and expert mentorship.</p>
+                <div class="cta-buttons">
+                    <a href="../courses" class="cta-button">Explore AWS Courses</a>
+                    <a href="../mentorship" class="cta-button secondary">Get Personal Mentorship</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Lead With Skills. All rights reserved. | Empowering careers through technology education.</p>
+        </div>
+    </footer>
+</body>
+</html>

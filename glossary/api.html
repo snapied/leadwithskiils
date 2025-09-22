@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API (Application Programming Interface) - Complete Guide | Lead With Skills</title>
+    <meta name="description" content="Learn API (Application Programming Interface) - protocols and tools for building software applications. Master API development with Lead With Skills.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/api">
+    <style>
+        
+
+        /* Breadcrumb */
+        .breadcrumb {    
+            background: var(--card);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb-nav {width:fit-content;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .breadcrumb-nav a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb-nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 3rem 0;
+        }
+
+        .term-header {
+            margin-bottom: 2rem;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .term-category {
+            display: inline-block;
+            background: var(--Primary-100);
+            color: var(--Primary-600);
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .term-definition {
+            font-size: 1.25rem;
+            color: var(--muted);
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--Primary-25);
+            border-radius: var(--radius);
+            border-left: 4px solid var(--primary);
+        }
+
+        .content-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .content-section h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .content-section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--foreground);
+            margin-bottom: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .content-section p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .content-section ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box h4 {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .code-example {
+            background: #1f2937;
+            color: #f9fafb;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        /* Related Terms */
+        .related-terms {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .related-terms h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .related-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .related-link {
+            background: var(--Primary-100);
+            color: var(--Primary-600);
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .related-link:hover {
+            background: var(--primary);
+            color: var(--primary-foreground);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--Primary-600) 100%);
+            color: var(--primary-foreground);
+            padding: 3rem;
+            border-radius: var(--radius);
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-primary, .cta-secondary {
+            padding: 1rem 2rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-primary {
+            background: var(--primary-foreground);
+            color: var(--primary);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: var(--primary-foreground);
+            border: 2px solid var(--primary-foreground);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-secondary:hover {
+            background: var(--primary-foreground);
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--card);
+            border-top: 1px solid var(--border);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--muted);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .term-title {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+       <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <section class="breadcrumb margin-top-80">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="/">Home</a> / <a href="/glossary/">Glossary</a> / API
+            </nav>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="term-header">
+                <h1 class="term-title">API (Application Programming Interface)</h1>
+                <span class="term-category">Development</span>
+                <div class="term-definition">
+                    A set of protocols, routines, and tools for building software applications that specifies how software components should interact and enables communication between different systems.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>What is an API?</h2>
+                <p>An Application Programming Interface (API) is a contract between different software applications that defines how they can communicate with each other. Think of an API as a waiter in a restaurant - it takes your order (request), communicates it to the kitchen (server), and brings back your food (response).</p>
+                
+                <p>APIs enable different software systems to work together by providing a standardized way to access data and functionality without needing to understand the internal workings of the system.</p>
+
+                <div class="highlight-box">
+                    <h4>Key Components of an API:</h4>
+                    <ul>
+                        <li><strong>Endpoints:</strong> Specific URLs where API requests are sent</li>
+                        <li><strong>Methods:</strong> HTTP verbs (GET, POST, PUT, DELETE) that define actions</li>
+                        <li><strong>Headers:</strong> Metadata about the request or response</li>
+                        <li><strong>Parameters:</strong> Data sent with the request</li>
+                        <li><strong>Response:</strong> Data returned by the API</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Types of APIs</h2>
+                
+                <h3>1. REST APIs</h3>
+                <p>Representational State Transfer (REST) APIs are the most common type, using standard HTTP methods and following specific architectural principles.</p>
+
+                <h3>2. GraphQL APIs</h3>
+                <p>A query language for APIs that allows clients to request exactly the data they need, reducing over-fetching and under-fetching of data.</p>
+
+                <h3>3. SOAP APIs</h3>
+                <p>Simple Object Access Protocol (SOAP) APIs use XML messaging and are known for their strict standards and security features.</p>
+
+                <h3>4. WebSocket APIs</h3>
+                <p>Enable real-time, bidirectional communication between client and server, perfect for chat applications and live updates.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>API Example</h2>
+                <p>Here's a simple example of making an API request to fetch user data:</p>
+                
+                <div class="code-example">
+// JavaScript fetch API example
+fetch('https://api.example.com/users/123', {
+  method: 'GET',
+  headers: {
+    'Authorization': 'Bearer your-token-here',
+    'Content-Type': 'application/json'
+  }
+})
+.then(response => response.json())
+.then(data => {
+  console.log('User data:', data);
+})
+.catch(error => {
+  console.error('Error:', error);
+});
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>API Development Best Practices</h2>
+                <ul>
+                    <li><strong>Use Clear Naming:</strong> Make endpoint names intuitive and consistent</li>
+                    <li><strong>Version Your APIs:</strong> Use versioning to maintain backward compatibility</li>
+                    <li><strong>Implement Authentication:</strong> Secure your APIs with proper authentication</li>
+                    <li><strong>Handle Errors Gracefully:</strong> Provide meaningful error messages and status codes</li>
+                    <li><strong>Document Thoroughly:</strong> Create comprehensive API documentation</li>
+                    <li><strong>Rate Limiting:</strong> Implement rate limiting to prevent abuse</li>
+                    <li><strong>Use HTTPS:</strong> Always encrypt data in transit</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Career Opportunities</h2>
+                <p>API knowledge is essential for various tech roles:</p>
+                <ul>
+                    <li><strong>Backend Developer:</strong> ₹6-15 LPA - Design and build APIs</li>
+                    <li><strong>Full-Stack Developer:</strong> ₹8-20 LPA - Work with both API creation and consumption</li>
+                    <li><strong>API Developer:</strong> ₹7-18 LPA - Specialize in API design and development</li>
+                    <li><strong>Integration Engineer:</strong> ₹8-16 LPA - Connect different systems via APIs</li>
+                    <li><strong>DevOps Engineer:</strong> ₹10-22 LPA - Manage API deployments and monitoring</li>
+                </ul>
+            </div>
+
+            <div class="related-terms">
+                <h3>Related Terms</h3>
+                <div class="related-links">
+                    <a href="backend-development" class="related-link">Backend Development</a>
+                    <a href="nodejs" class="related-link">Node.js</a>
+                    <a href="javascript" class="related-link">JavaScript</a>
+                    <a href="web-development" class="related-link">Web Development</a>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h2>Master API Development with Expert Guidance</h2>
+                <p>Learn to build robust, scalable APIs from industry professionals</p>
+                <div class="cta-buttons">
+                    <a href="/courses" class="cta-primary">Explore API Courses</a>
+                    <a href="/mentorship" class="cta-secondary">Get 1-on-1 Mentorship</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+    
+</body>
+</html>

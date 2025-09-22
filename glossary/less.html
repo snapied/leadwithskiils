@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Less - CSS Preprocessor | Lead With Skills</title>
+    <meta name="description" content="Learn about Less, the dynamic CSS preprocessor that extends CSS with variables, mixins, and functions for more maintainable stylesheets.">
+    <meta name="keywords" content="Less, CSS preprocessor, web development, styling, variables, mixins">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/less">
+    <style>
+        
+
+        .breadcrumb {    
+            padding: 1rem 0;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .term-header {
+            background: linear-gradient(135deg, var(--Primary-25), var(--Primary-100));
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            background: var(--primary);
+            color: var(--primary-foreground);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            display: inline-block;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .term-summary {
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--Primary-100);
+            padding-bottom: 0.5rem;
+        }
+
+        .definition-card {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        .code-block {
+            background: #1f2937;
+            color: #f9fafb;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            overflow-x: auto;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: var(--card);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .feature-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .career-stats {
+            background: var(--Primary-25);
+            padding: 2rem;
+            border-radius: var(--radius);
+            margin: 2rem 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--Primary-600);
+        }
+
+        .stat-label {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .related-terms {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            margin: 2rem 0;
+        }
+
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .term-link {
+            background: var(--background);
+            padding: 1rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--foreground);
+            transition: all 0.3s;
+        }
+
+        .term-link:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .cta-section {
+            background: var(--primary);
+            color: var(--primary-foreground);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--primary-foreground);
+            color: var(--primary);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-foreground);
+            border-color: var(--primary-foreground);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: var(--card);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--muted);
+        }
+
+        @media (max-width: 768px) {
+            .term-title {
+                font-size: 2rem;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumb margin-top-80">
+            <a href="/">Home</a> > <a href="/glossary/">Glossary</a> > Less
+        </div>
+    </div>
+
+    <section class="term-header">
+        <div class="container">
+            <div class="term-category">CSS Preprocessor</div>
+            <h1 class="term-title">Less</h1>
+            <p class="term-summary">A dynamic CSS preprocessor that extends CSS with variables, mixins, operations, and functions, making CSS more maintainable and easier to write.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="content-section">
+            <h2 class="section-title">What is Less?</h2>
+            <div class="definition-card">
+                <p><strong>Less</strong> (Leaner Style Sheets) is a backward-compatible language extension for CSS that adds features like variables, mixins, functions, and operations. Less compiles to standard CSS and can run on both the client-side (in the browser) and server-side (with Node.js).</p>
+                
+                <p>Less helps developers write more maintainable and organized CSS by providing programming constructs that make stylesheets more dynamic and reusable. It's particularly popular for its simplicity and ease of adoption.</p>
+            </div>
+
+            <h3 class="section-title">Key Features</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-title">Variables</div>
+                    <p>Store values in variables for reuse throughout your stylesheets, making maintenance easier.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-title">Mixins</div>
+                    <p>Create reusable groups of CSS declarations that can be included in multiple rule sets.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-title">Nested Rules</div>
+                    <p>Write CSS selectors nested inside other selectors, following HTML structure.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-title">Operations</div>
+                    <p>Perform mathematical operations on numbers, colors, and variables.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-title">Functions</div>
+                    <p>Built-in functions for manipulating colors, strings, and mathematical calculations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-title">Client-side Compilation</div>
+                    <p>Can compile Less to CSS directly in the browser during development.</p>
+                </div>
+            </div>
+
+            <h3 class="section-title">Example Usage</h3>
+            <pre class="code-block">
+// Variables
+@primary-color: #007bff;
+@secondary-color: #6c757d;
+@font-size-base: 16px;
+@border-radius: 4px;
+
+// Mixins
+.border-radius(@radius: @border-radius) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
+.button-style(@bg-color, @text-color) {
+  background-color: @bg-color;
+  color: @text-color;
+  padding: 10px 20px;
+  .border-radius(5px);
+  border: none;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: darken(@bg-color, 10%);
+  }
+}
+
+// Nested rules and usage
+.header {
+  background-color: @primary-color;
+  padding: 20px;
+  
+  .nav {
+    list-style: none;
+    
+    li {
+      display: inline-block;
+      margin-right: 20px;
+      
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: @font-size-base;
+        
+        &:hover {
+          color: lighten(@primary-color, 30%);
+        }
+      }
+    }
+  }
+}
+
+// Button implementations
+.btn-primary {
+  .button-style(@primary-color, white);
+}
+
+.btn-secondary {
+  .button-style(@secondary-color, white);
+}
+
+// Operations
+.container {
+  width: 100% - 40px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+            </pre>
+
+            <h3 class="section-title">Career Impact</h3>
+            <div class="career-stats">
+                <h4 style="color: var(--primary); margin-bottom: 1rem;">Less Skills in the Job Market</h4>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">35%</div>
+                        <div class="stat-label">of CSS preprocessor jobs use Less</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">$78K</div>
+                        <div class="stat-label">Average salary boost with preprocessor skills</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">25%</div>
+                        <div class="stat-label">Faster CSS development</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">8K+</div>
+                        <div class="stat-label">Projects using Less on GitHub</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="section-title">Learning Path</h3>
+            <div class="definition-card">
+                <h4 style="color: var(--primary); margin-bottom: 1rem;">Recommended Learning Sequence:</h4>
+                <ol style="margin-left: 2rem;">
+                    <li><strong>CSS Fundamentals</strong> - Solid understanding of CSS selectors, properties, and layout</li>
+                    <li><strong>Less Basics</strong> - Variables, nesting, and basic mixins</li>
+                    <li><strong>Advanced Less</strong> - Functions, operations, and advanced mixins</li>
+                    <li><strong>Build Tools</strong> - Integration with Webpack, Gulp, or other build systems</li>
+                    <li><strong>Best Practices</strong> - Code organization, performance optimization</li>
+                    <li><strong>Migration Strategies</strong> - Converting existing CSS to Less</li>
+                </ol>
+            </div>
+
+            <h3 class="section-title">Related Terms</h3>
+            <div class="related-terms">
+                <div class="terms-grid">
+                    <a href="/glossary/css" class="term-link">
+                        <strong>CSS</strong>
+                        <p>Base language that Less extends</p>
+                    </a>
+                    <a href="/glossary/sass" class="term-link">
+                        <strong>Sass</strong>
+                        <p>Alternative CSS preprocessor</p>
+                    </a>
+                    <a href="/glossary/nodejs" class="term-link">
+                        <strong>Node.js</strong>
+                        <p>Runtime for server-side Less compilation</p>
+                    </a>
+                    <a href="/glossary/webpack" class="term-link">
+                        <strong>Webpack</strong>
+                        <p>Build tool that can process Less files</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Master CSS Preprocessing</h2>
+            <p class="cta-description">Learn to write more maintainable and efficient stylesheets with Less and other modern CSS tools</p>
+            <div class="cta-buttons">
+                <a href="/courses" class="btn btn-primary">Explore CSS Courses</a>
+                <a href="/mentorship" class="btn btn-secondary">Get Personal Mentorship</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Lead With Skills. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

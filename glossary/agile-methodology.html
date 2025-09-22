@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agile Methodology - Complete Guide | Lead With Skills</title>
+    <meta name="description" content="Learn Agile Methodology - iterative software development approach emphasizing collaboration, flexibility, and rapid delivery. Master Agile with Lead With Skills.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/agile-methodology">
+    <style>
+
+        /* Breadcrumb */
+        .breadcrumb {    
+            background: var(--card);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb-nav {width:fit-content;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .breadcrumb-nav a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb-nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 3rem 0;
+        }
+
+        .term-header {
+            margin-bottom: 2rem;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .term-category {
+            display: inline-block;
+            background: var(--Primary-100);
+            color: var(--Primary-600);
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .term-definition {
+            font-size: 1.25rem;
+            color: var(--muted);
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--Primary-25);
+            border-radius: var(--radius);
+            border-left: 4px solid var(--primary);
+        }
+
+        .content-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .content-section h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .content-section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--foreground);
+            margin-bottom: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .content-section p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .content-section ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box h4 {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        /* Related Terms */
+        .related-terms {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .related-terms h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .related-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .related-link {
+            background: var(--Primary-100);
+            color: var(--Primary-600);
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .related-link:hover {
+            background: var(--primary);
+            color: var(--primary-foreground);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--Primary-600) 100%);
+            color: var(--primary-foreground);
+            padding: 3rem;
+            border-radius: var(--radius);
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-primary, .cta-secondary {
+            padding: 1rem 2rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-primary {
+            background: var(--primary-foreground);
+            color: var(--primary);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: var(--primary-foreground);
+            border: 2px solid var(--primary-foreground);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-secondary:hover {
+            background: var(--primary-foreground);
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--card);
+            border-top: 1px solid var(--border);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--muted);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .term-title {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <section class="breadcrumb margin-top-80">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="/">Home</a> / <a href="/glossary/">Glossary</a> / Agile Methodology
+            </nav>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="term-header">
+                <h1 class="term-title">Agile Methodology</h1>
+                <span class="term-category">Project Management</span>
+                <div class="term-definition">
+                    An iterative approach to software development that emphasizes collaboration, flexibility, customer feedback, and rapid delivery of working software through short development cycles called sprints.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>What is Agile Methodology?</h2>
+                <p>Agile methodology is a project management and software development approach that prioritizes flexibility, collaboration, and customer satisfaction. Unlike traditional waterfall methods, Agile breaks projects into small, manageable iterations called sprints, typically lasting 1-4 weeks.</p>
+                
+                <p>The Agile approach was formalized in 2001 with the Agile Manifesto, which outlined four core values and twelve principles that guide Agile development teams worldwide.</p>
+
+                <div class="highlight-box">
+                    <h4>The Four Core Values of Agile:</h4>
+                    <ul>
+                        <li><strong>Individuals and interactions</strong> over processes and tools</li>
+                        <li><strong>Working software</strong> over comprehensive documentation</li>
+                        <li><strong>Customer collaboration</strong> over contract negotiation</li>
+                        <li><strong>Responding to change</strong> over following a plan</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Principles of Agile</h2>
+                
+                <h3>1. Customer Collaboration</h3>
+                <p>Agile emphasizes continuous customer involvement throughout the development process, ensuring the final product meets actual user needs and expectations.</p>
+
+                <h3>2. Iterative Development</h3>
+                <p>Work is divided into short iterations or sprints, allowing teams to deliver working software frequently and incorporate feedback quickly.</p>
+
+                <h3>3. Adaptive Planning</h3>
+                <p>Plans are flexible and can be adjusted based on changing requirements, market conditions, or customer feedback.</p>
+
+                <h3>4. Cross-functional Teams</h3>
+                <p>Agile teams include members with diverse skills who collaborate closely to deliver complete features.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>Popular Agile Frameworks</h2>
+                
+                <h3>Scrum</h3>
+                <p>The most widely used Agile framework, featuring roles like Scrum Master and Product Owner, with ceremonies like daily standups and sprint reviews.</p>
+
+                <h3>Kanban</h3>
+                <p>A visual workflow management method that uses boards and cards to track work progress and optimize flow.</p>
+
+                <h3>Extreme Programming (XP)</h3>
+                <p>Focuses on engineering practices like pair programming, test-driven development, and continuous integration.</p>
+
+                <h3>Lean Software Development</h3>
+                <p>Applies lean manufacturing principles to software development, emphasizing waste elimination and value delivery.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>Benefits of Agile Methodology</h2>
+                <ul>
+                    <li><strong>Faster Time to Market:</strong> Regular releases deliver value to customers sooner</li>
+                    <li><strong>Higher Quality:</strong> Continuous testing and feedback improve product quality</li>
+                    <li><strong>Better Risk Management:</strong> Early detection of issues through frequent iterations</li>
+                    <li><strong>Increased Customer Satisfaction:</strong> Regular feedback ensures alignment with customer needs</li>
+                    <li><strong>Team Motivation:</strong> Collaborative environment and autonomy boost team morale</li>
+                    <li><strong>Flexibility:</strong> Ability to adapt to changing requirements and market conditions</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Career Opportunities</h2>
+                <p>Understanding Agile methodology opens doors to various career paths:</p>
+                <ul>
+                    <li><strong>Scrum Master:</strong> ₹8-15 LPA - Facilitate Agile processes and remove impediments</li>
+                    <li><strong>Product Owner:</strong> ₹12-25 LPA - Define product vision and manage backlog</li>
+                    <li><strong>Agile Coach:</strong> ₹15-30 LPA - Guide organizations in Agile transformation</li>
+                    <li><strong>Project Manager:</strong> ₹10-20 LPA - Lead Agile projects and teams</li>
+                </ul>
+            </div>
+
+            <div class="related-terms">
+                <h3>Related Terms</h3>
+                <div class="related-links">
+                    <a href="scrum" class="related-link">Scrum</a>
+                    <a href="product-management" class="related-link">Product Management</a>
+                    <a href="devops" class="related-link">DevOps</a>
+                    <a href="quality-assurance" class="related-link">Quality Assurance</a>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h2>Master Agile Methodology with Expert Guidance</h2>
+                <p>Learn from certified Agile practitioners and transform your project management skills</p>
+                <div class="cta-buttons">
+                    <a href="/courses" class="cta-primary">Explore Agile Courses</a>
+                    <a href="/mentorship" class="cta-secondary">Get 1-on-1 Mentorship</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+    
+</body>
+</html>
