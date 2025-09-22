@@ -11,12 +11,5 @@
       "destination": "/:path*",
       "permanent": true
     }
-  ],
-  "routes": [
-    {
-      "handle": "error",
-      "src": "/.*",
-      "dest": "/404.html"
-    }
   ]
 }
