@@ -1,11 +1,25 @@
 {
   "rewrites": [
-    { "source": "/:path*", "destination": "/:path*.html" }
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "filesystem",
+          "missing": true
+        }
+      ],
+      "destination": "/404.html"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/:path*.html"
+    }
   ],
   "redirects": [
-    { "source": "/:path*.html", "destination": "/:path*", "permanent": true }
-  ],
-  "routes": [
-    { "handle": "error", "src": "/.*", "dest": "/404.html" }
+    {
+      "source": "/:path*.html",
+      "destination": "/:path*",
+      "permanent": true
+    }
   ]
 }
