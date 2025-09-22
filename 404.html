@@ -7,116 +7,10 @@
     <meta name="description" content="The page you're looking for doesn't exist. Explore our courses, mentorship programs, and career transformation resources.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" href="/images/favicon.png">
+        <link rel="stylesheet" href="/styles/styles.css"/>
+
     <link rel="canonical" href="https://www.leadwithskills.com/404">
     <style>
-        :root {
-            --background: #ffffff;
-            --foreground: #111827;
-            --card: #f9fafb;
-            --card-foreground: #111827;
-            --primary: #00353b;
-            --primary-foreground: #ffffff;
-            --secondary: #00353b;
-            --secondary-foreground: #ffffff;
-            --muted: #6b7280;
-            --accent: #00353b;
-            --border: #e5e7eb;
-            --Primary-25: #f0f8ed;
-            --Primary-100: #c6f6d5;
-            --Primary-600: #158e5e;
-            --radius: 0.5rem;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: var(--foreground);
-            background: var(--background);
-            font-weight: 400;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Header */
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            transition: all 0.3s ease;
-            height: 85px;
-            display: flex;
-            align-items: center;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .logo {
-            font-family: "Inter", sans-serif;
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--primary);
-            letter-spacing: -0.02em;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 32px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--muted);
-            font-weight: 500;
-            font-size: 16px;
-            transition: color 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        .cta-button {
-            background: var(--primary);
-            color: var(--primary-foreground);
-            padding: 10px 20px;
-            border: none;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .cta-button:hover {
-            background: var(--Primary-600);
-            transform: translateY(-1px);
-        }
 
         /* Main content */
         main {
@@ -366,7 +260,7 @@
     </style>
 </head>
 <body>
-<header>
+    <header>
         <nav class="container">
             <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
             <ul class="nav-links">
@@ -375,7 +269,7 @@
                 <li><a href="/courses">Courses</a></li>
                 <li><a href="/mentorship">Mentorship</a></li>
                 <li><a href="/communities">Community</a></li>
-<li><a href="/blogs">Blogs</a></li>
+                <li><a href="/blogs">Blogs</a></li>
             </ul>
             <a href="/courses" class="cta-button">Get Started</a>
         </nav>
@@ -395,13 +289,13 @@
                     
                     <div class="error-actions">
                         <a href="/" class="primary-cta">Go Home</a>
-                        <a href="/courses.html" class="secondary-cta">
+                        <a href="/courses" class="secondary-cta">
                             Explore Courses →
                         </a>
                     </div>
 
                     <div class="quick-links">
-                        <a href="/courses.html" class="quick-link-card">
+                        <a href="/courses" class="quick-link-card">
                             <div class="quick-link-icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke="#00353b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -411,7 +305,7 @@
                             <p class="quick-link-description">Discover our comprehensive courses in AI, web development, testing, and product management.</p>
                         </a>
 
-                        <a href="/mentorship.html" class="quick-link-card">
+                        <a href="/mentorship" class="quick-link-card">
                             <div class="quick-link-icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#00353b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -437,7 +331,7 @@
                             <p class="quick-link-description">Get insights on career development, technology trends, and industry best practices.</p>
                         </a>
 
-                        <a href="/contact-us.html" class="quick-link-card">
+                        <a href="/contact-us" class="quick-link-card">
                             <div class="quick-link-icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#00353b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -458,12 +352,12 @@
         <div class="container">
             <div class="footer-content">
                 <a href="/" class="footer-link">Home</a>
-                <a href="/about-us.html" class="footer-link">About</a>
-                <a href="/courses.html" class="footer-link">Courses</a>
-                <a href="/mentorship.html" class="footer-link">Mentorship</a>
-                <a href="/contact-us.html" class="footer-link">Contact</a>
-                <a href="/privacy-policy.html" class="footer-link">Privacy</a>
-                <a href="/terms-and-conditions.html" class="footer-link">Terms</a>
+                <a href="/about-us" class="footer-link">About</a>
+                <a href="/courses" class="footer-link">Courses</a>
+                <a href="/mentorship" class="footer-link">Mentorship</a>
+                <a href="/contact-us" class="footer-link">Contact</a>
+                <a href="/privacy-policy" class="footer-link">Privacy</a>
+                <a href="/terms-and-conditions" class="footer-link">Terms</a>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 Lead With Skills. All rights reserved. Transform your career with industry experts.</p>

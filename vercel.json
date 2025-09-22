@@ -2,12 +2,12 @@
   "rewrites": [
     {
       "source": "/:path*",
-      "destination": "/:path*.html"
+      "destination": "/:path*"
     }
   ],
   "redirects": [
     {
-      "source": "/:path*.html",
+      "source": "/:path*",
       "destination": "/:path*",
       "permanent": true,
       "has": [
@@ -18,7 +18,7 @@
       ]
     },
     {
-      "source": "/404.html",
+      "source": "/404",
       "destination": "/404",
       "permanent": true
     }
