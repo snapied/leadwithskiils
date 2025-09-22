@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    <link rel="icon" href="/images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript ES6+: What You Need to Know in 2025 | Lead With Skills</title>
+    <meta name="description" content="Master essential JavaScript ES6+ features for developers in 2025. Learn arrow functions, async/await, destructuring, modules, and modern JavaScript techniques with practical examples.">
+    <meta name="keywords" content="JavaScript ES6+ features for developers, modern JavaScript, ES6 tutorial, JavaScript 2025, arrow functions, async await, destructuring">
+    <link rel="canonical" href="https://leadwithskills.com/blog-javascript-es6-features-2025.html">
+    <link rel="stylesheet" href="/styles/styles.css">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "JavaScript ES6+: What You Need to Know in 2025",
+        "description": "Master essential JavaScript ES6+ features for developers in 2025. Learn arrow functions, async/await, destructuring, modules, and modern JavaScript techniques with practical examples.",
+        "image": "https://leadwithskills.com/images/javascript-es6-blog.jpg",
+        "author": {
+            "@type": "Organization",
+            "name": "Lead With Skills"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Lead With Skills",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://leadwithskills.com/images/logo.avif"
+            }
+        },
+        "datePublished": "2025-01-15",
+        "dateModified": "2025-01-15",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://leadwithskills.com/blog-javascript-es6-features-2025.html"
+        },
+        "keywords": "JavaScript ES6+ features for developers, modern JavaScript, ES6 tutorial, JavaScript 2025"
+    }
+    </script>
+
+    <style>
+
+        /* Blog Content Styles */
+        .blog-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .blog-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .blog-meta {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .blog-description {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        .blog-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 20px;
+        }
+
+        .blog-content h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin: 2.5rem 0 1rem 0;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 0.5rem;
+        }
+
+        .blog-content h3 {
+            color: #34495e;
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .blog-content ul, .blog-content ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .blog-content li {
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+
+        .highlight-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e9ecef;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #007bff;
+            display: block;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            border: none;
+            color: white;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            background: white;
+            color: #667eea;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: 2px solid white;
+        }
+
+        .cta-btn:hover {
+            background: transparent;
+            color: white;
+        }
+
+        .cta-btn.secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-btn.secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #ecf0f1;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: #3498db;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 1rem;
+            text-align: center;
+            color: #95a5a6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .blog-header h1 {
+                font-size: 2rem;
+            }
+
+            .blog-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <a href="/"><img src="/images/logo.avif" alt="Lead With Skills Logo"/></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us.html">About</a></li>
+                <li><a href="/courses.html">Courses</a></li>
+                <li><a href="/mentorship.html">Mentorship</a></li>
+                <li><a href="/communities.html">Community</a></li>
+<li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses.html" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <section class="blog-header margin-top-60">
+        <div class="container">
+            <h1>JavaScript ES6+: What You Need to Know in 2025</h1>
+            <div class="blog-meta">
+                Published on January 15, 2025 | 12 min read | By Lead With Skills Team
+            </div>
+            <p class="blog-description">
+                Master the essential JavaScript ES6+ features that every developer needs to know in 2025. From arrow functions to async/await, learn modern JavaScript techniques with practical examples.
+            </p>
+        </div>
+    </section>
+
+    <article class="blog-content">
+        <p>JavaScript has evolved tremendously since ES6 (ECMAScript 2015), introducing powerful features that have revolutionized how we write modern web applications. As we navigate through 2025, understanding these JavaScript ES6+ features for developers is not just beneficial—it's essential for career growth and building efficient, maintainable code.</p>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-number">95%</span>
+                <p>of modern web applications use ES6+ features</p>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">40%</span>
+                <p>increase in developer productivity with modern JavaScript</p>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">85%</span>
+                <p>of job postings require ES6+ knowledge</p>
+            </div>
+        </div>
+
+        <h2>Why JavaScript ES6+ Matters in 2025</h2>
+        <p>The JavaScript ecosystem continues to evolve rapidly, and ES6+ features have become the foundation of modern web development. Whether you're building React applications, Node.js backends, or vanilla JavaScript projects, these features provide:</p>
+        <ul>
+            <li><strong>Cleaner, more readable code</strong> that's easier to maintain</li>
+            <li><strong>Better performance</strong> through optimized syntax and features</li>
+            <li><strong>Enhanced developer experience</strong> with powerful debugging and development tools</li>
+            <li><strong>Industry standard practices</strong> that align with modern development workflows</li>
+        </ul>
+
+        <h2>Essential ES6+ Features Every Developer Must Know</h2>
+
+        <h3>1. Arrow Functions</h3>
+        <p>Arrow functions provide a concise way to write functions and automatically bind the <code>this</code> context, making them perfect for callbacks and functional programming patterns.</p>
+        
+        <pre class="code-block">
+// Traditional function
+function add(a, b) {
+    return a + b;
+}
+
+// Arrow function
+const add = (a, b) => a + b;
+
+// With array methods
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(num => num * 2);
+console.log(doubled); // [2, 4, 6, 8, 10]
+        </pre>
+
+        <h3>2. Destructuring Assignment</h3>
+        <p>Destructuring allows you to extract values from arrays and objects into distinct variables, making your code more readable and efficient.</p>
+
+        <pre class="code-block">
+// Object destructuring
+const user = { name: 'John', age: 30, city: 'Mumbai' };
+const { name, age } = user;
+
+// Array destructuring
+const colors = ['red', 'green', 'blue'];
+const [primary, secondary] = colors;
+
+// Function parameter destructuring
+const displayUser = ({ name, age }) => {
+    console.log(`${name} is ${age} years old`);
+};
+        </pre>
+
+        <h3>3. Template Literals</h3>
+        <p>Template literals provide an elegant way to create strings with embedded expressions and multi-line strings.</p>
+
+        <pre class="code-block">
+const name = 'Priya';
+const age = 25;
+
+// Template literal with expressions
+const greeting = `Hello, my name is ${name} and I'm ${age} years old.`;
+
+// Multi-line strings
+const htmlTemplate = `
+    &lt;div class="user-card"&gt;
+        &lt;h2&gt;${name}&lt;/h2&gt;
+        &lt;p&gt;Age: ${age}&lt;/p&gt;
+    &lt;/div&gt;
+`;
+        </pre>
+
+        <h3>4. Async/Await</h3>
+        <p>Async/await makes asynchronous code look and behave more like synchronous code, eliminating callback hell and making error handling easier.</p>
+
+        <pre class="code-block">
+// Traditional Promise chain
+fetch('/api/users')
+    .then(response => response.json())
+    .then(users => console.log(users))
+    .catch(error => console.error(error));
+
+// Modern async/await
+const fetchUsers = async () => {
+    try {
+        const response = await fetch('/api/users');
+        const users = await response.json();
+        console.log(users);
+    } catch (error) {
+        console.error('Error fetching users:', error);
+    }
+};
+        </pre>
+
+        <h3>5. Modules (Import/Export)</h3>
+        <p>ES6 modules provide a standardized way to organize and share code across files, improving maintainability and reusability.</p>
+
+        <pre class="code-block">
+// utils.js - Named exports
+export const formatDate = (date) => {
+    return date.toLocaleDateString('en-IN');
+};
+
+export const calculateAge = (birthYear) => {
+    return new Date().getFullYear() - birthYear;
+};
+
+// main.js - Import
+import { formatDate, calculateAge } from './utils.js';
+
+// Default export
+export default class User {
+    constructor(name, birthYear) {
+        this.name = name;
+        this.age = calculateAge(birthYear);
+    }
+}
+        </pre>
+
+        <h3>6. Spread and Rest Operators</h3>
+        <p>The spread (...) operator allows you to expand arrays and objects, while the rest operator collects multiple elements into an array.</p>
+
+        <pre class="code-block">
+// Spread with arrays
+const fruits = ['apple', 'banana'];
+const moreFruits = [...fruits, 'orange', 'mango'];
+
+// Spread with objects
+const user = { name: 'Raj', age: 28 };
+const updatedUser = { ...user, city: 'Delhi' };
+
+// Rest parameters
+const sum = (...numbers) => {
+    return numbers.reduce((total, num) => total + num, 0);
+};
+
+console.log(sum(1, 2, 3, 4, 5)); // 15
+        </pre>
+
+        <h3>7. Classes</h3>
+        <p>ES6 classes provide a cleaner syntax for creating objects and implementing inheritance, making object-oriented programming more intuitive.</p>
+
+        <pre class="code-block">
+class Vehicle {
+    constructor(make, model) {
+        this.make = make;
+        this.model = model;
+    }
+
+    start() {
+        console.log(`${this.make} ${this.model} is starting...`);
+    }
+}
+
+class Car extends Vehicle {
+    constructor(make, model, doors) {
+        super(make, model);
+        this.doors = doors;
+    }
+
+    honk() {
+        console.log('Beep beep!');
+    }
+}
+
+const myCar = new Car('Maruti', 'Swift', 4);
+myCar.start(); // Maruti Swift is starting...
+        </pre>
+
+        <h2>Advanced ES6+ Features for 2025</h2>
+
+        <h3>8. Optional Chaining (?.)</h3>
+        <p>Optional chaining allows you to safely access nested object properties without worrying about null or undefined values.</p>
+
+        <pre class="code-block">
+const user = {
+    profile: {
+        social: {
+            twitter: '@johndoe'
+        }
+    }
+};
+
+// Without optional chaining (risky)
+// const twitter = user.profile.social.twitter;
+
+// With optional chaining (safe)
+const twitter = user.profile?.social?.twitter;
+const instagram = user.profile?.social?.instagram ?? 'Not available';
+        </pre>
+
+        <h3>9. Nullish Coalescing (??)</h3>
+        <p>The nullish coalescing operator provides a way to handle null and undefined values more precisely than the logical OR operator.</p>
+
+        <pre class="code-block">
+const config = {
+    theme: null,
+    timeout: 0,
+    retries: undefined
+};
+
+// Using || (problematic with falsy values)
+const theme1 = config.theme || 'light'; // 'light'
+const timeout1 = config.timeout || 5000; // 5000 (wrong!)
+
+// Using ?? (only null/undefined)
+const theme2 = config.theme ?? 'light'; // 'light'
+const timeout2 = config.timeout ?? 5000; // 0 (correct!)
+        </pre>
+
+        <h3>10. Array Methods</h3>
+        <p>Modern JavaScript includes powerful array methods that make data manipulation more functional and readable.</p>
+
+        <pre class="code-block">
+const employees = [
+    { name: 'Amit', department: 'Engineering', salary: 75000 },
+    { name: 'Priya', department: 'Design', salary: 65000 },
+    { name: 'Rahul', department: 'Engineering', salary: 80000 },
+    { name: 'Sneha', department: 'Marketing', salary: 54990 }
+];
+
+// Filter engineers
+const engineers = employees.filter(emp => emp.department === 'Engineering');
+
+// Get all names
+const names = employees.map(emp => emp.name);
+
+// Find high earner
+const highEarner = employees.find(emp => emp.salary > 67990);
+
+// Calculate total salary
+const totalSalary = employees.reduce((sum, emp) => sum + emp.salary, 0);
+
+// Check if all earn above 50k
+const allWellPaid = employees.every(emp => emp.salary > 50000);
+        </pre>
+
+        <div class="highlight-box">
+            <h3>💡 Pro Tip for Indian Developers</h3>
+            <p>Many Indian tech companies like TCS, Infosys, Wipro, and startups like Flipkart, Zomato, and Paytm extensively use these ES6+ features. Mastering them can significantly boost your chances in technical interviews and day-to-day development work.</p>
+        </div>
+
+        <h2>Best Practices for Using ES6+ Features</h2>
+
+        <h3>1. Code Readability</h3>
+        <ul>
+            <li>Use descriptive variable names with destructuring</li>
+            <li>Prefer arrow functions for short, simple operations</li>
+            <li>Use template literals for complex string formatting</li>
+            <li>Implement proper error handling with async/await</li>
+        </ul>
+
+        <h3>2. Performance Considerations</h3>
+        <ul>
+            <li>Use spread operator judiciously with large arrays/objects</li>
+            <li>Prefer const and let over var for better optimization</li>
+            <li>Utilize array methods like map, filter, reduce for functional programming</li>
+            <li>Implement proper module bundling and tree shaking</li>
+        </ul>
+
+        <h3>3. Browser Compatibility</h3>
+        <ul>
+            <li>Use Babel for transpiling modern JavaScript to older browsers</li>
+            <li>Implement progressive enhancement strategies</li>
+            <li>Test across different browsers and devices</li>
+            <li>Use polyfills for missing features when necessary</li>
+        </ul>
+
+        <h2>Career Impact of JavaScript ES6+ Skills</h2>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-number">₹8-15L</span>
+                <p>Average salary for JavaScript developers with ES6+ skills</p>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">70%</span>
+                <p>of React/Vue/Angular jobs require ES6+ knowledge</p>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">3x</span>
+                <p>faster development with modern JavaScript features</p>
+            </div>
+        </div>
+
+        <h3>Job Opportunities</h3>
+        <p>Companies actively seeking developers with strong ES6+ skills include:</p>
+        <ul>
+            <li><strong>Product Companies:</strong> Google, Microsoft, Amazon, Meta</li>
+            <li><strong>Indian Unicorns:</strong> Flipkart, Paytm, Ola, Swiggy, Zomato</li>
+            <li><strong>Service Companies:</strong> TCS, Infosys, Wipro, HCL, Tech Mahindra</li>
+            <li><strong>Startups:</strong> Razorpay, Freshworks, Chargebee, Postman</li>
+        </ul>
+
+        <h2>Learning Path and Next Steps</h2>
+
+        <h3>Beginner Level (1-2 months)</h3>
+        <ol>
+            <li>Master arrow functions, template literals, and destructuring</li>
+            <li>Practice with let/const and understand block scoping</li>
+            <li>Learn basic array methods (map, filter, reduce)</li>
+            <li>Build simple projects using these features</li>
+        </ol>
+
+        <h3>Intermediate Level (2-3 months)</h3>
+        <ol>
+            <li>Deep dive into Promises and async/await</li>
+            <li>Master ES6 modules and modern bundling</li>
+            <li>Learn classes and inheritance patterns</li>
+            <li>Practice with spread/rest operators</li>
+        </ol>
+
+        <h3>Advanced Level (3-4 months)</h3>
+        <ol>
+            <li>Explore optional chaining and nullish coalescing</li>
+            <li>Master advanced array and object methods</li>
+            <li>Learn about generators and iterators</li>
+            <li>Build complex applications using all ES6+ features</li>
+        </ol>
+
+        <div class="highlight-box">
+            <h3>🚀 Ready to Master JavaScript ES6+?</h3>
+            <p>Join thousands of Indian developers who have transformed their careers with modern JavaScript skills. Our comprehensive mentorship program provides hands-on experience with real-world projects and industry expert guidance.</p>
+        </div>
+
+        <h2>Conclusion</h2>
+        <p>JavaScript ES6+ features are no longer optional—they're essential for modern web development. As we progress through 2025, these features continue to be the foundation of frameworks like React, Vue, Angular, and Node.js applications. By mastering these JavaScript ES6+ features for developers, you're not just learning syntax; you're adopting industry-standard practices that will accelerate your career growth.</p>
+
+        <p>The key to success is consistent practice and real-world application. Start with the basics, build projects, and gradually incorporate more advanced features. Remember, every expert was once a beginner, and with the right guidance and dedication, you can master these essential JavaScript skills.</p>
+
+        <p>Whether you're preparing for technical interviews at top Indian companies or looking to build modern web applications, these ES6+ features will be your competitive advantage in the ever-evolving JavaScript ecosystem.</p>
+    </article>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Master Modern JavaScript?</h2>
+            <p>Join our comprehensive JavaScript mentorship program and learn from industry experts who have worked at top tech companies. Get hands-on experience with real-world projects and accelerate your career growth.</p>
+            <div class="cta-buttons">
+                <a href="mailto:hello@leadwithskills.com?subject=JavaScript%20Mentorship%20Inquiry&body=Hi,%0A%0AI'm%20interested%20in%20learning%20more%20about%20your%20JavaScript%20mentorship%20program.%20Please%20share%20more%20details.%0A%0AThank%20you!" class="cta-btn">Get JavaScript Mentorship</a>
+                <a href="mailto:hello@leadwithskills.com?subject=JavaScript%20Course%20Inquiry&body=Hi,%0A%0AI'd%20like%20to%20know%20more%20about%20your%20JavaScript%20courses%20and%20programs.%0A%0AThank%20you!" class="cta-btn secondary">Explore JavaScript Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+    <h3>Programs</h3>
+    <!-- Technical & Product -->
+    <a href="/courses/technical-product-manager.html">Technical Product Manager</a>
+    <a href="/courses/ai-in-product-management.html">AI in Product Management</a>
+
+    <!-- Testing -->
+    <a href="/courses/manual-testing-fundamentals.html">Manual Testing Fundamentals</a>
+    <a href="/courses/manual-and-full-stack-automation-testing.html">Manual & Full Stack Automation Testing</a>
+
+    <!-- Web Development -->
+    <a href="/courses/web-designing-and-development/index.html">Web Designing & Development</a>
+    <a href="/courses/web-designing-and-development/html-mastery.html">HTML Mastery</a>
+    <a href="/courses/web-designing-and-development/css-mastery.html">CSS Mastery</a>
+    <a href="/courses/web-designing-and-development/javascript-mastery.html">JavaScript Mastery</a>
+    <a href="/courses/web-designing-and-development/angular-training.html">Angular Training</a>
+    <a href="/courses/web-designing-and-development/nodejs-mastery.html">Node.js Mastery</a>
+    <a href="/courses/full-stack-development.html">Full Stack Developer Program</a>
+
+    <!-- AI & Marketing -->
+    <a href="/courses/generative-ai-mastery.html">Generative AI Mastery</a>
+    <a href="/courses/prompt-engineering-excellence.html">Prompt Engineering Excellence</a>
+    <a href="/courses/digital-marketing-and-sustainability.html">Digital Marketing & Sustainability</a>
+</div>
+
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="/about-us.html">About Lead With Skills</a>
+                    <a href="/mentorship.html">Our Mentors</a>
+                    <a href="/success-stories.html">Success Stories</a>
+                    <a href="/careers.html">Careers</a>
+                    
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    
+                    <a href="#">Contact Us</a>
+                    <a href="/communities.html">Community</a>
+                    <a href="/terms-and-conditions.html">Terms of Service</a>
+                    <a href="/privacy-policy.html">Privacy Policy</a>
+                    <a href="/refund-policy.html">Refund/Cancellation Policy</a>
+                    
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">YouTube</a>
+                    <a href="#">Discord</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lead With Skills. All rights reserved. Built for ambitious professionals.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

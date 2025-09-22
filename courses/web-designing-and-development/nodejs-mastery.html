@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/favicon.png">
+    <title>Node.js Mastery - Backend Development | 3-Month Intensive Program</title>
+    <meta name="description" content="Master Node.js, Express, MongoDB, REST APIs, and backend development in 3 months. Comprehensive server-side development training with hands-on projects by Dinesh Rawat.">
+    <meta name="keywords" content="nodejs training course, backend development, nodejs express course, mongodb nodejs course, nodejs bootcamp, backend developer course, nodejs certification, server-side development">
+    <link rel="canonical" href="https://leadwithskills.com/courses/web-designing-and-development/nodejs-mastery">
+    <link rel="stylesheet" href="/styles/styles.css">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Node.js Mastery - Backend Development">
+    <meta property="og:description" content="Master Node.js, Express, MongoDB, and backend development in 3 months. Comprehensive server-side development training with hands-on projects.">
+    <meta property="og:image" content="/images/nodejs-hero.jpg">
+    <meta property="og:url" content="https://leadwithskills.com/courses/web-designing-and-development/nodejs-mastery">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Node.js Mastery - Backend Development">
+    <meta name="twitter:description" content="Master Node.js, Express, MongoDB, and backend development in 3 months.">
+    <meta name="twitter:image" content="/images/nodejs-hero.jpg">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need prior Node.js experience?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No prior Node.js experience is required. We start with Node.js fundamentals and gradually build up to advanced concepts. Basic JavaScript knowledge is recommended but not mandatory."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I complete this while working full-time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! The program requires 8-10 hours per week including live sessions and practice. Evening sessions are available for working professionals, and all sessions are recorded for flexibility."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What technologies will I learn besides Node.js?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You'll master Express.js, MongoDB, Mongoose, REST APIs, JWT authentication, testing with Jest, file uploads, email integration, deployment with PM2, and production best practices."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will this help me get a job as a backend developer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You'll build a comprehensive portfolio with 6+ projects, receive job placement assistance, and gain skills that are in high demand. Our graduates typically find backend developer jobs within 2-3 months."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the final project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You'll build a complete Student Registration Portal API with Node.js backend, MongoDB database, JWT authentication, file uploads, email integration, comprehensive testing, and production deployment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the schedule & timings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Program Duration: 12 Weeks (3 Months). Format: Live sessions with recorded content for flexibility. Live Session Timings: Evening sessions (IST) on weekdays via Zoom. Time Commitment: 8-10 hours per week including self-study."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I get certification upon completion?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you'll receive an industry-recognized 'Node.js Backend Developer Certificate' upon completion. This certificate validates your backend development skills with Node.js specialization."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the pricing structure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For Candidates from India: Course Fee: ~Rs 18499/- (Early Bird Offer). For Candidates Outside India: Course Fee: ~USD 312 (Early Bird Offer). EMI options available. The fees include all taxes and 18% GST."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How will Node.js skills benefit my career?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Node.js developers are in high demand with excellent salary prospects. You'll be qualified for backend developer, full-stack developer, and API developer roles with starting salaries of ₹7-10 LPA for freshers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What kind of career support do you provide?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We provide comprehensive career support including resume optimization, LinkedIn profile enhancement, mock technical interviews, portfolio review, and job referrals to companies seeking Node.js developers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is this programme for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This programme is designed for students, freshers, frontend developers, career switchers, and professionals who want to master Node.js and backend development for career advancement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What job roles will I be able to apply for after completing the course?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Job roles include: Backend Developer, Node.js Developer, Full Stack Developer, API Developer, Server-Side Developer, and JavaScript Developer positions across various industries."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What average salary will I get?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Node.js developers can expect competitive salaries. Freshers typically start at ₹7-10 LPA, while experienced developers can earn ₹15-25 LPA depending on skills and location."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know this programme's curriculum is industry-relevant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our curriculum is designed by industry experts with 15+ years of experience, covers the latest Node.js features and best practices, and includes real-world projects that mirror actual industry requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I miss a live session?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All live sessions are recorded and available immediately after the session. You can revisit them anytime, and our instructor provides additional support for any missed content during office hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How will the projects help my portfolio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You'll build 6+ production-ready projects including REST APIs, authentication systems, file upload services, and complete backend applications. These projects demonstrate your Node.js expertise and backend capabilities to potential employers."
+      }
+    }
+  ]
+}
+</script>
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Node.js Mastery Course",
+        "description": "Comprehensive 3-month Node.js training program covering backend development with Node.js, Express, MongoDB, and REST APIs.",
+        "provider": {
+            "@type": "Organization",
+            "name": "Lead With Skills",
+            "url": "https://leadwithskills.com"
+        },
+        "courseMode": "online",
+        "educationalLevel": "intermediate",
+        "timeRequired": "P12W",
+        "numberOfCredits": 12,
+        "coursePrerequisites": "Basic JavaScript knowledge recommended",
+        "offers": {
+            "@type": "Offer",
+            "price": "18000",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2025-01-01"
+        },
+        "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": "online",
+            "instructor": {
+                "@type": "Person",
+                "name": "Dinesh Rawat"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us.html">About</a></li>
+                <li><a href="/courses.html">Courses</a></li>
+                <li><a href="/mentorship.html">Mentorship</a></li>
+                <li><a href="/communities.html">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses.html" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="tpm-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="course-badge">
+                        <span class="badge-icon">⚡</span>
+                        <span>Complete Backend Development Training</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Master Node.js & 
+                        <span class="highlight-text">Backend Development</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Transform into a skilled backend developer with Node.js, Express, MongoDB, REST APIs, and authentication. 
+                        Build scalable server-side applications with comprehensive hands-on training in just 3 months.
+                    </p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">12</div>
+                            <div class="stat-label">Weeks Intensive</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Core Topics</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">6</div>
+                            <div class="stat-label">Major Projects</div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-cta">
+                        <button class="cta-primary" onclick="scrollToEnrollment()">
+                            Start Your Backend Developer Journey
+                            <span class="cta-arrow">→</span>
+                        </button>
+                        <div class="cta-info">
+                            <div class="urgency-text">
+                                <span class="urgency-icon">🔥</span>
+                                <span>Limited spots left in the upcoming batch - Filling fast!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="success-card floating">
+                        <div class="success-header">
+                            <div class="success-avatar">
+                                <img src="/images/nodejs-testimonial-1.jpg" alt="Node.js Developer Success Story">
+                            </div>
+                            <div class="success-info">
+                                <div class="success-name">Arjun Singh</div>
+                                <div class="success-role">Fresher → Backend Developer</div>
+                            </div>
+                        </div>
+                        <div class="success-metrics">
+                            <div class="metric">
+                                <span class="metric-value">₹8.5 LPA</span>
+                                <span class="metric-label">Starting Salary</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">2 Months</span>
+                                <span class="metric-label">To Job Placement</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-badges">
+                        <div class="badge">🚀 Node.js Expert</div>
+                        <div class="badge">🗄️ Database Master</div>
+                        <div class="badge">⚡ API Specialist</div>
+                    </div>
+                    
+                    <div class="growth-chart">
+                        <div class="chart-title">Skills & Career Growth</div>
+                        <div class="chart-bars">
+                            <div class="bar" style="height: 25%!important;">
+                                <span class="bar-label">Before</span>
+                            </div>
+                            <div class="bar" style="height: 90%!important;">
+                                <span class="bar-label">After 3 Months</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Different Section -->
+    <section class="why-different">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why This Course is Different</h2>
+                <p>Other courses teach theory. We teach practical Node.js development with real-world backend projects.</p>
+            </div>
+            
+            <div class="comparison-table">
+                <div class="comparison-row">
+                    <div class="comparison-label">&nbsp;</div>
+                    <div class="comparison-col">
+                        <h3>Traditional Courses</h3>
+                    </div>
+                    <div class="comparison-col highlight">
+                        <h3>Our Node.js Program</h3>
+                    </div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-label">Learning Approach</div>
+                    <div class="comparison-col">
+                        <span class="comparison-text">Theory-heavy lectures</span>
+                    </div>
+                    <div class="comparison-col highlight">
+                        <span class="comparison-text">Hands-on project-based learning</span>
+                    </div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-label">Course Duration</div>
+                    <div class="comparison-col">
+                        <span class="comparison-text">6+ months basic coverage</span>
+                    </div>
+                    <div class="comparison-col highlight">
+                        <span class="comparison-text">3 months intensive mastery</span>
+                    </div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-label">Technology Stack</div>
+                    <div class="comparison-col">
+                        <span class="comparison-text">Node.js basics only</span>
+                    </div>
+                    <div class="comparison-col highlight">
+                        <span class="comparison-text">Node.js + Express + MongoDB + APIs + Testing</span>
+                    </div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-label">Project Portfolio</div>
+                    <div class="comparison-col">
+                        <span class="comparison-text">1-2 basic projects</span>
+                    </div>
+                    <div class="comparison-col highlight">
+                        <span class="comparison-text">6+ production-ready backend applications</span>
+                    </div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-label">Industry Readiness</div>
+                    <div class="comparison-col">
+                        <span class="comparison-text">Basic Node.js knowledge</span>
+                    </div>
+                    <div class="comparison-col highlight">
+                        <span class="comparison-text">Full backend development skills</span>
+                    </div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-label">Mentorship</div>
+                    <div class="comparison-col">
+                        <span class="comparison-text">Limited instructor interaction</span>
+                    </div>
+                    <div class="comparison-col highlight">
+                        <span class="comparison-text">1:1 mentorship with industry expert</span>
+                    </div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-label">Job Preparation</div>
+                    <div class="comparison-col">
+                        <span class="comparison-text">Basic certificate only</span>
+                    </div>
+                    <div class="comparison-col highlight">
+                        <span class="comparison-text">Portfolio + Interview prep + Job support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Overview Section -->
+    <section class="curriculum-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>12-Week Node.js Mastery Program</h2>
+                <p>Master backend development through comprehensive modules with hands-on projects</p>
+            </div>
+            
+            <div class="curriculum-timeline">
+                <div class="week-module">
+                    <div class="week-number">Week 1-2</div>
+                    <div class="week-content">
+                        <h3>Node.js Foundation & Setup </h3>
+                        <p class="week-goal"><strong>Goal:</strong> Master Node.js fundamentals and build your first server application</p>
+                        
+                        <div class="learning-objectives">
+                            <h4> Learning Objectives:</h4>
+                            <ul>
+                                <li>Understand Node.js architecture and event loop</li>
+                                <li>Master Node.js installation and development environment</li>
+                                <li>Learn module system and file operations</li>
+                                <li>Build and deploy your first Node.js application</li>
+                            </ul>
+                        </div>
+
+                        <div class="week-details">
+                            <div class="module-breakdown">
+                                <h4> Module Breakdown:</h4>
+                                
+                                <div class="week-detail">
+                                    <h5>Welcome & Node.js Introduction (2 Hours)</h5>
+                                    <ul>
+                                        <li>What is Node.js and why use it?</li>
+                                        <li>Installing Node.js & VS Code setup</li>
+                                        <li>Understanding the event loop and non-blocking I/O</li>
+                                        <li>Writing your first Node.js script</li>
+                                        <li>Node.js vs browser JavaScript differences</li>
+                                    </ul>
+                                    <p class="project-section"</strong> Create and run your first Node.js application</p>
+                                </div>
+
+                                <div class="week-detail">
+                                    <h5>Node.js Module System (3 Hours)</h5>
+                                    <ul>
+                                        <li>Understanding core modules (fs, path, os, http)</li>
+                                        <li>Importing your own files and modules</li>
+                                        <li>Working with npm and package.json</li>
+                                        <li>Installing and using npm modules</li>
+                                        <li>Global npm modules and nodemon setup</li>
+                                    </ul>
+                                    <p class="project-section"><strong>Hands-On:</strong> Build modular Node.js applications with npm packages</p>
+                                </div>
+
+                                <div class="week-detail">
+                                    <h5>File System & Command Line (3 Hours)</h5>
+                                    <ul>
+                                        <li>Getting input from users via command line</li>
+                                        <li>Parsing command line arguments with Yargs</li>
+                                        <li>Working with JSON data storage</li>
+                                        <li>Building a notes application with CRUD operations</li>
+                                        <li>Adding, removing, listing, and reading notes</li>
+                                    </ul>
+                                    <p class="project-section"><strong>Hands-On:</strong> Create a command-line notes management application</p>
+                                </div>
+                            </div>
+
+                            <div class="outcome-section">
+                                <h4>✅ Week Outcome:</h4>
+                                <p>Build a functional command-line application with file operations and user input</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="week-module">
+                    <div class="week-number">Week 3-4</div>
+                    <div class="week-content">
+                        <h3>ES6 Features & Asynchronous Programming </h3>
+                        <p class="week-goal"><strong>Goal:</strong> Master modern JavaScript features and asynchronous programming patterns</p>
+                        
+                        <div class="learning-objectives">
+                            <h4> Learning Objectives:</h4>
+                            <ul>
+                                <li>Master ES6+ features for Node.js development</li>
+                                <li>Understand asynchronous programming concepts</li>
+                                <li>Learn debugging techniques and error handling</li>
+                                <li>Build applications with HTTP requests and callbacks</li>
+                            </ul>
+                        </div>
+
+                        <div class="week-details">
+                            <div class="module-breakdown">
+                                <h4> Module Breakdown:</h4>
+                                
+                                <div class="week-detail">
+                                    <h5>ES6 & Debugging (3 Hours)</h5>
+                                    <ul>
+                                        <li>ES6 arrow functions and their benefits</li>
+                                        <li>Object and array destructuring</li>
+                                        <li>ES6 object shorthand syntax</li>
+                                        <li>Debugging Node.js applications</li>
+                                        <li>Reading and understanding error messages</li>
+                                    </ul>
+                                    <p class="project-section"><strong>Hands-On:</strong> Refactor applications using modern ES6 features</p>
+                                </div>
+
+                                <div class="week-detail">
+                                    <h5>Asynchronous Node.js (5 Hours)</h5>
+                                    <ul>
+                                        <li>Understanding async basics and the event loop</li>
+                                        <li>Making HTTP requests to external APIs</li>
+                                        <li>Handling errors in asynchronous operations</li>
+                                        <li>Working with callbacks and callback patterns</li>
+                                        <li>Callback chaining and abstraction techniques</li>
+                                        <li>Introduction to Promises and async/await</li>
+                                    </ul>
+                                    <p class="project-section"><strong>Hands-On:</strong> Build weather application with external API integration</p>
+                                </div>
+                            </div>
+
+                            <div class="outcome-section">
+                                <h4>✅ Week Outcome:</h4>
+                                <p>Master asynchronous programming and build applications with external API integration</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="week-module">
+                    <div class="week-number">Week 5-6</div>
+                    <div class="week-content">
+                        <h3>Web Servers with Express </h3>
+                        <p class="week-goal"><strong>Goal:</strong> Master Express.js framework and build dynamic web applications</p>
+                        
+                        <div class="learning-objectives">
+                            <h4> Learning Objectives:</h4>
+                            <ul>
+                                <li>Master Express.js framework fundamentals</li>
+                                <li>Build dynamic web applications with templating</li>
+                                <li>Serve static assets and handle routing</li>
+                                <li>Create JSON APIs and handle HTTP methods</li>
+                            </ul>
+                        </div>
+
+                        <div class="week-details">
+                            <div class="module-breakdown">
+                                <h4> Module Breakdown:</h4>
+                                
+                                <div class="week-detail">
+                                    <h5>Express Fundamentals (4 Hours)</h5>
+                                    <ul>
+                                        <li>Introduction to Express.js framework</li>
+                                        <li>Setting up Express server and basic routing</li>
+                                        <li>Serving HTML, JSON, and static assets</li>
+                                        <li>Working with dynamic templating using Handlebars</li>
+                                        <li>Creating 404 error pages and custom styling</li>
+                                    </ul>
+                                    <p class="project-section"><strong>Hands-On:</strong> Build dynamic web application with Express and Handlebars</p>
+                                </div>
+
+                                <div class="week-detail">
+                                    <h5>APIs and Browser Integration (4 Hours)</h5>
+                                    <ul>
+                                        <li>Understanding query strings and URL parameters</li>
+                                        <li>Creating JSON endpoints for frontend consumption</li>
+                                        <li>Fetching data from browser using JavaScript</li>
+                                        <li>Building search forms and UI integration</li>
+                                        <li>Handling form submissions and data processing</li>
+                                    </ul>
+                                    <p class="project-section"><strong>Hands-On:</strong> Create weather web app with search functionality</p>
+                                </div>
+                            </div>
+
+                            <div class="outcome-section">
+                                <h4>✅ Week Outcome:</h4>
+                                <p>Build complete web applications with Express, templating, and API integration</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="week-module">
+                    <div class="week-number">Week 7-8</div>
+                    <div class="week-content">
+                        <h3>Application Deployment & MongoDB </h3>
+                        <p class="week-goal"><strong>Goal:</strong> Master deployment strategies and database integration with MongoDB</p>
+                        
+                        <div class="learning-objectives">
+                            <h4> Learning Objectives:</h4>
+                            <ul>
+                                <li>Deploy Node.js applications to production</li>
+                                <li>Master Git version control and GitHub workflows</li>
+                                <li>Learn MongoDB database operations</li>
+                                <li>Implement data persistence and CRUD operations</li>
+                            </ul>
+                        </div>
+
+                        <div class="week-details">
+                            <div class="module-breakdown">
+                                <h4> Module Breakdown:</h4>
+                                
+                                <div class="week-detail">
+                                    <h5>Application Deployment (4 Hours)</h5>
+                                    <ul>
+                                        <li>Git and GitHub setup for version control</li>
+                                        <li>Deploying to Railway platform</li>
+                                        <li>SSH keys setup and management</li>
+                                        <li>Understanding deployment workflows</li>
+                                        <li>Using PM2 for process management</li>
+                                        <li>Environment variables and production configuration</li>
+                                    </ul>
+                                    <p class="project-section"><strong>Hands-On:</strong> Deploy Express applications to production</p>
+                                </div>
+
+                                <div class="week-detail">
+                                    <h5>MongoDB & Promises (4 Hours)</h5>
+                                    <ul>
+                                        <li>Installing and setting up MongoDB</li>
+                                        <li>Understanding NoSQL vs SQL databases</li>
+                                        <li>Inserting, querying, updating, and deleting documents</li>
+                                        <li>Working with ObjectID and data relationships</li>
+                                        <li>Using Promises for database operations</li>
+                                        <li>Error handling in database operations</li>
+                                    </ul>
+                                    <p class="project-section"><strong>Hands-On:</strong> Build applications with MongoDB data persistence</p>
+                                </div>
+                            </div>
+
+                            <div class="outcome-section">
+                                <h4>✅ Week Outcome:</h4>
+                                <p>Deploy production applications and integrate MongoDB for data persistence</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="week-module">
+                    <div class="week-number">Week 9-10</div>
+                    <div class="week-content">
+                        <h3>REST APIs & Mongoose </h3>
+                        <p class="week-goal"><strong>Goal:</strong> Master REST API development and advanced database operations with Mongoose</p>
+                        
+                        <div class="learning-objectives">
+                            <h4> Learning Objectives:</h4>
+                            <ul>
+                                <li>Design and build RESTful APIs</li>
+                                <li>Master Mongoose ODM for MongoDB</li>
+                                <li>Implement data validation and error handling</li>
+                                <li>Use async/await for modern asynchronous programming</li>
+                            </ul>
+                        </div>
+
+                        <div class="week-details">
+                            <div class="module-breakdown">
+                                <h4> Module Breakdown:</h4>
+                                
+                                <div class="week-detail">
+                                    <h5>REST APIs & Mongoose Setup (4 Hours)</h5>
+                                    <ul>
+                                        <li>Understanding REST API principles and design</li>
+                                        <li>Setting up Mongoose ODM for MongoDB</li>
+                                        <li>Creating data models with validation</li>
+                                        <li>Structuring REST API endpoints</li>
+                                        <li>HTTP methods: GET, POST, PUT, DELETE</li>
+                                    </ul>
+                                    <p class="project-section"><strong>Hands-On:</strong> Design and implement RESTful API structure</p>
+                                </div>
+
+                                <div class="week-detail">
+                                    <h5>CRUD Operations & Async/Await (4 Hours)</h5>
+                                    <ul>
+                                        <li>Implementing Create, Read, Update, Delete endpoints</li>
+                                        <li>Data validation and error handling</li>
+                                        <li>Using async/await for cleaner asynchronous code</li>
+                                        <li>Testing API endpoints with Postman</li>
+                                        <li>API documentation and best practices</li>
+                                    </ul>
+                                    <p class="project-section"><strong>Hands-On:</strong> Build complete CRUD API with validation and testing</p>
+                                </div>
+                            </div>
+
+                            <div class="outcome-section">
+                                <h4>✅ Week Outcome:</h4>
+                                <p>Build production-ready REST APIs with proper validation and error handling</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="week-module">
+                    <div class="week-number">Week 11</div>
+                    <div class="week-content">
+                        <h3>Authentication, Security & Advanced Features </h3>
+                        <p class="week-goal"><strong>Goal:</strong> Implement authentication, security measures, and advanced API features</p>
+                        
+                        <div class="learning-objectives">
+                            <h4> Learning Objectives:</h4>
+                            <ul>
+                                <li>Implement secure user authentication</li>
+                                <li>Master JWT tokens and middleware</li>
+                                <li>Add file upload capabilities</li>
+                                <li>Implement email functionality</li>
+                            </ul>
+                        </div>
+
+                        <div class="week-details">
+                            <div class="module-breakdown">
+                                <h4> Module Breakdown:</h4>
+                                
+                                <div class="week-detail">
+                                    <h5>API Authentication & Security (3 Hours)</h5>
+                                    <ul>
+                                        <li>Password hashing with bcrypt</li>
+                                        <li>JWT (JSON Web Token) authentication</li>
+                                        <li>Creating authentication middleware</li>
+                                        <li>Securing API endpoints</li>
+                                        <li>Implementing cascade deletes</li>
+                                        <li>Adding sorting, pagination, and filtering</li>
+                                    </ul>
+                                    <p class="project-section"><strong>Hands-On:</strong> Secure APIs with JWT authentication and middleware</p>
+                                </div>
+
+                                <div class="week-detail">
+                                    <h5>File Uploads & Email Integration (3 Hours)</h5>
+                                    <ul>
+                                        <li>Setting up Multer/Express-file-upload for file uploads</li>
+                                        <li>Image upload validation and error handling</li>
+                                        <li>Image formatting with Sharp library</li>
+                                        <li>ZohoZepto setup for email functionality</li>
+                                        <li>Sending welcome and cancellation emails</li>
+                                        <li>Environment variables for production</li>
+                                    </ul>
+                                    <p class="project-section"><strong>Hands-On:</strong> Add file upload and email features to APIs</p>
+                                </div>
+                            </div>
+
+                            <div class="outcome-section">
+                                <h4>✅ Week Outcome:</h4>
+                                <p>Build secure, feature-rich APIs with authentication, file uploads, and email integration</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="week-module">
+                    <div class="week-number">Week 12</div>
+                    <div class="week-content">
+                        <h3>Testing & Final Project </h3>
+                        <p class="week-goal"><strong>Goal:</strong> Master testing practices and build a comprehensive final project</p>
+                        
+                        <div class="learning-objectives">
+                            <h4> Learning Objectives:</h4>
+                            <ul>
+                                <li>Implement comprehensive testing strategies</li>
+                                <li>Test APIs and authentication flows</li>
+                                <li>Build a complete production-ready application</li>
+                                <li>Deploy and document your final project</li>
+                            </ul>
+                        </div>
+
+                        <div class="week-details">
+                            <div class="module-breakdown">
+                                <h4> Module Breakdown:</h4>
+                                
+                                <div class="week-detail">
+                                    <h5>Testing Node.js Applications (3 Hours)</h5>
+                                    <ul>
+                                        <li>Introduction to Jest testing framework</li>
+                                        <li>Writing unit tests and assertions</li>
+                                        <li>Testing asynchronous code and promises</li>
+                                        <li>Testing Express applications and routes</li>
+                                        <li>Authentication testing strategies</li>
+                                        <li>Mocking and advanced testing techniques</li>
+                                    </ul>
+                                    <p class="project-section"><strong>Hands-On:</strong> Write comprehensive tests for Node.js applications</p>
+                                </div>
+
+                                <div class="week-detail">
+                                    <h5>Final Project: Student Registration Portal (3 Hours)</h5>
+                                    <ul>
+                                        <li>Designing a RESTful Student Registration API</li>
+                                        <li>Implementing CRUD operations for students</li>
+                                        <li>Registration, updates, and deletion endpoints</li>
+                                        <li>Advanced validation and error handling</li>
+                                        <li>Connecting frontend forms to API</li>
+                                        <li>Securing endpoints with JWT and middleware</li>
+                                        <li>Deploying with PM2 and Railway</li>
+                                    </ul>
+                                    <p class="project-section"><strong>Hands-On:</strong> Build and deploy complete student management system</p>
+                                </div>
+                            </div>
+
+                            <div class="outcome-section">
+                                <h4>✅ Week Outcome:</h4>
+                                <p>Complete a production-ready Node.js application with testing and deployment</p>
+                            </div>
+                            
+                            <div class="project-section">
+                                <h4>🚀 Final Project Portfolio:</h4>
+                                <div class="project-details">
+                                    <h5>Student Registration Portal API</h5>
+                                    <ul>
+                                        <li><strong>Backend:</strong> Node.js with Express framework</li>
+                                        <li><strong>Database:</strong> MongoDB with Mongoose ODM</li>
+                                        <li><strong>Authentication:</strong> JWT-based secure authentication</li>
+                                        <li><strong>Features:</strong> CRUD operations, file uploads, email integration</li>
+                                        <li><strong>Testing:</strong> Comprehensive Jest test suite</li>
+                                        <li><strong>Deployment:</strong> Production deployment with PM2</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience Section -->
+    <section class="target-audience">
+        <div class="container">
+            <div class="section-header">
+                <h2>Who Should Join This Program?</h2>
+                <p>Perfect for aspiring backend developers and professionals looking to master Node.js development</p>
+            </div>
+            
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="audience-icon">🎓</div>
+                    <h3>Students & Freshers</h3>
+                    <p>Computer science students or recent graduates wanting to build strong backend development skills for their first job</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">💻</div>
+                    <h3>Frontend Developers</h3>
+                    <p>Frontend developers who want to become full-stack by mastering backend development with Node.js</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">🔄</div>
+                    <h3>Career Switchers</h3>
+                    <p>Professionals from other fields looking to transition into backend development with comprehensive skills</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">⬆️</div>
+                    <h3>Skill Upgraders</h3>
+                    <p>Working developers wanting to specialize in Node.js and modern backend development practices</p>
+                </div>
+            </div>
+            
+            <div class="tech-stack">
+                <h3>Complete Technology Stack You'll Master</h3>
+                <div class="tech-grid">
+                    <div class="tech-item">Node.js</div>
+                    <div class="tech-item">JavaScript ES6+</div>
+                    <div class="tech-item">Express.js</div>
+                    <div class="tech-item">MongoDB</div>
+                    <div class="tech-item">Mongoose ODM</div>
+                    <div class="tech-item">REST APIs</div>
+                    <div class="tech-item">JWT Authentication</div>
+                    <div class="tech-item">bcrypt</div>
+                    <div class="tech-item">Multer/Express-file-upload</div>
+                    <div class="tech-item">Sharp</div>
+                    <div class="tech-item">ZohoZepto</div>
+                    <div class="tech-item">Jest Testing</div>
+                    <div class="tech-item">Async/Await</div>
+                    <div class="tech-item">Promises</div>
+                    <div class="tech-item">Handlebars</div>
+                    <div class="tech-item">Git & GitHub</div>
+                    <div class="tech-item">Railway Deployment</div>
+                    <div class="tech-item">PM2</div>
+                    <div class="tech-item">Environment Variables</div>
+                    <div class="tech-item">API Documentation</div>
+                    <div class="tech-item">Error Handling</div>
+                    <div class="tech-item">Data Validation</div>
+                    <div class="tech-item">File Uploads</div>
+                    <div class="tech-item">Email Integration</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="success-stories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Success Stories from Backend Developers</h2>
+                <p>Hear from graduates who transformed their careers with comprehensive Node.js training</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="/images/nodejs-testimonial-1.jpg" alt="Arjun Singh" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Arjun Singh</h4>
+                            <p>Backend Developer at Infosys</p>
+                        </div>
+                    </div>
+                    <blockquote>
+                        <p>"This 3-month program was incredibly comprehensive and practical. I went from knowing basic JavaScript to building complete backend APIs with authentication and database integration. The hands-on approach made all the difference in landing my first backend developer job."</p>
+                    </blockquote>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="/images/nodejs-testimonial-2.jpg" alt="Govind Adhikari" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Govind Adhikari</h4>
+                            <p>Full Stack Developer at TCS</p>
+                        </div>
+                    </div>
+                    <blockquote>
+                        <p>"Coming from a frontend background, this course helped me master the backend completely. The progression from Node.js basics to building production APIs with MongoDB and authentication was perfect. Dinesh's teaching style made complex concepts easy to understand."</p>
+                    </blockquote>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="/images/nodejs-testimonial-3.jpg" alt="Vishal Yadav" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Vishal Yadav</h4>
+                            <p>Node.js Developer at Wipro</p>
+                        </div>
+                    </div>
+                    <blockquote>
+                        <p>"The final project - Student Registration Portal - was amazing. It covered everything from API design to deployment. The testing module with Jest was particularly valuable. I now feel confident building and deploying production-ready Node.js applications."</p>
+                    </blockquote>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="/images/nodejs-testimonial-4.jpg" alt="Manish Patil" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Manish Patil</h4>
+                            <p>API Developer at HCL</p>
+                        </div>
+                    </div>
+                    <blockquote>
+                        <p>"As a career switcher from non-tech background, I was worried about the learning curve. But the structured approach from basics to advanced topics, combined with practical projects, gave me confidence to successfully transition into backend development."</p>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Know More About Course Instructor Section -->
+    <section class="instructor-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Know More About Course Instructor</h2>
+            </div>
+            
+            <div class="instructor-card">
+                <div class="instructor-photo">
+                    <img src="/images/dinesh.png" alt="Dinesh Rawat" class="instructor-avatar">
+                </div>
+                <div class="instructor-info">
+                    <h3 class="instructor-name">Dinesh Rawat</h3>
+                    <div class="instructor-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Experience:</span>
+                            <span class="detail-value">15+ Years</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Expertise:</span>
+                            <span class="detail-value">Senior Backend Developer & Node.js Specialist</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">LinkedIn:</span>
+                            <span class="detail-value">
+                                <a target="_blank" href="https://www.linkedin.com/in/dinesh-rawat-leadwithskills/">
+                                <img class="social-media-logo" alt="Linkedin Logo" src="/images/LinkedIn_logo.png">
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="instructor-description">
+                        <p>Dinesh Rawat is a Senior Backend Developer with over 15 years of experience in server-side development and system architecture. He specializes in Node.js, Express.js, MongoDB, and building scalable backend systems.</p>
+                        <p>As an expert trainer who has mentored 200+ students, Dinesh brings real-world expertise in building production-grade APIs, implementing security best practices, and deploying applications at scale. His practical approach ensures students master both theoretical concepts and hands-on implementation.</p>
+                        <p>He is passionate about making backend development accessible and practical, helping students build robust, secure, and scalable server-side applications from day one.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Section -->
+    <section class="certificate-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="certificate-content">
+                        <div class="certificate-badge">
+                            <span class="badge-icon">🏆</span>
+                            <span>Industry-Recognized Certification</span>
+                        </div>
+                        <h2>Node.js Backend Developer Certificate</h2>
+                        <p class="certificate-description">
+                            Upon successful completion of the program, you'll receive an industry-recognized certificate that validates your expertise in Node.js backend development, REST API design, database integration, and production deployment skills.
+                        </p>
+                        
+                        <div class="certificate-benefits">
+                            <div class="benefit-item">
+                                <i class="fas fa-globe-americas benefit-icon"></i>
+                                <span>Industry-recognized Node.js development credential</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fab fa-linkedin benefit-icon"></i>
+                                <span>Digital badge showcasing backend skills for LinkedIn</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-shield-alt benefit-icon"></i>
+                                <span>Verification system for Node.js developer skills</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="certificate-image-container">
+                        <img src="/images/full-stack-developer-course-demo-certificate.avif" alt="Lead With Skills Node.js Development Certificate" class="certificate-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Callback Section -->
+    <section class="callback-section">
+        <div class="container">
+            <div class="callback-content">
+                <div class="callback-info">
+                    <div class="callback-badge">
+                        <span class="badge-icon">📞</span>
+                        <span>Free Career Consultation</span>
+                    </div>
+                    <h2>Ready to Become a Backend Developer?</h2>
+                    <p class="callback-subtitle">Get personalized guidance from our Node.js experts. We'll help you understand how backend development can accelerate your tech career.</p>
+                    
+                    <div class="callback-benefits">
+                        <div class="benefit-item">
+                            <span class="benefit-icon">✅</span>
+                            <span>Discuss your current skill level and goals</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">✅</span>
+                            <span>Get detailed Node.js curriculum walkthrough</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">✅</span>
+                            <span>Understand backend developer job market</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">✅</span>
+                            <span>Learn about training options and support</span>
+                        </div>
+                    </div>
+                    
+                    <div class="callback-guarantee">
+                        <span class="guarantee-icon"></span>
+                        <span>15-minute call • No sales pressure • Expert guidance</span>
+                    </div>
+                </div>
+                
+                <div class="callback-form-container">
+                    <div class="callback-form-header">
+                        <h3>Request a Callback</h3>
+                        <p>Fill the form and we'll call you within 2 hours</p>
+                    </div>
+                    
+                    <form class="callback-form" id="callbackForm">
+                        <div class="form-group">
+                            <label for="callbackName">Full Name *</label>
+                            <input type="text" id="callbackName" name="callbackName" required placeholder="Enter your full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="callbackEmail">Email Address *</label>
+                            <input type="email" id="callbackEmail" name="callbackEmail" required placeholder="Enter your email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="callbackPhone">Phone Number *</label>
+                            <input type="tel" id="callbackPhone" name="callbackPhone" required placeholder="Enter your phone number">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="courseInterest">Select Course Interest *</label>
+                            <select required>
+                                <option value="">Select Course Interest</option>
+                                <option value="technical-product-manager">Technical Product Manager</option>
+                                <option value="manual-testing-fundamentals">Manual Testing Fundamentals</option>
+                                <option value="full-stack-angular-developer">Web Development with AI</option>
+                                <option value="manual-automation-testing">Manual & Full Stack Automation Testing</option>
+                                <option value="angular-training">Angular Training</option>
+                                <option value="nodejs-mastery" selected>Node.js Mastery</option>
+                                <option value="full-stack-developer-ai">Full Stack Developer (AI-Powered)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="callbackRole">Current Role</label>
+                            <select id="callbackRole" name="callbackRole">
+                                <option value="">Select your current role</option>
+                                <option value="student-fresher">Student / Fresher</option>
+                                <option value="frontend-developer">Frontend Developer</option>
+                                <option value="backend-developer">Backend Developer</option>
+                                <option value="full-stack-developer">Full Stack Developer</option>
+                                <option value="javascript-developer">JavaScript Developer</option>
+                                <option value="career-switcher">Career Switcher</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="callback-btn">
+                            Request Free Consultation
+                            <span class="btn-arrow">→</span>
+                        </button>
+                        
+                        <div class="callback-footer">
+                            <p>🔒 Your information is secure and will not be shared</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enrollment Section -->
+    <section class="enrollment-section" id="enrollment">
+        <div class="container">
+            <div class="enrollment-content">
+                <div class="enrollment-info">
+                    <div class="enrollment-badge">
+                        <span class="badge-icon">🚀</span>
+                        <span>Limited Time Offer</span>
+                    </div>
+                    <h2>Start Your Node.js Journey Today</h2>
+                    <p class="enrollment-subtitle">Join the next cohort of backend developers and master Node.js with hands-on projects and expert mentorship.</p>
+                    
+                    <div class="enrollment-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">⚡</span>
+                            <span>3-Month Intensive Program</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">💻</span>
+                            <span>Complete Backend Development</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🚀</span>
+                            <span>Production-Ready Projects</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">👨‍🏫</span>
+                            <span>Expert Mentorship by Dinesh</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"></span>
+                            <span>Lifetime Access to Materials</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🏆</span>
+                            <span>Node.js Developer Certificate</span>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-info">
+                        <div class="pricing-options">
+                            <div class="pricing-option">
+                                <div class="price-main">
+                                    <s class="black">&nbsp; ₹38,000/- &nbsp;</s> &nbsp;
+                                    <b>₹18499</b>
+                                </div>
+                                <div class="price-details">
+                                    <span class="price-note">Early bird offer • Expert mentorship</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-guarantee">3-day money-back guarantee • EMI options available</div>
+                    </div>
+                </div>
+                
+                <div class="enrollment-form">
+                    <div class="form-header">
+                        <h3>Secure Your Backend Developer Spot</h3>
+                        <p>Limited spots left - Start your Node.js journey today!</p>
+                    </div>
+                    
+                    <form class="enroll-form" id="enrollmentForm">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="courseInterest">Select Course Interest *</label>
+                            <select required>
+                                <option value="">Select Course Interest</option>
+                                <option value="technical-product-manager">Technical Product Manager</option>
+                                <option value="manual-testing-fundamentals">Manual Testing Fundamentals</option>
+                                <option value="full-stack-angular-developer">Web Development with AI</option>
+                                <option value="manual-automation-testing">Manual & Full Stack Automation Testing</option>
+                                <option value="angular-training">Angular Training</option>
+                                <option value="nodejs-mastery" selected>Node.js Mastery</option>
+                                <option value="full-stack-developer-ai">Full Stack Developer (AI-Powered)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="currentRole">Current Role</label>
+                            <select id="currentRole" name="currentRole">
+                                <option value="">Select your current role</option>
+                                <option value="student-fresher">Student / Fresher</option>
+                                <option value="frontend-developer">Frontend Developer</option>
+                                <option value="backend-developer">Backend Developer</option>
+                                <option value="full-stack-developer">Full Stack Developer</option>
+                                <option value="javascript-developer">JavaScript Developer</option>
+                                <option value="career-switcher">Career Switcher</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="experience">Current Experience Level *</label>
+                            <select id="experience" name="experience" required>
+                                <option value="">Select your experience level</option>
+                                <option value="beginner">Beginner (Basic JavaScript)</option>
+                                <option value="intermediate">Intermediate (Some backend experience)</option>
+                                <option value="experienced">Experienced (2+ years development)</option>
+                                <option value="nodejs-curious">Node.js Curious (Want to learn backend)</option>
+                                <option value="career-changer">Career Changer (Non-tech background)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="motivation">Why do you want to learn Node.js development?</label>
+                            <textarea id="motivation" name="motivation" rows="3" placeholder="Tell us about your goals with Node.js and backend development..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="enroll-btn">
+                            Enroll Now - ₹18499
+                            <span class="btn-subtext">Start Your Backend Developer Journey</span>
+                        </button>
+                        
+                        <div class="form-footer">
+                            <p>🔒 Secure payment • 3-day money back guarantee • Instant access</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about the Node.js Mastery program</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Do I need prior Node.js experience?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No prior Node.js experience is required. We start with Node.js fundamentals and gradually build up to advanced concepts. Basic JavaScript knowledge is recommended but not mandatory.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Can I complete this while working full-time?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! The program requires 8-10 hours per week including live sessions and practice. Evening sessions are available for working professionals, and all sessions are recorded for flexibility.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What technologies will I learn besides Node.js?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You'll master Express.js, MongoDB, Mongoose, REST APIs, JWT authentication, testing with Jest, file uploads, email integration, deployment with PM2, and production best practices.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Will this help me get a job as a backend developer?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You'll build a comprehensive portfolio with 6+ projects, receive job placement assistance, and gain skills that are in high demand. Our graduates typically find backend developer jobs within 2-3 months.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What is the final project?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You'll build a complete Student Registration Portal API with Node.js backend, MongoDB database, JWT authentication, file uploads, email integration, comprehensive testing, and production deployment.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What are the schedule & timings?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Program Duration: 12 Weeks (3 Months)<br>
+                        Format: Live sessions with recorded content for flexibility<br>
+                        Live Session Timings: Evening sessions (IST) on weekdays via Zoom<br>
+                        Time Commitment: 8-10 hours per week including self-study</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Do I get certification upon completion?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you'll receive an industry-recognized "Node.js Backend Developer Certificate" upon completion. This certificate validates your backend development skills with Node.js specialization.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What is the pricing structure?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><b>For Candidates from India:</b><br> 
+                        Course Fee: <s><b>Rs 38,000/-</b></s> <b>Rs ₹18499/-</b> (Early Bird Offer)<br><br>
+                        
+                        <b>For Candidates Outside India:</b><br> 
+                        Course Fee: <s><b>USD 456</b></s> <b>USD 312</b> (Early Bird Offer)<br><br>
+                        
+                        <small>EMI options available. The fees include all taxes and 18% GST.</small></p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>How will Node.js skills benefit my career?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Node.js developers are in high demand with excellent salary prospects. You'll be qualified for backend developer, full-stack developer, and API developer roles with starting salaries of ₹7-10 LPA for freshers.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What kind of career support do you provide?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide comprehensive career support including resume optimization, LinkedIn profile enhancement, mock technical interviews, portfolio review, and job referrals to companies seeking Node.js developers.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Who is this programme for?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>This programme is designed for students, freshers, frontend developers, career switchers, and professionals who want to master Node.js and backend development for career advancement.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What job roles will I be able to apply for after completing the course?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Job roles include: Backend Developer, Node.js Developer, Full Stack Developer, API Developer, Server-Side Developer, and JavaScript Developer positions across various industries.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What average salary will I get?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Node.js developers can expect competitive salaries. Freshers typically start at ₹7-10 LPA, while experienced developers can earn ₹15-25 LPA depending on skills and location.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>How do I know this programme's curriculum is industry-relevant?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our curriculum is designed by industry experts with 15+ years of experience, covers the latest Node.js features and best practices, and includes real-world projects that mirror actual industry requirements.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What happens if I miss a live session?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All live sessions are recorded and available immediately after the session. You can revisit them anytime, and our instructor provides additional support for any missed content during office hours.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>How will the projects help my portfolio?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You'll build 6+ production-ready projects including REST APIs, authentication systems, file upload services, and complete backend applications. These projects demonstrate your Node.js expertise and backend capabilities to potential employers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+        <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+    <h3>Programs</h3>
+    <!-- Technical & Product -->
+    <a href="/courses/technical-product-manager.html">Technical Product Manager</a>
+    <a href="/courses/ai-in-product-management.html">AI in Product Management</a>
+
+    <!-- Testing -->
+    <a href="/courses/manual-testing-fundamentals.html">Manual Testing Fundamentals</a>
+    <a href="/courses/manual-and-full-stack-automation-testing.html">Manual & Full Stack Automation Testing</a>
+
+    <!-- Web Development -->
+    <a href="/courses/web-designing-and-development/index.html">Web Designing & Development</a>
+    <a href="/courses/web-designing-and-development/html-mastery.html">HTML Mastery</a>
+    <a href="/courses/web-designing-and-development/css-mastery.html">CSS Mastery</a>
+    <a href="/courses/web-designing-and-development/javascript-mastery.html">JavaScript Mastery</a>
+    <a href="/courses/web-designing-and-development/angular-training.html">Angular Training</a>
+    <a href="/courses/web-designing-and-development/nodejs-mastery.html">Node.js Mastery</a>
+    <a href="/courses/full-stack-development.html">Full Stack Developer Program</a>
+
+    <!-- AI & Marketing -->
+    <a href="/courses/generative-ai-mastery.html">Generative AI Mastery</a>
+    <a href="/courses/prompt-engineering-excellence.html">Prompt Engineering Excellence</a>
+    <a href="/courses/digital-marketing-and-sustainability.html">Digital Marketing & Sustainability</a>
+</div>
+
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="/about-us.html">About Lead With Skills</a>
+                    <a href="/mentorship.html">Our Mentors</a>
+                    <a href="/success-stories.html">Success Stories</a>
+                    <a href="/careers.html">Careers</a>
+                    
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    
+                    <a href="#">Contact Us</a>
+                    <a href="/communities.html">Community</a>
+                    <a href="/terms-and-conditions.html">Terms of Service</a>
+                    <a href="/privacy-policy.html">Privacy Policy</a>
+                    <a href="/refund-policy.html">Refund/Cancellation Policy</a>
+                    
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">YouTube</a>
+                    <a href="#">Discord</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lead With Skills. All rights reserved. Built for ambitious professionals.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Callback Button -->
+    <div class="sticky-callback-btn" id="stickyCallbackBtn">
+        <button class="sticky-btn" onclick="scrollToCallback()">
+            <span class="btn-icon">📞</span>
+            <span class="btn-text">Request Callback</span>
+        </button>
+    </div>
+
+    <script defer src="/scripts/common.js"></script>
+</body>
+</html>

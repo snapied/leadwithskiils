@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    <link rel="icon" href="/images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Responsive Websites with Angular and Node.js | Lead With Skills</title>
+    <meta name="description" content="Learn how to build responsive websites using Angular and Node.js. Complete guide covering responsive design principles, Angular components, and Node.js backend integration.">
+    <meta name="keywords" content="responsive web design with Angular and Node.js, Angular responsive design, Node.js backend, full-stack development, mobile-first design">
+    <link rel="canonical" href="https://leadwithskills.com/blog-responsive-websites-angular-nodejs.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Building Responsive Websites with Angular and Node.js">
+    <meta property="og:description" content="Master responsive web development with Angular and Node.js. Learn best practices, implementation strategies, and career opportunities.">
+    <meta property="og:image" content="https://leadwithskills.com/images/blog-angular-nodejs.jpg">
+    <meta property="og:url" content="https://leadwithskills.com/blog-responsive-websites-angular-nodejs.html">
+    <meta property="og:type" content="article">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Building Responsive Websites with Angular and Node.js">
+    <meta name="twitter:description" content="Master responsive web development with Angular and Node.js. Learn best practices, implementation strategies, and career opportunities.">
+    <meta name="twitter:image" content="https://leadwithskills.com/images/blog-angular-nodejs.jpg">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Building Responsive Websites with Angular and Node.js",
+        "description": "Learn how to build responsive websites using Angular and Node.js. Complete guide covering responsive design principles, Angular components, and Node.js backend integration.",
+        "image": "https://leadwithskills.com/images/blog-angular-nodejs.jpg",
+        "author": {
+            "@type": "Organization",
+            "name": "Lead With Skills"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Lead With Skills",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://leadwithskills.com/images/logo.avif"
+            }
+        },
+        "datePublished": "2025-01-22",
+        "dateModified": "2025-01-22",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://leadwithskills.com/blog-responsive-websites-angular-nodejs.html"
+        },
+        "keywords": ["responsive web design", "Angular", "Node.js", "full-stack development", "mobile-first design"]
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo img {
+            height: 40px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #007bff;
+        }
+        
+        .cta-button {
+            background: #007bff;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #0056b3;
+        }
+        
+        /* Blog Content Styles */
+        .blog-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .blog-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .blog-meta {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        .blog-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 20px;
+        }
+        
+        .blog-content h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin: 2rem 0 1rem 0;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 0.5rem;
+        }
+        
+        .blog-content h3 {
+            color: #34495e;
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .blog-content ul, .blog-content ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+        
+        .blog-content li {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .highlight-box {
+            background: #f8f9fa;
+            border-left: 4px solid #007bff;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+        
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #e9ecef;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #007bff;
+            display: block;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            border: none;
+            color: white;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn {
+            background: white;
+            color: #667eea;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-btn.secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-btn.secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #3498db;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section ul li a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section ul li a:hover {
+            color: #3498db;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 1rem;
+            text-align: center;
+            color: #bdc3c7;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .blog-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .blog-content {
+                padding: 2rem 15px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <a href="/"><img src="/images/logo.avif" alt="Lead With Skills"/></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us.html">About</a></li>
+                <li><a href="/courses.html">Courses</a></li>
+                <li><a href="/mentorship.html">Mentorship</a></li>
+                <li><a href="/communities.html">Community</a></li>
+<li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses.html" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="blog-hero">
+            <div class="container">
+                <h1>Building Responsive Websites with Angular and Node.js</h1>
+                <div class="blog-meta">
+                    Published on January 22, 2025 | 12 min read | Full-Stack Development
+                </div>
+            </div>
+        </section>
+
+        <article class="blog-content">
+            <p>In today's mobile-first world, building responsive websites that work seamlessly across all devices is not just a nice-to-have—it's essential. When you combine the power of Angular for frontend development with Node.js for backend services, you get a robust full-stack solution that can handle modern web application demands.</p>
+
+            <p>This comprehensive guide will walk you through everything you need to know about <strong>responsive web design with Angular and Node.js</strong>, from fundamental concepts to advanced implementation strategies.</p>
+
+            <h2>Why Choose Angular and Node.js for Responsive Web Development?</h2>
+
+            <p>The combination of Angular and Node.js offers several compelling advantages for building responsive websites:</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">87%</span>
+                    <p>of developers prefer Angular for enterprise applications</p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">68%</span>
+                    <p>faster development with Node.js backend</p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">94%</span>
+                    <p>mobile compatibility with proper responsive design</p>
+                </div>
+            </div>
+
+            <ul>
+                <li><strong>Single Language:</strong> JavaScript across the entire stack</li>
+                <li><strong>Component-Based Architecture:</strong> Reusable, maintainable code</li>
+                <li><strong>Real-time Capabilities:</strong> Perfect for modern interactive applications</li>
+                <li><strong>Strong Community Support:</strong> Extensive libraries and resources</li>
+                <li><strong>Enterprise-Ready:</strong> Scalable and robust for large applications</li>
+            </ul>
+
+            <h2>Understanding Responsive Design Principles</h2>
+
+            <p>Before diving into Angular and Node.js specifics, let's establish the core principles of responsive design:</p>
+
+            <h3>1. Mobile-First Approach</h3>
+            <p>Start designing for mobile devices and progressively enhance for larger screens. This ensures optimal performance on all devices.</p>
+
+            <h3>2. Flexible Grid Systems</h3>
+            <p>Use CSS Grid and Flexbox to create layouts that adapt to different screen sizes automatically.</p>
+
+            <h3>3. Responsive Images and Media</h3>
+            <p>Implement adaptive images that load appropriate sizes based on device capabilities and screen resolution.</p>
+
+            <h3>4. Touch-Friendly Interfaces</h3>
+            <p>Design interactive elements with touch devices in mind, ensuring adequate spacing and sizing.</p>
+
+            <h2>Setting Up Your Angular and Node.js Development Environment</h2>
+
+            <p>Let's start by setting up a complete development environment for building responsive websites:</p>
+
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>Node.js (version 16 or higher)</li>
+                <li>Angular CLI</li>
+                <li>A code editor (VS Code recommended)</li>
+                <li>Git for version control</li>
+            </ul>
+
+            <pre class="code-block">
+# Install Angular CLI globally
+npm install -g @angular/cli
+
+# Create a new Angular project
+ng new responsive-web-app --routing --style=scss
+
+# Navigate to project directory
+cd responsive-web-app
+
+# Install additional dependencies
+npm install @angular/flex-layout @angular/cdk
+            </pre>
+
+            <h3>Setting Up Node.js Backend</h3>
+
+            <pre class="code-block">
+# Create backend directory
+mkdir backend && cd backend
+
+# Initialize Node.js project
+npm init -y
+
+# Install essential packages
+npm install express cors helmet morgan dotenv
+npm install -D nodemon concurrently
+            </pre>
+
+            <h2>Building Responsive Angular Components</h2>
+
+            <p>Angular's component-based architecture makes it ideal for creating responsive web applications. Here's how to build components that adapt to different screen sizes:</p>
+
+            <h3>Using Angular Flex Layout</h3>
+
+            <pre class="code-block">
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-responsive-header',
+  template: `
+    &lt;div fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px"&gt;
+      &lt;div fxFlex="30" fxFlex.xs="100"&gt;
+        &lt;img src="logo.png" alt="Logo" class="logo"&gt;
+      &lt;/div&gt;
+      &lt;div fxFlex="70" fxFlex.xs="100"&gt;
+        &lt;nav fxLayout="row" fxLayout.xs="column" fxLayoutGap="15px"&gt;
+          &lt;a href="#" fxFlex&gt;Home&lt;/a&gt;
+          &lt;a href="#" fxFlex&gt;About&lt;/a&gt;
+          &lt;a href="#" fxFlex&gt;Services&lt;/a&gt;
+          &lt;a href="#" fxFlex&gt;Contact&lt;/a&gt;
+        &lt;/nav&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  `,
+  styleUrls: ['./responsive-header.component.scss']
+})
+export class ResponsiveHeaderComponent { }
+            </pre>
+
+            <h3>Implementing Responsive Navigation</h3>
+
+            <div class="highlight-box">
+                <strong>Pro Tip:</strong> Use Angular's BreakpointObserver service to detect screen size changes and adjust your component behavior accordingly.
+            </div>
+
+            <pre class="code-block">
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+
+@Component({
+  selector: 'app-navigation',
+  template: `
+    &lt;mat-toolbar color="primary"&gt;
+      &lt;button mat-icon-button *ngIf="isMobile" (click)="toggleSidenav()"&gt;
+        &lt;mat-icon&gt;menu&lt;/mat-icon&gt;
+      &lt;/button&gt;
+      &lt;span&gt;My App&lt;/span&gt;
+      &lt;div *ngIf="!isMobile" class="nav-links"&gt;
+        &lt;a mat-button routerLink="/home"&gt;Home&lt;/a&gt;
+        &lt;a mat-button routerLink="/about"&gt;About&lt;/a&gt;
+        &lt;a mat-button routerLink="/contact"&gt;Contact&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/mat-toolbar&gt;
+  `
+})
+export class NavigationComponent {
+  isMobile = false;
+
+  constructor(private breakpointObserver: BreakpointObserver) {
+    this.isMobile = this.breakpointObserver.isMatched('(max-width: 768px)');
+  }
+}
+            </pre>
+
+            <h2>Node.js Backend for Responsive Applications</h2>
+
+            <p>A well-structured Node.js backend is crucial for serving responsive content efficiently. Here's how to set up your backend:</p>
+
+            <h3>Creating a RESTful API</h3>
+
+            <pre class="code-block">
+const express = require('express');
+const cors = require('cors');
+const helmet = require('helmet');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Middleware
+app.use(helmet());
+app.use(cors());
+app.use(express.json());
+app.use(express.static('public'));
+
+// API Routes
+app.get('/api/content/:deviceType', (req, res) => {
+  const { deviceType } = req.params;
+  
+  // Serve different content based on device type
+  const content = getContentForDevice(deviceType);
+  res.json(content);
+});
+
+// Responsive image serving
+app.get('/api/images/:imageName/:size', (req, res) => {
+  const { imageName, size } = req.params;
+  // Logic to serve appropriately sized images
+  res.sendFile(path.join(__dirname, 'images', size, imageName));
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+            </pre>
+
+            <h3>Implementing Content Delivery Optimization</h3>
+
+            <pre class="code-block">
+// Middleware for device detection
+const deviceDetection = (req, res, next) => {
+  const userAgent = req.headers['user-agent'];
+  
+  if (/mobile/i.test(userAgent)) {
+    req.deviceType = 'mobile';
+  } else if (/tablet/i.test(userAgent)) {
+    req.deviceType = 'tablet';
+  } else {
+    req.deviceType = 'desktop';
+  }
+  
+  next();
+};
+
+app.use(deviceDetection);
+            </pre>
+
+            <h2>Advanced Responsive Techniques</h2>
+
+            <h3>1. Progressive Web App (PWA) Features</h3>
+            <p>Transform your Angular application into a PWA for enhanced mobile experience:</p>
+
+            <pre class="code-block">
+# Add PWA support to Angular project
+ng add @angular/pwa
+
+# This automatically adds:
+# - Service worker
+# - Web app manifest
+# - App shell
+# - Offline functionality
+            </pre>
+
+            <h3>2. Lazy Loading for Performance</h3>
+            <p>Implement lazy loading to improve initial load times, especially important for mobile users:</p>
+
+            <pre class="code-block">
+const routes: Routes = [
+  {
+    path: 'feature',
+    loadChildren: () => import('./feature/feature.module').then(m => m.FeatureModule)
+  }
+];
+            </pre>
+
+            <h3>3. Responsive Images with Angular</h3>
+
+            <pre class="code-block">
+&lt;img 
+  [src]="getResponsiveImageSrc()" 
+  [srcset]="getResponsiveImageSrcset()"
+  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+  alt="Responsive image"
+  loading="lazy"&gt;
+            </pre>
+
+            <h2>Testing Responsive Design</h2>
+
+            <p>Thorough testing is crucial for responsive web applications. Here are the key testing strategies:</p>
+
+            <h3>Device Testing Checklist</h3>
+            <ul>
+                <li>Test on actual devices (phones, tablets, desktops)</li>
+                <li>Use browser developer tools for various screen sizes</li>
+                <li>Test touch interactions and gestures</li>
+                <li>Verify performance on slower networks</li>
+                <li>Check accessibility across devices</li>
+            </ul>
+
+            <h3>Automated Testing with Angular</h3>
+
+            <pre class="code-block">
+// Example responsive component test
+describe('ResponsiveComponent', () => {
+  it('should display mobile layout on small screens', () => {
+    // Mock BreakpointObserver
+    const breakpointObserver = TestBed.inject(BreakpointObserver);
+    spyOn(breakpointObserver, 'isMatched').and.returnValue(true);
+    
+    component.ngOnInit();
+    expect(component.isMobile).toBe(true);
+  });
+});
+            </pre>
+
+            <h2>Performance Optimization Strategies</h2>
+
+            <p>Optimizing performance is crucial for responsive websites, especially on mobile devices:</p>
+
+            <h3>Frontend Optimization</h3>
+            <ul>
+                <li><strong>Code Splitting:</strong> Break your application into smaller chunks</li>
+                <li><strong>Tree Shaking:</strong> Remove unused code from bundles</li>
+                <li><strong>Image Optimization:</strong> Use WebP format and appropriate sizing</li>
+                <li><strong>Caching Strategies:</strong> Implement effective caching mechanisms</li>
+            </ul>
+
+            <h3>Backend Optimization</h3>
+            <ul>
+                <li><strong>API Response Compression:</strong> Use gzip compression</li>
+                <li><strong>Database Query Optimization:</strong> Efficient data retrieval</li>
+                <li><strong>CDN Integration:</strong> Serve static assets from CDN</li>
+                <li><strong>Caching Layers:</strong> Implement Redis for session management</li>
+            </ul>
+
+            <h2>Career Opportunities and Market Demand</h2>
+
+            <p>The demand for developers skilled in responsive web design with Angular and Node.js continues to grow:</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">₹8-15L</span>
+                    <p>Average salary for Angular developers in India</p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">₹6-12L</span>
+                    <p>Average salary for Node.js developers</p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">₹12-25L</span>
+                    <p>Full-stack developers with both skills</p>
+                </div>
+            </div>
+
+            <h3>Popular Job Roles</h3>
+            <ul>
+                <li>Full-Stack Developer</li>
+                <li>Frontend Developer (Angular Specialist)</li>
+                <li>Backend Developer (Node.js)</li>
+                <li>UI/UX Developer</li>
+                <li>Technical Lead</li>
+                <li>Solution Architect</li>
+            </ul>
+
+            <h2>Best Practices and Common Pitfalls</h2>
+
+            <div class="highlight-box">
+                <h3>Best Practices:</h3>
+                <ul>
+                    <li>Always design mobile-first</li>
+                    <li>Use semantic HTML for better accessibility</li>
+                    <li>Implement proper error handling</li>
+                    <li>Follow Angular style guide conventions</li>
+                    <li>Use TypeScript effectively for type safety</li>
+                    <li>Implement proper security measures</li>
+                </ul>
+            </div>
+
+            <h3>Common Pitfalls to Avoid</h3>
+            <ul>
+                <li>Not testing on real devices</li>
+                <li>Ignoring performance on slower networks</li>
+                <li>Overcomplicating responsive breakpoints</li>
+                <li>Not optimizing images for different screen densities</li>
+                <li>Forgetting about accessibility requirements</li>
+            </ul>
+
+            <h2>Future Trends and Technologies</h2>
+
+            <p>Stay ahead of the curve by understanding emerging trends in responsive web development:</p>
+
+            <ul>
+                <li><strong>Angular Universal:</strong> Server-side rendering for better SEO</li>
+                <li><strong>Micro Frontends:</strong> Scalable architecture for large applications</li>
+                <li><strong>WebAssembly:</strong> High-performance web applications</li>
+                <li><strong>AI-Powered Responsive Design:</strong> Automatic layout optimization</li>
+                <li><strong>5G and Edge Computing:</strong> New possibilities for web applications</li>
+            </ul>
+
+            <h2>Getting Started: Your Learning Path</h2>
+
+            <p>Ready to master responsive web design with Angular and Node.js? Here's your step-by-step learning path:</p>
+
+            <ol>
+                <li><strong>Master the Fundamentals:</strong> HTML5, CSS3, JavaScript ES6+</li>
+                <li><strong>Learn Angular:</strong> Components, services, routing, and state management</li>
+                <li><strong>Understand Node.js:</strong> Server-side JavaScript, Express.js, APIs</li>
+                <li><strong>Practice Responsive Design:</strong> CSS Grid, Flexbox, media queries</li>
+                <li><strong>Build Real Projects:</strong> Create portfolio-worthy applications</li>
+                <li><strong>Learn Testing:</strong> Unit testing, integration testing, e2e testing</li>
+                <li><strong>Deploy and Monitor:</strong> Cloud deployment, performance monitoring</li>
+            </ol>
+
+            <div class="highlight-box">
+                <strong>Success Tip:</strong> The key to mastering responsive web design with Angular and Node.js is consistent practice and building real-world projects. Start with simple applications and gradually increase complexity as you gain confidence.
+            </div>
+
+            <h2>Conclusion</h2>
+
+            <p>Building responsive websites with Angular and Node.js offers a powerful combination for modern web development. The mobile-first approach, combined with Angular's component architecture and Node.js's server-side capabilities, creates robust, scalable applications that work seamlessly across all devices.</p>
+
+            <p>As the demand for responsive web applications continues to grow, mastering these technologies will open doors to exciting career opportunities in full-stack development. Whether you're building enterprise applications or startup MVPs, the skills you develop in responsive web design with Angular and Node.js will serve you well throughout your career.</p>
+
+            <p>Remember, the journey to becoming proficient in responsive web development is ongoing. Stay curious, keep practicing, and don't hesitate to seek mentorship when you need guidance. The investment in learning these skills will pay dividends in your career growth and the quality of applications you can build.</p>
+        </article>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Master Responsive Web Development?</h2>
+                <p>Join thousands of developers who have transformed their careers with our comprehensive Angular and Node.js programs. Get personalized mentorship and hands-on project experience.</p>
+                <div class="cta-buttons">
+                    <a href="mailto:mentorship@leadwithskills.com?subject=Angular%20and%20Node.js%20Mentorship%20Inquiry&body=Hi,%0D%0A%0D%0AI'm%20interested%20in%20learning%20more%20about%20your%20Angular%20and%20Node.js%20mentorship%20program.%20Please%20provide%20details%20about:%0D%0A%0D%0A-%20Course%20curriculum%20and%20duration%0D%0A-%20Mentorship%20approach%20and%20support%0D%0A-%20Project-based%20learning%20opportunities%0D%0A-%20Career%20guidance%20and%20placement%20assistance%0D%0A%0D%0AThank%20you!" class="cta-btn">Get Mentorship</a>
+                    <a href="mailto:courses@leadwithskills.com?subject=Full-Stack%20Development%20Course%20Inquiry&body=Hi,%0D%0A%0D%0AI'm%20interested%20in%20your%20full-stack%20development%20courses%20focusing%20on%20Angular%20and%20Node.js.%20Please%20share:%0D%0A%0D%0A-%20Available%20course%20options%0D%0A-%20Pricing%20and%20payment%20plans%0D%0A-%20Course%20schedule%20and%20format%0D%0A-%20Certification%20details%0D%0A%0D%0AThank%20you!" class="cta-btn secondary">Explore Courses</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+            <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+    <h3>Programs</h3>
+    <!-- Technical & Product -->
+    <a href="/courses/technical-product-manager.html">Technical Product Manager</a>
+    <a href="/courses/ai-in-product-management.html">AI in Product Management</a>
+
+    <!-- Testing -->
+    <a href="/courses/manual-testing-fundamentals.html">Manual Testing Fundamentals</a>
+    <a href="/courses/manual-and-full-stack-automation-testing.html">Manual & Full Stack Automation Testing</a>
+
+    <!-- Web Development -->
+    <a href="/courses/web-designing-and-development/index.html">Web Designing & Development</a>
+    <a href="/courses/web-designing-and-development/html-mastery.html">HTML Mastery</a>
+    <a href="/courses/web-designing-and-development/css-mastery.html">CSS Mastery</a>
+    <a href="/courses/web-designing-and-development/javascript-mastery.html">JavaScript Mastery</a>
+    <a href="/courses/web-designing-and-development/angular-training.html">Angular Training</a>
+    <a href="/courses/web-designing-and-development/nodejs-mastery.html">Node.js Mastery</a>
+    <a href="/courses/full-stack-development.html">Full Stack Developer Program</a>
+
+    <!-- AI & Marketing -->
+    <a href="/courses/generative-ai-mastery.html">Generative AI Mastery</a>
+    <a href="/courses/prompt-engineering-excellence.html">Prompt Engineering Excellence</a>
+    <a href="/courses/digital-marketing-and-sustainability.html">Digital Marketing & Sustainability</a>
+</div>
+
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="/about-us.html">About Lead With Skills</a>
+                    <a href="/mentorship.html">Our Mentors</a>
+                    <a href="/success-stories.html">Success Stories</a>
+                    <a href="/careers.html">Careers</a>
+                    
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    
+                    <a href="#">Contact Us</a>
+                    <a href="/communities.html">Community</a>
+                    <a href="/terms-and-conditions.html">Terms of Service</a>
+                    <a href="/privacy-policy.html">Privacy Policy</a>
+                    <a href="/refund-policy.html">Refund/Cancellation Policy</a>
+                    
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">YouTube</a>
+                    <a href="#">Discord</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lead With Skills. All rights reserved. Built for ambitious professionals.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
