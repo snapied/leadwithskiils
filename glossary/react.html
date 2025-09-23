@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React - Tech Glossary | Lead With Skills</title>
+    <meta name="description" content="Learn about React, the popular JavaScript library for building user interfaces. Comprehensive guide covering React concepts, components, and career opportunities.">
+    <meta name="keywords" content="React, JavaScript library, frontend development, components, JSX, React hooks">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/react">
+    <style>
+        
+
+        .breadcrumb {    
+            background-color: var(--Primary-25);
+            padding: 1rem 0;
+        }
+
+        .breadcrumb-nav {width:fit-content;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb-nav a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            padding: 3rem 0;
+        }
+
+        .term-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            background-color: var(--Primary-100);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            display: inline-block;
+            font-weight: 500;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .main-definition {
+            background-color: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .definition-text {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-card {
+            background-color: var(--card);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .info-card h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .stats-list {
+            list-style: none;
+        }
+
+        .stats-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .stats-list li:last-child {
+            border-bottom: none;
+        }
+
+        .related-terms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .related-term {
+            background-color: var(--Primary-25);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .related-term:hover {
+            background-color: var(--Primary-100);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--Primary-600) 100%);
+            color: var(--primary-foreground);
+            padding: 4rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-foreground);
+            color: var(--primary);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-foreground);
+            border: 2px solid var(--primary-foreground);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .term-title {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <section class="breadcrumb margin-top-80">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index">Home</a>
+                <span>›</span>
+                <a href="index">Glossary</a>
+                <span>›</span>
+                <span>React</span>
+            </nav>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="term-header">
+                <h1 class="term-title">React</h1>
+                <span class="term-category">JavaScript Library</span>
+            </div>
+
+            <div class="content-grid">
+                <div class="main-definition">
+                    <p class="definition-text">
+                        React is a popular JavaScript library developed by Facebook for building user interfaces, particularly web applications. It allows developers to create reusable UI components and efficiently manage the application state, making it easier to build complex, interactive user interfaces.
+                    </p>
+
+                    <div class="section">
+                        <h3>Core React Concepts</h3>
+                        <ul>
+                            <li><strong>Components:</strong> Reusable pieces of UI that can be composed together</li>
+                            <li><strong>JSX:</strong> JavaScript syntax extension that looks similar to HTML</li>
+                            <li><strong>Props:</strong> Properties passed from parent to child components</li>
+                            <li><strong>State:</strong> Data that changes over time within a component</li>
+                            <li><strong>Virtual DOM:</strong> In-memory representation of the real DOM for efficient updates</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h3>React Component Example</h3>
+                        <div class="code-block">
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;h2&gt;Count: {count}&lt;/h2&gt;
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+        Increment
+      &lt;/button&gt;
+      &lt;button onClick={() =&gt; setCount(count - 1)}&gt;
+        Decrement
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default Counter;
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h3>React Hooks</h3>
+                        <ul>
+                            <li><strong>useState:</strong> Manage component state</li>
+                            <li><strong>useEffect:</strong> Handle side effects and lifecycle events</li>
+                            <li><strong>useContext:</strong> Access React context values</li>
+                            <li><strong>useReducer:</strong> Manage complex state logic</li>
+                            <li><strong>useMemo:</strong> Optimize expensive calculations</li>
+                            <li><strong>useCallback:</strong> Optimize function references</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h3>React Ecosystem</h3>
+                        <ul>
+                            <li><strong>React Router:</strong> Client-side routing</li>
+                            <li><strong>Redux/Zustand:</strong> State management</li>
+                            <li><strong>Next.js:</strong> Full-stack React framework</li>
+                            <li><strong>Material-UI/Chakra UI:</strong> Component libraries</li>
+                            <li><strong>React Testing Library:</strong> Testing utilities</li>
+                            <li><strong>Storybook:</strong> Component development environment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sidebar">
+                    <div class="info-card">
+                        <h4>Career Impact</h4>
+                        <ul class="stats-list">
+                            <li><strong>Average Salary:</strong> $75,000 - $150,000</li>
+                            <li><strong>Job Growth:</strong> 13% (Faster than average)</li>
+                            <li><strong>Experience Level:</strong> Entry to Senior</li>
+                            <li><strong>Remote Friendly:</strong> Very High</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Learning Path</h4>
+                        <ol>
+                            <li>JavaScript Fundamentals</li>
+                            <li>HTML & CSS Basics</li>
+                            <li>React Fundamentals</li>
+                            <li>JSX and Components</li>
+                            <li>State and Props</li>
+                            <li>React Hooks</li>
+                            <li>React Router</li>
+                            <li>State Management</li>
+                            <li>Testing React Apps</li>
+                            <li>Next.js Framework</li>
+                        </ol>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Related Terms</h4>
+                        <div class="related-terms">
+                            <a href="javascript" class="related-term">JavaScript</a>
+                            <a href="frontend-development" class="related-term">Frontend Development</a>
+                            <a href="nodejs" class="related-term">Node.js</a>
+                            <a href="html" class="related-term">HTML</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Master React Development</h2>
+                <p>Join thousands of developers who've built amazing applications with React through Lead With Skills</p>
+                <div class="cta-buttons">
+                    <a href="../courses" class="btn btn-primary">Explore React Courses</a>
+                    <a href="../mentorship" class="btn btn-secondary">Get React Mentorship</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Lead With Skills. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

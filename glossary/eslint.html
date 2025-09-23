@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESLint - Lead With Skills Glossary</title>
+    <meta name="description" content="Learn about ESLint, the popular JavaScript linting tool that helps identify and fix code quality issues, enforce coding standards, and prevent bugs.">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/eslint">
+    <style>
+        
+
+        .breadcrumb {    
+            padding: 1rem 0;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .term-header {
+            background: linear-gradient(135deg, var(--Primary-25), var(--Primary-100));
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            background: var(--primary);
+            color: var(--primary-foreground);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            display: inline-block;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .term-summary {
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--Primary-100);
+            padding-bottom: 0.5rem;
+        }
+
+        .definition-card {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        .code-block {
+            background: #1f2937;
+            color: #f9fafb;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            overflow-x: auto;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: var(--card);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .feature-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: var(--Primary-25);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .related-terms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .related-term {
+            background: var(--Primary-100);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .related-term:hover {
+            background: var(--primary);
+            color: var(--primary-foreground);
+        }
+
+        .cta-section {
+            background: var(--primary);
+            color: var(--primary-foreground);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            background: var(--primary-foreground);
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: var(--primary-foreground);
+            border: 2px solid var(--primary-foreground);
+        }
+
+        footer {
+            background: var(--card);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--muted);
+        }
+
+        @media (max-width: 768px) {
+            .term-title {
+                font-size: 2rem;
+            }
+            
+            .features-grid,
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumb margin-top-80">
+            <a href="../index">Home</a> > <a href="index">Glossary</a> > ESLint
+        </div>
+    </div>
+
+    <section class="term-header">
+        <div class="container">
+            <div class="term-category">Code Quality Tool</div>
+            <h1 class="term-title">ESLint</h1>
+            <p class="term-summary">
+                A static code analysis tool for identifying problematic patterns in JavaScript code. 
+                ESLint helps maintain code quality, enforce coding standards, and catch potential bugs early.
+            </p>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="content-section">
+            <h2 class="section-title">Definition</h2>
+            <div class="definition-card">
+                <p>
+                    <strong>ESLint</strong> is a pluggable and configurable linter tool for identifying and reporting on patterns 
+                    in JavaScript code. It helps developers maintain consistent code style, catch syntax errors, and identify 
+                    potential runtime issues before they occur. ESLint is highly customizable and supports modern JavaScript 
+                    features, including ES6+, JSX, and TypeScript.
+                </p>
+            </div>
+
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-title">Configurable Rules</div>
+                    <p>Extensive set of rules that can be enabled, disabled, or customized to fit your coding standards.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-title">Plugin System</div>
+                    <p>Rich ecosystem of plugins for frameworks like React, Vue, Angular, and Node.js.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-title">Auto-fixing</div>
+                    <p>Automatically fix many code style issues and simple errors with the --fix flag.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-title">IDE Integration</div>
+                    <p>Seamless integration with popular editors like VS Code, Sublime Text, and Atom.</p>
+                </div>
+            </div>
+
+            <h2 class="section-title">Configuration Example</h2>
+            <pre class="code-block">
+// .eslintrc.js - ESLint configuration file
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+    node: true
+  },
+  extends: [
+    'eslint:recommended',
+    '@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended'
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true
+    },
+    ecmaVersion: 12,
+    sourceType: 'module'
+  },
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'react-hooks'
+  ],
+  rules: {
+    'indent': ['error', 2],
+    'linebreak-style': ['error', 'unix'],
+    'quotes': ['error', 'single'],
+    'semi': ['error', 'always'],
+    'no-unused-vars': 'error',
+    'no-console': 'warn',
+    'react/prop-types': 'off',
+    '@typescript-eslint/no-unused-vars': 'error'
+  },
+  settings: {
+    react: {
+      version: 'detect'
+    }
+  }
+};
+
+// package.json scripts
+{
+  "scripts": {
+    "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
+    "lint:fix": "eslint src/**/*.{js,jsx,ts,tsx} --fix",
+    "lint:check": "eslint src/**/*.{js,jsx,ts,tsx} --max-warnings 0"
+  }
+}
+
+// Example of ESLint catching issues
+function calculateTotal(items) {
+  let total = 0;
+  for (let i = 0; i < items.length; i++) {
+    total += items[i].price;
+  }
+  return total
+} // ESLint: Missing semicolon (semi)
+
+const unusedVariable = 'test'; // ESLint: 'unusedVariable' is assigned but never used
+            </pre>
+
+            <h2 class="section-title">Career Impact</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">JS Projects Use Linting</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">$80K+</div>
+                    <div class="stat-label">Frontend Developer Salary</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">25M+</div>
+                    <div class="stat-label">Weekly Downloads</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">Essential</div>
+                    <div class="stat-label">Code Quality Tool</div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Learning Path</h2>
+            <div class="definition-card">
+                <ol>
+                    <li><strong>JavaScript Fundamentals:</strong> Understand JavaScript syntax and best practices</li>
+                    <li><strong>ESLint Basics:</strong> Learn installation, configuration, and basic rule usage</li>
+                    <li><strong>Rule Configuration:</strong> Master different rule types and severity levels</li>
+                    <li><strong>Plugin Integration:</strong> Work with popular plugins for React, TypeScript, etc.</li>
+                    <li><strong>CI/CD Integration:</strong> Integrate ESLint into build pipelines and pre-commit hooks</li>
+                    <li><strong>Custom Rules:</strong> Create custom ESLint rules for specific project needs</li>
+                </ol>
+            </div>
+
+            <h2 class="section-title">Related Terms</h2>
+            <div class="related-terms">
+                <a href="javascript" class="related-term">JavaScript</a>
+                <a href="typescript" class="related-term">TypeScript</a>
+                <a href="react" class="related-term">React</a>
+                <a href="nodejs" class="related-term">Node.js</a>
+                <a href="webpack" class="related-term">Webpack</a>
+            </div>
+        </section>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Master JavaScript Development</h2>
+            <p class="cta-subtitle">
+                Join thousands of developers who've advanced their careers with our comprehensive JavaScript courses
+            </p>
+            <div class="cta-buttons">
+                <a href="../courses" class="cta-button">Explore Courses</a>
+                <a href="../mentorship" class="cta-button secondary">Get Mentorship</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Lead With Skills. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

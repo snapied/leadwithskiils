@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubernetes - Container Orchestration | Lead With Skills Glossary</title>
+    <meta name="description" content="Learn Kubernetes, the leading container orchestration platform. Master K8s concepts, deployment strategies, and cloud-native development.">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/kubernetes">
+    <style>
+        
+
+        .breadcrumb {    
+            background-color: var(--Primary-25);
+            padding: 1rem 0;
+        }
+
+        .breadcrumb-nav {width:fit-content;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .breadcrumb-nav a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb-nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        .term-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            display: inline-block;
+            background-color: var(--Primary-100);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .main-content {
+            background-color: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-card {
+            background-color: var(--card);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .sidebar-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .definition {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: var(--Primary-25);
+            border-left: 4px solid var(--primary);
+            border-radius: var(--radius);
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--Primary-100);
+            padding-bottom: 0.5rem;
+        }
+
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+
+        .highlight-box {
+            background-color: var(--Primary-25);
+            border: 1px solid var(--Primary-100);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .related-terms {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .related-term {
+            background-color: var(--Primary-25);
+            padding: 1rem;
+            border-radius: var(--radius);
+            text-align: center;
+            text-decoration: none;
+            color: var(--primary);
+            transition: all 0.3s;
+        }
+
+        .related-term:hover {
+            background-color: var(--Primary-100);
+            transform: translateY(-2px);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--Primary-600) 100%);
+            color: var(--primary-foreground);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-foreground);
+            color: var(--primary);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-foreground);
+            border: 2px solid var(--primary-foreground);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--Primary-25);
+            border-radius: var(--radius);
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .term-title {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <section class="breadcrumb margin-top-80">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="/">Home</a> → <a href="/glossary/">Glossary</a> → <span>Kubernetes</span>
+            </nav>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="term-header">
+            <h1 class="term-title">Kubernetes</h1>
+            <span class="term-category">Container Orchestration</span>
+        </div>
+
+        <div class="content-grid">
+            <div class="main-content">
+                <div class="definition">
+                    <strong>Kubernetes (K8s)</strong> is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications. It provides a robust framework for running distributed systems resiliently.
+                </div>
+
+                <div class="section">
+                    <h2>Key Features</h2>
+                    <ul style="margin-left: 2rem; line-height: 2;">
+                        <li><strong>Container Orchestration:</strong> Manages containerized applications across clusters</li>
+                        <li><strong>Auto-scaling:</strong> Automatically scales applications based on demand</li>
+                        <li><strong>Self-healing:</strong> Restarts failed containers and replaces unhealthy nodes</li>
+                        <li><strong>Load Balancing:</strong> Distributes traffic across multiple instances</li>
+                        <li><strong>Rolling Updates:</strong> Updates applications without downtime</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Core Kubernetes Concepts</h2>
+                    <pre class="code-block">
+# Basic Pod Definition
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-app
+spec:
+  containers:
+  - name: app-container
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+
+---
+# Deployment Example
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-app
+        image: my-app:v1.0
+        ports:
+        - containerPort: 8080
+
+---
+# Service Definition
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-app-service
+spec:
+  selector:
+    app: my-app
+  ports:
+  - port: 80
+    targetPort: 8080
+  type: LoadBalancer
+                    </pre>
+                </div>
+
+                <div class="section">
+                    <h2>Kubernetes Architecture</h2>
+                    <div class="highlight-box">
+                        <h4>Key Components:</h4>
+                        <ul style="margin-left: 2rem; line-height: 2;">
+                            <li><strong>Master Node:</strong> Control plane managing the cluster</li>
+                            <li><strong>Worker Nodes:</strong> Run application workloads</li>
+                            <li><strong>Pods:</strong> Smallest deployable units</li>
+                            <li><strong>Services:</strong> Network abstraction for pods</li>
+                            <li><strong>Deployments:</strong> Manage pod replicas and updates</li>
+                            <li><strong>ConfigMaps & Secrets:</strong> Configuration management</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Career Impact</h2>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">88%</div>
+                            <div class="stat-label">of companies use K8s</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">$130K+</div>
+                            <div class="stat-label">Average K8s engineer salary</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5.6M</div>
+                            <div class="stat-label">developers use K8s</div>
+                        </div>
+                    </div>
+                    <p>Kubernetes expertise is highly valued in the job market, with organizations increasingly adopting cloud-native architectures. K8s skills can significantly boost your DevOps and cloud engineering career prospects.</p>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="sidebar-card">
+                    <h3>Quick Facts</h3>
+                    <ul style="line-height: 2;">
+                        <li><strong>Created:</strong> 2014 by Google</li>
+                        <li><strong>License:</strong> Apache 2.0</li>
+                        <li><strong>Language:</strong> Go</li>
+                        <li><strong>CNCF:</strong> Graduated project</li>
+                        <li><strong>Also Known As:</strong> K8s</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>Learning Path</h3>
+                    <ol style="line-height: 2;">
+                        <li>Container fundamentals (Docker)</li>
+                        <li>Kubernetes architecture</li>
+                        <li>Pods, Services, Deployments</li>
+                        <li>ConfigMaps and Secrets</li>
+                        <li>Networking and Storage</li>
+                        <li>Monitoring and Logging</li>
+                    </ol>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>Popular Tools</h3>
+                    <ul style="line-height: 2;">
+                        <li>kubectl (CLI)</li>
+                        <li>Helm (Package Manager)</li>
+                        <li>Prometheus (Monitoring)</li>
+                        <li>Grafana (Visualization)</li>
+                        <li>Istio (Service Mesh)</li>
+                        <li>Rancher (Management)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Related Terms</h2>
+            <div class="related-terms">
+                <a href="/glossary/docker" class="related-term">Docker</a>
+                <a href="/glossary/containerization" class="related-term">Containerization</a>
+                <a href="/glossary/devops" class="related-term">DevOps</a>
+                <a href="/glossary/cloud-native" class="related-term">Cloud Native</a>
+                <a href="/glossary/microservices" class="related-term">Microservices</a>
+                <a href="/glossary/helm" class="related-term">Helm</a>
+            </div>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Master Kubernetes and Cloud Native</h2>
+                <p>Advance your DevOps career with our comprehensive Kubernetes courses and expert mentorship programs.</p>
+                <div class="cta-buttons">
+                    <a href="https://leadwithskills.com/courses" class="btn btn-primary">Explore Courses</a>
+                    <a href="https://leadwithskills.com/mentorship" class="btn btn-secondary">Get Mentorship</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

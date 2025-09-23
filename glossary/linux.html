@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux - Tech Glossary | Lead With Skills</title>
+    <meta name="description" content="Learn about Linux operating system, its features, distributions, and career opportunities in system administration and DevOps.">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/linux">
+    <style>
+        
+
+        .breadcrumb {    
+            padding: 1rem 0;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .term-header {
+            background: linear-gradient(135deg, var(--Primary-25), var(--Primary-100));
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            background: var(--primary);
+            color: var(--primary-foreground);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+
+        .content-section {
+            padding: 3rem 0;
+        }
+
+        .definition-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--Primary-100);
+            padding-bottom: 0.5rem;
+        }
+
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--Primary-600);
+        }
+
+        .related-terms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .related-term {
+            background: var(--Primary-25);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .related-term:hover {
+            background: var(--Primary-100);
+        }
+
+        .cta-section {
+            background: var(--primary);
+            color: var(--primary-foreground);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .cta-button {
+            background: var(--primary-foreground);
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: var(--primary-foreground);
+            border: 2px solid var(--primary-foreground);
+        }
+
+        footer {
+            background: var(--card);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--muted);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .term-title {
+                font-size: 2rem;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumb margin-top-80">
+            <a href="../index">Home</a> > <a href="index">Glossary</a> > Linux
+        </div>
+    </div>
+
+    <section class="term-header">
+        <div class="container">
+            <h1 class="term-title">Linux</h1>
+            <span class="term-category">Operating System</span>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="content-section">
+            <div class="definition-card">
+                <h2 class="section-title">Definition</h2>
+                <p>Linux is a free and open-source operating system kernel that serves as the foundation for numerous operating system distributions. Created by Linus Torvalds in 1991, Linux has become one of the most widely used operating systems in the world, powering everything from smartphones and embedded devices to servers and supercomputers.</p>
+            </div>
+
+            <div class="definition-card">
+                <h2 class="section-title">Key Features</h2>
+                <ul>
+                    <li><strong>Open Source:</strong> Source code is freely available and modifiable</li>
+                    <li><strong>Multi-user:</strong> Multiple users can access the system simultaneously</li>
+                    <li><strong>Multitasking:</strong> Can run multiple processes concurrently</li>
+                    <li><strong>Security:</strong> Built-in security features and permission systems</li>
+                    <li><strong>Stability:</strong> Known for reliability and uptime</li>
+                    <li><strong>Portability:</strong> Runs on various hardware architectures</li>
+                </ul>
+            </div>
+
+            <div class="definition-card">
+                <h2 class="section-title">Popular Distributions</h2>
+                <pre class="code-block">
+# Desktop Distributions
+Ubuntu - User-friendly, great for beginners
+Fedora - Cutting-edge features, Red Hat sponsored
+Linux Mint - Based on Ubuntu, traditional desktop
+Debian - Stable, community-driven
+
+# Server Distributions
+CentOS/RHEL - Enterprise-focused
+Ubuntu Server - Cloud and server deployments
+SUSE Linux Enterprise - Enterprise solutions
+</pre>
+            </div>
+
+            <div class="definition-card">
+                <h2 class="section-title">Career Impact</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">$95K</div>
+                        <p>Average Linux Admin Salary</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">85%</div>
+                        <p>Of Cloud Infrastructure Uses Linux</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">500K+</div>
+                        <p>Linux Jobs Available Globally</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="definition-card">
+                <h2 class="section-title">Learning Path</h2>
+                <ol>
+                    <li>Install a beginner-friendly distribution (Ubuntu/Linux Mint)</li>
+                    <li>Learn basic command line operations</li>
+                    <li>Understand file system structure and permissions</li>
+                    <li>Practice system administration tasks</li>
+                    <li>Learn shell scripting (Bash)</li>
+                    <li>Explore server configuration and management</li>
+                    <li>Study containerization (Docker) and orchestration</li>
+                </ol>
+            </div>
+
+            <div class="definition-card">
+                <h2 class="section-title">Related Terms</h2>
+                <div class="related-terms">
+                    <a href="unix" class="related-term">Unix</a>
+                    <a href="bash" class="related-term">Bash</a>
+                    <a href="docker" class="related-term">Docker</a>
+                    <a href="kubernetes" class="related-term">Kubernetes</a>
+                    <a href="devops" class="related-term">DevOps</a>
+                    <a href="cloud-computing" class="related-term">Cloud Computing</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Master Linux with Lead With Skills</h2>
+            <p>Join thousands of professionals who've advanced their careers with our comprehensive Linux training programs.</p>
+            <div class="cta-buttons">
+                <a href="../courses" class="cta-button">Explore Linux Courses</a>
+                <a href="../mentorship" class="cta-button secondary">Get Personal Mentorship</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Lead With Skills. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

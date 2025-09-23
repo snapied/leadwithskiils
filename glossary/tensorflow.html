@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TensorFlow - Complete Guide | Lead With Skills</title>
+    <meta name="description" content="Learn TensorFlow machine learning framework - deep learning, neural networks, and AI development. Complete guide with examples and career opportunities.">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/tensorflow">
+    <style>
+        
+
+        .breadcrumb {    
+            background: var(--card);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb-nav {width:fit-content;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .breadcrumb-nav a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .main-content {
+            padding: 3rem 0;
+        }
+
+        .term-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            display: inline-block;
+            background: var(--Primary-100);
+            color: var(--Primary-600);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .main-article {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-card {
+            background: var(--card);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .definition {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--Primary-25);
+            border-left: 4px solid var(--Primary-600);
+            border-radius: var(--radius);
+        }
+
+        .code-block {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            margin: 1rem 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+        }
+
+        .highlight-box {
+            background: var(--Primary-25);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--Primary-600);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--Primary-25);
+            border-radius: var(--radius);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--Primary-600);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-top: 0.5rem;
+        }
+
+        .related-terms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .related-term {
+            background: var(--primary);
+            color: var(--primary-foreground);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: opacity 0.3s;
+        }
+
+        .related-term:hover {
+            opacity: 0.8;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--Primary-600) 100%);
+            color: var(--primary-foreground);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .cta-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            background: var(--primary-foreground);
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: var(--primary-foreground);
+            border: 2px solid var(--primary-foreground);
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .term-title {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <section class="breadcrumb margin-top-80">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index">Home</a>
+                <span>›</span>
+                <a href="index">Glossary</a>
+                <span>›</span>
+                <span>TensorFlow</span>
+            </nav>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="term-header">
+                <h1 class="term-title">TensorFlow</h1>
+                <span class="term-category">Machine Learning</span>
+            </div>
+
+            <div class="content-grid">
+                <article class="main-article">
+                    <div class="definition">
+                        <strong>TensorFlow</strong> is an open-source machine learning framework developed by Google. It provides a comprehensive ecosystem of tools, libraries, and community resources for building and deploying machine learning applications at scale.
+                    </div>
+
+                    <section>
+                        <h2 class="section-title">Key Features</h2>
+                        <ul style="margin-left: 2rem; margin-bottom: 2rem;">
+                            <li><strong>Flexible Architecture:</strong> Deploy on CPUs, GPUs, TPUs, mobile, edge devices</li>
+                            <li><strong>High-Level APIs:</strong> Keras integration for easy model building</li>
+                            <li><strong>Production Ready:</strong> TensorFlow Serving for model deployment</li>
+                            <li><strong>Visualization:</strong> TensorBoard for monitoring and debugging</li>
+                            <li><strong>Cross-Platform:</strong> Python, JavaScript, Swift, and more</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="section-title">Basic TensorFlow Example</h2>
+                        <pre class="code-block">
+import tensorflow as tf
+from tensorflow import keras
+import numpy as np
+
+# Create a simple neural network
+model = keras.Sequential([
+    keras.layers.Dense(128, activation='relu', input_shape=(784,)),
+    keras.layers.Dropout(0.2),
+    keras.layers.Dense(10, activation='softmax')
+])
+
+# Compile the model
+model.compile(optimizer='adam',
+              loss='sparse_categorical_crossentropy',
+              metrics=['accuracy'])
+
+# Load and preprocess data
+(x_train, y_train), (x_test, y_test) = keras.datasets.mnist.load_data()
+x_train = x_train.reshape(60000, 784).astype('float32') / 255
+x_test = x_test.reshape(10000, 784).astype('float32') / 255
+
+# Train the model
+model.fit(x_train, y_train, epochs=5, batch_size=32)
+
+# Evaluate
+test_loss, test_acc = model.evaluate(x_test, y_test)
+print(f'Test accuracy: {test_acc}')
+                        </pre>
+                    </section>
+
+                    <section>
+                        <h2 class="section-title">Common Use Cases</h2>
+                        <div class="highlight-box">
+                            <ul style="margin-left: 1.5rem;">
+                                <li><strong>Image Recognition:</strong> Computer vision and image classification</li>
+                                <li><strong>Natural Language Processing:</strong> Text analysis and language models</li>
+                                <li><strong>Recommendation Systems:</strong> Personalized content recommendations</li>
+                                <li><strong>Time Series Analysis:</strong> Forecasting and trend analysis</li>
+                                <li><strong>Reinforcement Learning:</strong> Game AI and autonomous systems</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="section-title">Career Impact</h2>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-number">$130K</div>
+                                <div class="stat-label">ML Engineer Salary</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">180K+</div>
+                                <div class="stat-label">GitHub Stars</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">50K+</div>
+                                <div class="stat-label">Job Openings</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="section-title">Learning Path</h2>
+                        <ol style="margin-left: 2rem; line-height: 2;">
+                            <li>Learn Python programming and NumPy</li>
+                            <li>Understand machine learning fundamentals</li>
+                            <li>Master TensorFlow basics and Keras API</li>
+                            <li>Practice with different neural network architectures</li>
+                            <li>Learn model deployment with TensorFlow Serving</li>
+                            <li>Build end-to-end ML projects and applications</li>
+                        </ol>
+                    </section>
+                </article>
+
+                <aside class="sidebar">
+                    <div class="sidebar-card">
+                        <h3 class="section-title">Quick Facts</h3>
+                        <ul style="list-style: none; line-height: 2;">
+                            <li><strong>Created:</strong> 2015</li>
+                            <li><strong>Creator:</strong> Google Brain Team</li>
+                            <li><strong>Type:</strong> ML Framework</li>
+                            <li><strong>License:</strong> Apache 2.0</li>
+                            <li><strong>Latest Version:</strong> 2.x</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3 class="section-title">Related Terms</h3>
+                        <div class="related-terms">
+                            <a href="machine-learning" class="related-term">Machine Learning</a>
+                            <a href="python" class="related-term">Python</a>
+                            <a href="artificial-intelligence" class="related-term">AI</a>
+                            <a href="data-science" class="related-term">Data Science</a>
+                            <a href="neural-networks" class="related-term">Neural Networks</a>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3 class="section-title">Skill Level</h3>
+                        <div style="background: var(--Primary-25); padding: 1rem; border-radius: var(--radius); text-align: center;">
+                            <div style="font-size: 1.2rem; font-weight: bold; color: var(--Primary-600);">Advanced</div>
+                            <div style="font-size: 0.9rem; color: var(--muted); margin-top: 0.5rem;">Requires ML knowledge</div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Master TensorFlow & AI</h2>
+            <p class="cta-subtitle">Build intelligent applications and advance your machine learning career</p>
+            <div class="cta-buttons">
+                <a href="../courses" class="cta-button">Explore AI Courses</a>
+                <a href="../mentorship" class="cta-button secondary">Get Mentorship</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

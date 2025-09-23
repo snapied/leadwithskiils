@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Programming Language | Lead With Skills Glossary</title>
+    <meta name="description" content="Learn JavaScript, the versatile programming language that powers modern web development. Master JS fundamentals, ES6+, and advanced concepts.">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/javascript">
+    <style>
+        
+
+        .breadcrumb {    
+            background-color: var(--Primary-25);
+            padding: 1rem 0;
+        }
+
+        .breadcrumb-nav {width:fit-content;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .breadcrumb-nav a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb-nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        .term-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            display: inline-block;
+            background-color: var(--Primary-100);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .main-content {
+            background-color: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-card {
+            background-color: var(--card);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .sidebar-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .definition {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: var(--Primary-25);
+            border-left: 4px solid var(--primary);
+            border-radius: var(--radius);
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--Primary-100);
+            padding-bottom: 0.5rem;
+        }
+
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+
+        .highlight-box {
+            background-color: var(--Primary-25);
+            border: 1px solid var(--Primary-100);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .related-terms {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .related-term {
+            background-color: var(--Primary-25);
+            padding: 1rem;
+            border-radius: var(--radius);
+            text-align: center;
+            text-decoration: none;
+            color: var(--primary);
+            transition: all 0.3s;
+        }
+
+        .related-term:hover {
+            background-color: var(--Primary-100);
+            transform: translateY(-2px);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--Primary-600) 100%);
+            color: var(--primary-foreground);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-foreground);
+            color: var(--primary);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-foreground);
+            border: 2px solid var(--primary-foreground);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--Primary-25);
+            border-radius: var(--radius);
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .term-title {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <section class="breadcrumb margin-top-80">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="/">Home</a> → <a href="/glossary/">Glossary</a> → <span>JavaScript</span>
+            </nav>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="term-header">
+            <h1 class="term-title">JavaScript</h1>
+            <span class="term-category">Programming Language</span>
+        </div>
+
+        <div class="content-grid">
+            <div class="main-content">
+                <div class="definition">
+                    <strong>JavaScript</strong> is a high-level, interpreted programming language that enables interactive web pages and is an essential part of web applications. It's a versatile language that runs in browsers, servers, and mobile applications.
+                </div>
+
+                <div class="section">
+                    <h2>Key Features</h2>
+                    <ul style="margin-left: 2rem; line-height: 2;">
+                        <li><strong>Dynamic Typing:</strong> Variables can hold different types of values</li>
+                        <li><strong>First-Class Functions:</strong> Functions can be assigned to variables and passed as arguments</li>
+                        <li><strong>Prototype-Based OOP:</strong> Object-oriented programming through prototypes</li>
+                        <li><strong>Event-Driven:</strong> Responds to user interactions and system events</li>
+                        <li><strong>Cross-Platform:</strong> Runs on browsers, servers, and mobile devices</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>JavaScript Fundamentals</h2>
+                    <pre class="code-block">
+// Variables and Data Types
+let name = "John Doe";
+const age = 30;
+var isActive = true;
+
+// Functions
+function greetUser(userName) {
+    return `Hello, ${userName}!`;
+}
+
+// Arrow Functions (ES6+)
+const calculateArea = (width, height) => width * height;
+
+// Objects
+const person = {
+    name: "Alice",
+    age: 25,
+    greet() {
+        console.log(`Hi, I'm ${this.name}`);
+    }
+};
+
+// Arrays and Methods
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(num => num * 2);
+
+// DOM Manipulation
+document.getElementById('myButton').addEventListener('click', function() {
+    document.querySelector('.content').innerHTML = 'Button clicked!';
+});
+
+// Async/Await (Modern JavaScript)
+async function fetchData() {
+    try {
+        const response = await fetch('/api/data');
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+                    </pre>
+                </div>
+
+                <div class="section">
+                    <h2>Modern JavaScript (ES6+)</h2>
+                    <div class="highlight-box">
+                        <h4>Key ES6+ Features:</h4>
+                        <ul style="margin-left: 2rem; line-height: 2;">
+                            <li><strong>Arrow Functions:</strong> Concise function syntax</li>
+                            <li><strong>Template Literals:</strong> String interpolation with backticks</li>
+                            <li><strong>Destructuring:</strong> Extract values from arrays and objects</li>
+                            <li><strong>Modules:</strong> Import/export functionality</li>
+                            <li><strong>Promises & Async/Await:</strong> Handle asynchronous operations</li>
+                            <li><strong>Classes:</strong> Syntactic sugar for prototype-based inheritance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Career Impact</h2>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">69%</div>
+                            <div class="stat-label">of developers use JS</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">$95K+</div>
+                            <div class="stat-label">Average JS developer salary</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">#1</div>
+                            <div class="stat-label">Most popular language</div>
+                        </div>
+                    </div>
+                    <p>JavaScript is the most in-demand programming language, powering everything from web applications to mobile apps and server-side development. Mastering JavaScript opens doors to full-stack development opportunities.</p>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="sidebar-card">
+                    <h3>Quick Facts</h3>
+                    <ul style="line-height: 2;">
+                        <li><strong>Created:</strong> 1995 by Brendan Eich</li>
+                        <li><strong>Type:</strong> Interpreted, High-level</li>
+                        <li><strong>Paradigm:</strong> Multi-paradigm</li>
+                        <li><strong>Standard:</strong> ECMAScript</li>
+                        <li><strong>File Extension:</strong> .js</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>Learning Path</h3>
+                    <ol style="line-height: 2;">
+                        <li>Basic syntax and variables</li>
+                        <li>Functions and scope</li>
+                        <li>Objects and arrays</li>
+                        <li>DOM manipulation</li>
+                        <li>Asynchronous JavaScript</li>
+                        <li>Modern ES6+ features</li>
+                    </ol>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>Popular Frameworks</h3>
+                    <ul style="line-height: 2;">
+                        <li>React</li>
+                        <li>Vue.js</li>
+                        <li>Angular</li>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>Next.js</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Related Terms</h2>
+            <div class="related-terms">
+                <a href="/glossary/html" class="related-term">HTML</a>
+                <a href="/glossary/css" class="related-term">CSS</a>
+                <a href="/glossary/react" class="related-term">React</a>
+                <a href="/glossary/nodejs" class="related-term">Node.js</a>
+                <a href="/glossary/dom" class="related-term">DOM</a>
+                <a href="/glossary/es6" class="related-term">ES6+</a>
+            </div>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Master JavaScript Development</h2>
+                <p>Join thousands of developers who've mastered JavaScript with our comprehensive courses and expert mentorship.</p>
+                <div class="cta-buttons">
+                    <a href="https://leadwithskills.com/courses" class="btn btn-primary">Explore Courses</a>
+                    <a href="https://leadwithskills.com/mentorship" class="btn btn-secondary">Get Mentorship</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

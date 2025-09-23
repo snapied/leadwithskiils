@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development - Tech Glossary | Lead With Skills</title>
+    <meta name="description" content="Learn about Web Development including frontend, backend, and full-stack development. Essential skills for modern tech careers.">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/web-development">
+    <style>
+        
+
+        .breadcrumb {    
+            background-color: var(--card);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb-nav {width:fit-content;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .breadcrumb-nav a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb-nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        .term-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            display: inline-block;
+            background-color: var(--Primary-100);
+            color: var(--Primary-600);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .main-content {
+            background-color: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-card {
+            background-color: var(--card);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .sidebar-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .definition {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: var(--Primary-25);
+            border-left: 4px solid var(--Primary-600);
+            border-radius: var(--radius);
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--Primary-100);
+            padding-bottom: 0.5rem;
+        }
+
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .stat-card {
+            background-color: var(--Primary-25);
+            padding: 1rem;
+            border-radius: var(--radius);
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--Primary-600);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .related-terms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .related-term {
+            background-color: var(--Primary-100);
+            color: var(--Primary-600);
+            padding: 0.3rem 0.8rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .related-term:hover {
+            background-color: var(--Primary-600);
+            color: var(--primary-foreground);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--Primary-600) 100%);
+            color: var(--primary-foreground);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-foreground);
+            color: var(--primary);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-foreground);
+            border: 2px solid var(--primary-foreground);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .term-title {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <div class="breadcrumb margin-top-80">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index">Home</a>
+                <span>›</span>
+                <a href="index">Glossary</a>
+                <span>›</span>
+                <span>Web Development</span>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="term-header">
+            <h1 class="term-title">Web Development</h1>
+            <span class="term-category">Programming</span>
+        </div>
+
+        <div class="content-grid">
+            <div class="main-content">
+                <div class="definition">
+                    <strong>Web Development</strong> is the process of building and maintaining websites and web applications. It encompasses everything from creating simple static web pages to complex web-based applications, e-commerce platforms, and social media services that run in web browsers.
+                </div>
+
+                <div class="section">
+                    <h2>Types of Web Development</h2>
+                    <h3>Frontend Development</h3>
+                    <p>The client-side of web development focusing on user interface and user experience.</p>
+                    <pre class="code-block">
+&lt;!-- HTML Structure --&gt;
+&lt;div class="hero-section"&gt;
+    &lt;h1&gt;Welcome to Our Website&lt;/h1&gt;
+    &lt;button onclick="handleClick()"&gt;Get Started&lt;/button&gt;
+&lt;/div&gt;
+
+/* CSS Styling */
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+// JavaScript Functionality
+function handleClick() {
+    alert('Welcome to web development!');
+}
+                    </pre>
+
+                    <h3>Backend Development</h3>
+                    <p>The server-side of web development handling data, authentication, and business logic.</p>
+                    <pre class="code-block">
+// Node.js Express Server
+const express = require('express');
+const app = express();
+
+app.get('/api/users', (req, res) => {
+    res.json({ users: ['John', 'Jane', 'Bob'] });
+});
+
+app.listen(3000, () => {
+    console.log('Server running on port 3000');
+});
+                    </pre>
+
+                    <h3>Full-Stack Development</h3>
+                    <p>Combining both frontend and backend development skills to build complete web applications.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Essential Technologies</h2>
+                    <ul>
+                        <li><strong>HTML:</strong> Structure and content of web pages</li>
+                        <li><strong>CSS:</strong> Styling and layout of web pages</li>
+                        <li><strong>JavaScript:</strong> Interactive functionality and dynamic behavior</li>
+                        <li><strong>Frameworks:</strong> React, Angular, Vue.js for frontend; Node.js, Django, Ruby on Rails for backend</li>
+                        <li><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB for data storage</li>
+                        <li><strong>Version Control:</strong> Git for code management</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Career Opportunities</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">$85K</div>
+                            <div class="stat-label">average web developer salary</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">23%</div>
+                            <div class="stat-label">job growth rate (2021-2031)</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">200K+</div>
+                            <div class="stat-label">web developer jobs available</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="sidebar-card">
+                    <h3>Quick Facts</h3>
+                    <ul>
+                        <li><strong>First Website:</strong> 1991 by Tim Berners-Lee</li>
+                        <li><strong>Languages:</strong> HTML, CSS, JavaScript</li>
+                        <li><strong>Frameworks:</strong> 100+ available</li>
+                        <li><strong>Job Demand:</strong> Very High</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>Learning Path</h3>
+                    <ol>
+                        <li>HTML & CSS fundamentals</li>
+                        <li>JavaScript programming</li>
+                        <li>Frontend framework (React/Vue/Angular)</li>
+                        <li>Backend development (Node.js/Python)</li>
+                        <li>Database management</li>
+                        <li>Deployment and DevOps</li>
+                    </ol>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>Related Terms</h3>
+                    <div class="related-terms">
+                        <a href="html" class="related-term">HTML</a>
+                        <a href="css" class="related-term">CSS</a>
+                        <a href="javascript" class="related-term">JavaScript</a>
+                        <a href="react" class="related-term">React</a>
+                        <a href="nodejs" class="related-term">Node.js</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Start Your Web Development Journey</h2>
+                <p>Join thousands of successful developers who started their careers with Lead With Skills comprehensive web development courses</p>
+                <div class="cta-buttons">
+                    <a href="../courses" class="btn btn-primary">Explore Courses</a>
+                    <a href="../mentorship" class="btn btn-secondary">Get Mentorship</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

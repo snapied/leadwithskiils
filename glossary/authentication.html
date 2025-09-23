@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication - Tech Glossary | Lead With Skills</title>
+    <meta name="description" content="Learn about authentication - the process of verifying user identity in software systems. Master security concepts with Lead With Skills.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/authentication">
+    <style>
+        
+
+        /* Breadcrumb */
+        .breadcrumb {    
+            background: var(--card);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb-links {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb-links a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        .breadcrumb-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 3rem 0;
+        }
+
+        .term-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            display: inline-block;
+            background: var(--Primary-100);
+            color: var(--Primary-600);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .term-definition {
+            font-size: 1.25rem;
+            color: var(--muted);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .content-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .code-block {
+            background: #1f2937;
+            color: #f9fafb;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        .related-terms {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .related-term {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            text-decoration: none;
+            color: var(--foreground);
+            transition: all 0.3s ease;
+        }
+
+        .related-term:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 53, 59, 0.1);
+            border-color: var(--primary);
+        }
+
+        .related-term-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--Primary-600) 100%);
+            color: var(--primary-foreground);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-primary, .cta-secondary {
+            padding: 1rem 2rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-primary {
+            background: var(--primary-foreground);
+            color: var(--primary);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: var(--primary-foreground);
+            border: 2px solid var(--primary-foreground);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-secondary:hover {
+            background: var(--primary-foreground);
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--card);
+            border-top: 1px solid var(--border);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--muted);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .term-title {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+       <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <section class="breadcrumb margin-top-80">
+        <div class="container">
+            <div class="breadcrumb-links">
+                <a href="/">Home</a> / <a href="/glossary/">Glossary</a> / <span>Authentication</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="term-header">
+                <h1 class="term-title">Authentication</h1>
+                <span class="term-category">Security</span>
+                <p class="term-definition">
+                    The process of verifying the identity of a user, device, or system before granting access to protected resources or applications.
+                </p>
+            </div>
+
+            <section class="content-section">
+                <h2 class="section-title">What is Authentication?</h2>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3 class="card-title">Core Concept</h3>
+                        <p>Authentication answers the question "Who are you?" by verifying that users are who they claim to be. It's the first line of defense in application security, typically involving credentials like usernames, passwords, or biometric data.</p>
+                    </div>
+                    <div class="content-card">
+                        <h3 class="card-title">Authentication vs Authorization</h3>
+                        <ul>
+                            <li><strong>Authentication:</strong> Verifies identity ("Who are you?")</li>
+                            <li><strong>Authorization:</strong> Determines permissions ("What can you do?")</li>
+                            <li>Authentication always comes before authorization</li>
+                            <li>Both are essential for complete security</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">Authentication Methods</h2>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3 class="card-title">Single-Factor Authentication</h3>
+                        <p>Uses one method to verify identity:</p>
+                        <ul>
+                            <li><strong>Password:</strong> Most common method</li>
+                            <li><strong>PIN:</strong> Numeric codes</li>
+                            <li><strong>Biometric:</strong> Fingerprint, face recognition</li>
+                        </ul>
+                    </div>
+                    <div class="content-card">
+                        <h3 class="card-title">Multi-Factor Authentication (MFA)</h3>
+                        <p>Combines multiple verification methods:</p>
+                        <ul>
+                            <li><strong>Something you know:</strong> Password, PIN</li>
+                            <li><strong>Something you have:</strong> Phone, token</li>
+                            <li><strong>Something you are:</strong> Biometrics</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">Implementation Example</h2>
+                <div class="content-card">
+                    <h3 class="card-title">JWT Authentication in Node.js</h3>
+                    <pre class="code-block">
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
+
+// Login endpoint
+app.post('/login', async (req, res) => {
+    const { email, password } = req.body;
+    
+    // Find user in database
+    const user = await User.findOne({ email });
+    if (!user) {
+        return res.status(401).json({ error: 'Invalid credentials' });
+    }
+    
+    // Verify password
+    const isValidPassword = await bcrypt.compare(password, user.password);
+    if (!isValidPassword) {
+        return res.status(401).json({ error: 'Invalid credentials' });
+    }
+    
+    // Generate JWT token
+    const token = jwt.sign(
+        { userId: user._id, email: user.email },
+        process.env.JWT_SECRET,
+        { expiresIn: '24h' }
+    );
+    
+    res.json({ token, user: { id: user._id, email: user.email } });
+});
+
+// Middleware to verify token
+const authenticateToken = (req, res, next) => {
+    const authHeader = req.headers['authorization'];
+    const token = authHeader && authHeader.split(' ')[1];
+    
+    if (!token) {
+        return res.status(401).json({ error: 'Access token required' });
+    }
+    
+    jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
+        if (err) {
+            return res.status(403).json({ error: 'Invalid token' });
+        }
+        req.user = user;
+        next();
+    });
+};
+                    </pre>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">Modern Authentication Protocols</h2>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3 class="card-title">OAuth 2.0</h3>
+                        <p>Industry-standard protocol for authorization, commonly used for "Login with Google/Facebook" functionality. Allows third-party applications to access user data without exposing passwords.</p>
+                    </div>
+                    <div class="content-card">
+                        <h3 class="card-title">OpenID Connect</h3>
+                        <p>Authentication layer built on top of OAuth 2.0. Provides identity verification and user information exchange between applications and identity providers.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">Career Impact</h2>
+                <div class="content-card">
+                    <p>Authentication expertise is valuable for:</p>
+                    <ul>
+                        <li><strong>Security Engineer:</strong> $110,000 - $200,000 annually</li>
+                        <li><strong>Full-Stack Developer:</strong> $85,000 - $160,000 annually</li>
+                        <li><strong>DevSecOps Engineer:</strong> $120,000 - $220,000 annually</li>
+                        <li><strong>Identity & Access Management:</strong> $100,000 - $180,000 annually</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">Related Terms</h2>
+                <div class="related-terms">
+                    <a href="authorization" class="related-term">
+                        <div class="related-term-title">Authorization</div>
+                        <p>Determining what authenticated users can access</p>
+                    </a>
+                    <a href="jwt" class="related-term">
+                        <div class="related-term-title">JWT (JSON Web Token)</div>
+                        <p>Compact token format for secure information transmission</p>
+                    </a>
+                    <a href="oauth" class="related-term">
+                        <div class="related-term-title">OAuth</div>
+                        <p>Open standard for access delegation</p>
+                    </a>
+                    <a href="encryption" class="related-term">
+                        <div class="related-term-title">Encryption</div>
+                        <p>Converting data into coded format for security</p>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Master Security & Authentication</h2>
+            <p>Build secure applications with our comprehensive security courses and expert mentorship</p>
+            <div class="cta-buttons">
+                <a href="/courses" class="cta-primary">Explore Security Courses</a>
+                <a href="/mentorship" class="cta-secondary">Get Expert Guidance</a>
+            </div>
+        </div>
+    </section>
+
+    
+    
+</body>
+</html>
