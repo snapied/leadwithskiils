@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babel - Lead With Skills Glossary</title>
+    <meta name="description" content="Learn about Babel, the JavaScript compiler that transforms modern JavaScript code for browser compatibility. Essential for modern web development.">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/babel">
+    <style>
+        
+
+        .breadcrumb {    
+            padding: 1rem 0;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .term-header {
+            background: linear-gradient(135deg, var(--Primary-25), var(--Primary-100));
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            background: var(--primary);
+            color: var(--primary-foreground);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            display: inline-block;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .term-summary {
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--Primary-100);
+            padding-bottom: 0.5rem;
+        }
+
+        .definition-card {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        .code-block {
+            background: #1f2937;
+            color: #f9fafb;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            overflow-x: auto;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: var(--card);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .feature-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: var(--Primary-25);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .related-terms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .related-term {
+            background: var(--Primary-100);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .related-term:hover {
+            background: var(--primary);
+            color: var(--primary-foreground);
+        }
+
+        .cta-section {
+            background: var(--primary);
+            color: var(--primary-foreground);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            background: var(--primary-foreground);
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: var(--primary-foreground);
+            border: 2px solid var(--primary-foreground);
+        }
+
+        footer {
+            background: var(--card);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--muted);
+        }
+
+        @media (max-width: 768px) {
+            .term-title {
+                font-size: 2rem;
+            }
+            
+            .features-grid,
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumb margin-top-80">
+            <a href="../index">Home</a> > <a href="index">Glossary</a> > Babel
+        </div>
+    </div>
+
+    <section class="term-header">
+        <div class="container">
+            <div class="term-category">JavaScript Compiler</div>
+            <h1 class="term-title">Babel</h1>
+            <p class="term-summary">
+                A JavaScript compiler that transforms modern JavaScript code (ES6+) into backward-compatible versions 
+                for older browsers, enabling developers to use the latest language features.
+            </p>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="content-section">
+            <h2 class="section-title">Definition</h2>
+            <div class="definition-card">
+                <p>
+                    <strong>Babel</strong> is a free, open-source JavaScript transcompiler that converts ECMAScript 2015+ (ES6+) code 
+                    into backward-compatible JavaScript that can run in older browsers and environments. It allows developers to use 
+                    modern JavaScript features while maintaining compatibility across different platforms and browser versions.
+                </p>
+            </div>
+
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-title">ES6+ Support</div>
+                    <p>Transform modern JavaScript features like arrow functions, classes, and async/await.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-title">Plugin System</div>
+                    <p>Extensible architecture with plugins for specific transformations and optimizations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-title">Preset Collections</div>
+                    <p>Pre-configured plugin bundles for common use cases like React, TypeScript, and Node.js.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-title">Source Maps</div>
+                    <p>Generate source maps for debugging transformed code in development tools.</p>
+                </div>
+            </div>
+
+            <h2 class="section-title">Configuration Example</h2>
+            <pre class="code-block">
+// babel.config.js
+module.exports = {
+  presets: [
+    ['@babel/preset-env', {
+      targets: {
+        browsers: ['> 1%', 'last 2 versions']
+      }
+    }],
+    '@babel/preset-react'
+  ],
+  plugins: [
+    '@babel/plugin-proposal-class-properties',
+    '@babel/plugin-transform-runtime'
+  ]
+};
+
+// Before transformation (ES6+)
+const greet = (name) => {
+  return `Hello, ${name}!`;
+};
+
+class User {
+  constructor(name) {
+    this.name = name;
+  }
+  
+  async fetchData() {
+    const response = await fetch('/api/user');
+    return response.json();
+  }
+}
+
+// After Babel transformation (ES5)
+var greet = function greet(name) {
+  return "Hello, " + name + "!";
+};
+
+var User = function() {
+  function User(name) {
+    this.name = name;
+  }
+  
+  User.prototype.fetchData = function fetchData() {
+    return regeneratorRuntime.async(function fetchData$(_context) {
+      // ... transformed async code
+    });
+  };
+  
+  return User;
+}();
+            </pre>
+
+            <h2 class="section-title">Career Impact</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">90%</div>
+                    <div class="stat-label">React Projects Use Babel</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">$85K+</div>
+                    <div class="stat-label">Average Salary</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2M+</div>
+                    <div class="stat-label">Weekly Downloads</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">Essential</div>
+                    <div class="stat-label">For Modern JS</div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Learning Path</h2>
+            <div class="definition-card">
+                <ol>
+                    <li><strong>JavaScript Fundamentals:</strong> Master ES6+ features and syntax</li>
+                    <li><strong>Babel Basics:</strong> Learn installation, configuration, and basic usage</li>
+                    <li><strong>Presets & Plugins:</strong> Understand different presets and when to use them</li>
+                    <li><strong>Build Integration:</strong> Integrate Babel with Webpack, Rollup, or other bundlers</li>
+                    <li><strong>Advanced Configuration:</strong> Custom plugins, polyfills, and optimization</li>
+                    <li><strong>Debugging:</strong> Use source maps and debugging tools effectively</li>
+                </ol>
+            </div>
+
+            <h2 class="section-title">Related Terms</h2>
+            <div class="related-terms">
+                <a href="javascript" class="related-term">JavaScript</a>
+                <a href="webpack" class="related-term">Webpack</a>
+                <a href="react" class="related-term">React</a>
+                <a href="typescript" class="related-term">TypeScript</a>
+                <a href="nodejs" class="related-term">Node.js</a>
+            </div>
+        </section>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Master Modern JavaScript Development</h2>
+            <p class="cta-subtitle">
+                Join thousands of developers who've advanced their careers with our comprehensive JavaScript courses
+            </p>
+            <div class="cta-buttons">
+                <a href="../courses" class="cta-button">Explore Courses</a>
+                <a href="../mentorship" class="cta-button secondary">Get Mentorship</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Lead With Skills. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

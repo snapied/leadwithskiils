@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitbucket - Lead With Skills Glossary</title>
+    <meta name="description" content="Learn about Bitbucket, a Git-based source code repository hosting service. Comprehensive guide covering features, benefits, and career opportunities.">
+    <meta name="keywords" content="Bitbucket, Git repository, version control, source code hosting, Atlassian">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/bitbucket">
+    <style>
+        
+
+        .breadcrumb {    
+            background-color: var(--card);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb-nav {width:fit-content;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .breadcrumb-nav a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb-nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        .term-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            display: inline-block;
+            background-color: var(--Primary-100);
+            color: var(--Primary-600);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .main-content {
+            background-color: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-card {
+            background-color: var(--card);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .info-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+
+        .info-list strong {
+            color: var(--primary);
+        }
+
+        h2 {
+            color: var(--primary);
+            margin: 2rem 0 1rem 0;
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            color: var(--primary);
+            margin: 1.5rem 0 1rem 0;
+            font-size: 1.4rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--foreground);
+        }
+
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+
+        .code-block code {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .highlight-box {
+            background-color: var(--Primary-25);
+            border-left: 4px solid var(--Primary-600);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+
+        .related-terms {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .related-term {
+            background-color: var(--card);
+            padding: 1rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--foreground);
+            transition: all 0.3s;
+        }
+
+        .related-term:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .related-term h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--Primary-600) 100%);
+            color: var(--primary-foreground);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-content h2 {
+            color: var(--primary-foreground);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-foreground);
+            color: var(--primary);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-foreground);
+            border-color: var(--primary-foreground);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .term-title {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <div class="breadcrumb margin-top-80">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="/">Home</a>
+                <span>›</span>
+                <a href="/glossary/">Glossary</a>
+                <span>›</span>
+                <span>Bitbucket</span>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="term-header">
+            <h1 class="term-title">Bitbucket</h1>
+            <span class="term-category">Version Control Platform</span>
+        </div>
+
+        <div class="content-grid">
+            <div class="main-content">
+                <h2>What is Bitbucket?</h2>
+                <p>Bitbucket is a Git-based source code repository hosting service owned by Atlassian. It offers both commercial plans and free accounts with unlimited private repositories for small teams. Bitbucket integrates with other Atlassian software like Jira, HipChat, Confluence, and Bamboo, making it a popular choice for teams already using Atlassian products.</p>
+
+                <div class="highlight-box">
+                    <p><strong>Key Insight:</strong> Bitbucket offers unlimited private repositories for free (up to 5 users), making it an attractive option for small teams and individual developers who need private code hosting.</p>
+                </div>
+
+                <h2>Core Features</h2>
+                <h3>1. Git and Mercurial Support</h3>
+                <p>Bitbucket supports both Git and Mercurial version control systems, though Git is more commonly used.</p>
+
+                <pre class="code-block">
+                    <code>
+# Clone a Bitbucket repository
+git clone https://username@bitbucket.org/username/repository.git
+
+# Add Bitbucket as remote origin
+git remote add origin https://username@bitbucket.org/username/repository.git
+
+# Push to Bitbucket
+git push -u origin main
+                    </code>
+                </pre>
+
+                <h3>2. Pull Requests</h3>
+                <p>Collaborative code review process where developers can propose changes and discuss modifications before merging.</p>
+
+                <h3>3. Bitbucket Pipelines</h3>
+                <p>Built-in CI/CD service that allows you to automatically build, test, and deploy your code based on a configuration file in your repository.</p>
+
+                <h2>Why Use Bitbucket?</h2>
+                <p>Bitbucket offers several advantages for development teams:</p>
+                <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+                    <li>Free unlimited private repositories for small teams</li>
+                    <li>Seamless integration with Atlassian ecosystem</li>
+                    <li>Built-in CI/CD with Bitbucket Pipelines</li>
+                    <li>Advanced security features and permissions</li>
+                    <li>Issue tracking and project management tools</li>
+                </ul>
+
+                <h2>Career Impact</h2>
+                <p>Bitbucket skills are valuable in enterprise environments, especially those using Atlassian tools:</p>
+                <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+                    <li><strong>Software Developer:</strong> $70,000 - $120,000/year</li>
+                    <li><strong>DevOps Engineer:</strong> $80,000 - $140,000/year</li>
+                    <li><strong>Technical Lead:</strong> $90,000 - $150,000/year</li>
+                    <li><strong>Solutions Architect:</strong> $100,000 - $170,000/year</li>
+                </ul>
+
+                <h2>Learning Path</h2>
+                <p>To master Bitbucket, follow this structured approach:</p>
+                <ol style="margin-left: 2rem; margin-bottom: 1rem;">
+                    <li>Learn Git version control fundamentals</li>
+                    <li>Understand repository management and branching</li>
+                    <li>Master pull requests and code review process</li>
+                    <li>Explore Bitbucket Pipelines for CI/CD</li>
+                    <li>Learn integration with Jira and other Atlassian tools</li>
+                    <li>Practice with team collaboration workflows</li>
+                </ol>
+            </div>
+
+            <div class="sidebar">
+                <div class="info-card">
+                    <h3>Quick Facts</h3>
+                    <ul class="info-list">
+                        <li><strong>Type:</strong> Git Repository Hosting</li>
+                        <li><strong>Owner:</strong> Atlassian</li>
+                        <li><strong>Founded:</strong> 2008</li>
+                        <li><strong>Free Tier:</strong> Up to 5 users</li>
+                        <li><strong>Supports:</strong> Git, Mercurial</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>Use Cases</h3>
+                    <ul class="info-list">
+                        <li>Private code repositories</li>
+                        <li>Team collaboration</li>
+                        <li>Code review workflows</li>
+                        <li>CI/CD pipelines</li>
+                        <li>Project management integration</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>Prerequisites</h3>
+                    <ul class="info-list">
+                        <li>Git version control basics</li>
+                        <li>Command line familiarity</li>
+                        <li>Software development experience</li>
+                        <li>Understanding of branching strategies</li>
+                        <li>Basic project management concepts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h2>Related Terms</h2>
+        <div class="related-terms">
+            <a href="/glossary/git" class="related-term">
+                <h4>Git</h4>
+                <p>Distributed version control system</p>
+            </a>
+            <a href="/glossary/github" class="related-term">
+                <h4>GitHub</h4>
+                <p>Popular Git hosting platform</p>
+            </a>
+            <a href="/glossary/jira" class="related-term">
+                <h4>Jira</h4>
+                <p>Issue tracking and project management</p>
+            </a>
+            <a href="/glossary/continuous-integration" class="related-term">
+                <h4>Continuous Integration</h4>
+                <p>Automated testing and integration</p>
+            </a>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Master Version Control and Collaboration</h2>
+                <p>Join thousands of developers who've advanced their careers with our comprehensive Git and DevOps courses.</p>
+                <div class="cta-buttons">
+                    <a href="/courses" class="btn btn-primary">Explore DevOps Courses</a>
+                    <a href="/mentorship" class="btn btn-secondary">Get Personal Mentorship</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Lead With Skills. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

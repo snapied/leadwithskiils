@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flutter - Mobile App Development Framework | Lead With Skills</title>
+    <meta name="description" content="Learn Flutter - Google's UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.">
+    <meta name="keywords" content="Flutter, mobile development, cross-platform, Dart, Google, app development">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/flutter">
+    <style>
+        
+
+        .breadcrumb {    
+            background: var(--Primary-25);
+            padding: 1rem 0;
+        }
+
+        .breadcrumb-nav {width:fit-content;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb-nav a {
+            color: var(--Primary-600);
+            text-decoration: none;
+        }
+
+        .breadcrumb-nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        .term-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            display: inline-block;
+            background: var(--Primary-100);
+            color: var(--Primary-600);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .main-content {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: var(--card);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .info-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .definition {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: var(--foreground);
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--Primary-100);
+            padding-bottom: 0.5rem;
+        }
+
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+
+        .code-block code {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background: var(--Primary-25);
+            border-radius: var(--radius);
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--Primary-600);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .related-terms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .related-term {
+            background: var(--Primary-100);
+            color: var(--Primary-600);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .related-term:hover {
+            background: var(--Primary-600);
+            color: white;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--Primary-600) 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .term-title {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <section class="breadcrumb margin-top-80">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index">Home</a>
+                <span>›</span>
+                <a href="index">Glossary</a>
+                <span>›</span>
+                <span>Flutter</span>
+            </nav>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="term-header">
+            <h1 class="term-title">Flutter</h1>
+            <span class="term-category">Mobile Development Framework</span>
+        </div>
+
+        <div class="content-grid">
+            <div class="main-content">
+                <div class="definition">
+                    Flutter is Google's UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase. It uses the Dart programming language and provides a rich set of pre-designed widgets.
+                </div>
+
+                <div class="section">
+                    <h2>Key Features</h2>
+                    <ul>
+                        <li><strong>Cross-Platform:</strong> Write once, run on iOS, Android, web, and desktop</li>
+                        <li><strong>Hot Reload:</strong> See changes instantly during development</li>
+                        <li><strong>Native Performance:</strong> Compiles to native ARM code</li>
+                        <li><strong>Rich Widgets:</strong> Extensive library of customizable widgets</li>
+                        <li><strong>Dart Language:</strong> Modern, object-oriented programming language</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Basic Flutter App Example</h2>
+                    <pre class="code-block">
+                        <code>
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Hello Flutter'),
+        ),
+        body: Center(
+          child: Text(
+            'Hello, World!',
+            style: TextStyle(fontSize: 24),
+          ),
+        ),
+      ),
+    );
+  }
+}
+                        </code>
+                    </pre>
+                </div>
+
+                <div class="section">
+                    <h2>Career Impact</h2>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">$95K</div>
+                            <div class="stat-label">Average Salary</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">68%</div>
+                            <div class="stat-label">Job Growth</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">2M+</div>
+                            <div class="stat-label">Developers</div>
+                        </div>
+                    </div>
+                    <p>Flutter developers are in high demand as companies seek efficient cross-platform solutions. The framework's growing popularity makes it an excellent skill for mobile developers.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Learning Path</h2>
+                    <ol>
+                        <li>Learn Dart programming fundamentals</li>
+                        <li>Understand Flutter widgets and layouts</li>
+                        <li>Master state management (Provider, Bloc, Riverpod)</li>
+                        <li>Learn navigation and routing</li>
+                        <li>Integrate APIs and databases</li>
+                        <li>Publish apps to app stores</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="info-card">
+                    <h3>Quick Facts</h3>
+                    <ul>
+                        <li><strong>Created by:</strong> Google</li>
+                        <li><strong>First Release:</strong> 2017</li>
+                        <li><strong>Language:</strong> Dart</li>
+                        <li><strong>License:</strong> BSD</li>
+                        <li><strong>Platform:</strong> Cross-platform</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>Popular Apps Built with Flutter</h3>
+                    <ul>
+                        <li>Google Ads</li>
+                        <li>Alibaba</li>
+                        <li>BMW</li>
+                        <li>eBay Motors</li>
+                        <li>Reflectly</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>Related Terms</h3>
+                    <div class="related-terms">
+                        <a href="dart" class="related-term">Dart</a>
+                        <a href="mobile-development" class="related-term">Mobile Development</a>
+                        <a href="cross-platform" class="related-term">Cross-Platform</a>
+                        <a href="react-native" class="related-term">React Native</a>
+                        <a href="android" class="related-term">Android</a>
+                        <a href="ios" class="related-term">iOS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Master Flutter Development</h2>
+                <p>Join thousands of developers who've advanced their careers with our comprehensive Flutter courses and expert mentorship.</p>
+                <div class="cta-buttons">
+                    <a href="../courses" class="btn btn-primary">Explore Courses</a>
+                    <a href="../mentorship" class="btn btn-secondary">Get Mentorship</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
