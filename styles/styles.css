@@ -71,7 +71,11 @@ body {
   font-weight: 400;
   overflow-x: hidden;
 }
+.special-program {
+  color: #a0ffcd!important;
+    font-weight: 500!important;
 
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
