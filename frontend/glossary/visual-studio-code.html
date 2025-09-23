@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Studio Code - Code Editor | Lead With Skills Glossary</title>
+    <meta name="description" content="Learn about Visual Studio Code, a free, open-source code editor developed by Microsoft that has become the most popular choice among developers worldwide.">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/visual-studio-code">
+    <style>
+        
+
+        .breadcrumb {    
+            padding: 1rem 0;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .term-header {
+            background: linear-gradient(135deg, var(--Primary-25), var(--Primary-100));
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            background: var(--primary);
+            color: var(--primary-foreground);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            display: inline-block;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .term-summary {
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--Primary-100);
+            padding-bottom: 0.5rem;
+        }
+
+        .code-block {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+        }
+
+        .code-block pre {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--Primary-600);
+            display: block;
+        }
+
+        .related-terms {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .related-term {
+            background: var(--Primary-25);
+            padding: 1rem;
+            border-radius: var(--radius);
+            text-align: center;
+            text-decoration: none;
+            color: var(--primary);
+            transition: background-color 0.3s;
+        }
+
+        .related-term:hover {
+            background: var(--Primary-100);
+        }
+
+        .cta-section {
+            background: var(--primary);
+            color: var(--primary-foreground);
+            padding: 4rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--Primary-600);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-foreground);
+            border: 2px solid var(--primary-foreground);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            .term-title {
+                font-size: 2rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumb margin-top-80">
+            <a href="../index">Home</a> > <a href="index">Glossary</a> > Visual Studio Code
+        </div>
+    </div>
+
+    <section class="term-header">
+        <div class="container">
+            <div class="term-category">Code Editor</div>
+            <h1 class="term-title">Visual Studio Code</h1>
+            <p class="term-summary">
+                Visual Studio Code is a free, open-source code editor developed by Microsoft that has become the most popular choice among developers worldwide for its extensibility, performance, and rich feature set.
+            </p>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="content-section">
+            <h2 class="section-title">What is Visual Studio Code?</h2>
+            <p>Visual Studio Code (VS Code) is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages and runtimes.</p>
+            
+            <div class="code-block">
+                <pre>
+// Example VS Code settings.json configuration
+{
+  "editor.fontSize": 14,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "workbench.colorTheme": "Dark+ (default dark)",
+  "workbench.iconTheme": "vs-seti",
+  "terminal.integrated.fontSize": 12,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "extensions.autoUpdate": true,
+  "git.enableSmartCommit": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  }
+}
+
+// Example tasks.json for build automation
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "npm",
+      "script": "build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
+                </pre>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Key Features</h2>
+            <ul style="margin-left: 2rem; margin-bottom: 2rem;">
+                <li><strong>IntelliSense:</strong> Smart code completion, parameter info, and member lists</li>
+                <li><strong>Debugging:</strong> Built-in debugging support for Node.js and other runtimes</li>
+                <li><strong>Git Integration:</strong> Built-in Git commands and version control</li>
+                <li><strong>Extensions:</strong> Thousands of extensions for languages, themes, and tools</li>
+                <li><strong>Integrated Terminal:</strong> Built-in command line interface</li>
+                <li><strong>Multi-cursor Editing:</strong> Edit multiple lines simultaneously</li>
+                <li><strong>Live Share:</strong> Real-time collaborative development</li>
+                <li><strong>Remote Development:</strong> Work with code in containers, remote machines, or WSL</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Popular Extensions</h2>
+            <ul style="margin-left: 2rem; margin-bottom: 2rem;">
+                <li><strong>Prettier:</strong> Code formatter for consistent styling</li>
+                <li><strong>ESLint:</strong> JavaScript linting and error detection</li>
+                <li><strong>GitLens:</strong> Enhanced Git capabilities and blame annotations</li>
+                <li><strong>Live Server:</strong> Local development server with live reload</li>
+                <li><strong>Bracket Pair Colorizer:</strong> Colorize matching brackets</li>
+                <li><strong>Auto Rename Tag:</strong> Automatically rename paired HTML/XML tags</li>
+                <li><strong>Thunder Client:</strong> REST API client for testing APIs</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Career Impact</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">74%</span>
+                    <p>Of developers use VS Code as primary editor</p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">50M+</span>
+                    <p>Monthly active users worldwide</p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">30K+</span>
+                    <p>Available extensions in marketplace</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Learning Path</h2>
+            <ol style="margin-left: 2rem;">
+                <li>Download and install VS Code</li>
+                <li>Learn basic navigation and shortcuts</li>
+                <li>Configure settings and preferences</li>
+                <li>Install essential extensions</li>
+                <li>Master debugging features</li>
+                <li>Explore advanced features and customization</li>
+            </ol>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Related Terms</h2>
+            <div class="related-terms">
+                <a href="javascript" class="related-term">JavaScript</a>
+                <a href="typescript" class="related-term">TypeScript</a>
+                <a href="git" class="related-term">Git</a>
+                <a href="web-development" class="related-term">Web Development</a>
+            </div>
+        </section>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Master Development Tools</h2>
+            <p class="cta-subtitle">Join thousands of developers who've accelerated their careers with Lead With Skills</p>
+            <div class="cta-buttons">
+                <a href="../courses" class="btn btn-primary">Explore Development Courses</a>
+                <a href="../mentorship" class="btn btn-secondary">Get Mentorship</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

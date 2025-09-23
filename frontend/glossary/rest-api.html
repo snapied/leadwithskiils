@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST API - Lead With Skills Glossary</title>
+    <meta name="description" content="Learn about REST API design principles, HTTP methods, and best practices. Master API development with Lead With Skills courses.">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/rest-api">
+    <style>
+        
+
+        .breadcrumb {    
+            background-color: var(--Primary-25);
+            padding: 1rem 0;
+        }
+
+        .breadcrumb-nav {width:fit-content;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb-nav a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            padding: 3rem 0;
+        }
+
+        .term-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            background-color: var(--Primary-100);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            display: inline-block;
+            font-weight: 500;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .main-definition {
+            background-color: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border-left: 4px solid var(--primary);
+        }
+
+        .definition-text {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .code-example {
+            background-color: #1f2937;
+            color: #e5e7eb;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-card {
+            background-color: var(--card);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .info-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .salary-range {
+            background: linear-gradient(135deg, var(--Primary-100), var(--Primary-25));
+            padding: 1rem;
+            border-radius: var(--radius);
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .salary-amount {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .related-terms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .related-term {
+            background-color: var(--Primary-25);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .related-term:hover {
+            background-color: var(--Primary-100);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary), var(--Primary-600));
+            color: var(--primary-foreground);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-foreground);
+            color: var(--primary);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-foreground);
+            border: 2px solid var(--primary-foreground);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .term-title {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <section class="breadcrumb margin-top-80">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index">Home</a>
+                <span>›</span>
+                <a href="index">Glossary</a>
+                <span>›</span>
+                <span>REST API</span>
+            </nav>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="term-header">
+                <h1 class="term-title">REST API</h1>
+                <span class="term-category">Web Development</span>
+            </div>
+
+            <div class="content-grid">
+                <div class="main-definition">
+                    <p class="definition-text">
+                        <strong>REST API</strong> (Representational State Transfer Application Programming Interface) is an architectural style for designing networked applications. It uses standard HTTP methods and follows specific principles to create scalable, stateless web services that can be easily consumed by different clients.
+                    </p>
+
+                    <h3>REST Principles</h3>
+                    <ul style="margin: 1rem 0; padding-left: 2rem;">
+                        <li><strong>Stateless:</strong> Each request contains all information needed</li>
+                        <li><strong>Client-Server:</strong> Separation of concerns between client and server</li>
+                        <li><strong>Cacheable:</strong> Responses can be cached to improve performance</li>
+                        <li><strong>Uniform Interface:</strong> Consistent way to interact with resources</li>
+                        <li><strong>Layered System:</strong> Architecture can have multiple layers</li>
+                    </ul>
+
+                    <h3>HTTP Methods in REST</h3>
+                    <div class="code-example">
+// GET - Retrieve data
+GET /api/users/123
+Response: { "id": 123, "name": "John Doe", "email": "john@example.com" }
+
+// POST - Create new resource
+POST /api/users
+Body: { "name": "Jane Smith", "email": "jane@example.com" }
+Response: { "id": 124, "name": "Jane Smith", "email": "jane@example.com" }
+
+// PUT - Update entire resource
+PUT /api/users/123
+Body: { "name": "John Updated", "email": "john.updated@example.com" }
+
+// PATCH - Partial update
+PATCH /api/users/123
+Body: { "email": "newemail@example.com" }
+
+// DELETE - Remove resource
+DELETE /api/users/123
+Response: 204 No Content
+                    </div>
+
+                    <h3>REST API Best Practices</h3>
+                    <p>Use meaningful resource names, proper HTTP status codes, consistent naming conventions, versioning, proper error handling, and comprehensive documentation.</p>
+                </div>
+
+                <div class="sidebar">
+                    <div class="info-card">
+                        <h3>💰 Career Impact</h3>
+                        <div class="salary-range">
+                            <div class="salary-amount">$85K - $160K</div>
+                            <div>API Developer Salary</div>
+                        </div>
+                        <p><strong>Job Growth:</strong> 20% (Much faster than average)</p>
+                        <p><strong>Demand:</strong> Very High - Essential for modern applications</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>🎯 Learning Path</h3>
+                        <ol style="padding-left: 1.5rem;">
+                            <li>HTTP protocol fundamentals</li>
+                            <li>JSON data format</li>
+                            <li>API design principles</li>
+                            <li>Authentication (JWT, OAuth)</li>
+                            <li>API testing tools (Postman)</li>
+                            <li>Documentation (Swagger/OpenAPI)</li>
+                            <li>Rate limiting and security</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Master REST API Development with Lead With Skills</h2>
+                <p>Build robust, scalable APIs with our comprehensive courses and expert mentorship programs.</p>
+                <div class="cta-buttons">
+                    <a href="../courses" class="btn btn-primary">Explore API Courses</a>
+                    <a href="../mentorship" class="btn btn-secondary">Get API Mentorship</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

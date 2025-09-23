@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ember.js - Lead With Skills Glossary</title>
+    <meta name="description" content="Learn about Ember.js, a productive JavaScript framework for building ambitious web applications. Comprehensive guide with examples and career insights.">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/emberjs">
+    <style>
+        
+
+        .breadcrumb {    
+            background-color: var(--card);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb-nav {width:fit-content;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .breadcrumb-nav a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb-nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem 0;
+        }
+
+        .term-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            display: inline-block;
+            background-color: var(--Primary-100);
+            color: var(--Primary-600);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .main-content {
+            background-color: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-card {
+            background-color: var(--card);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .info-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .definition {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: var(--foreground);
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--Primary-100);
+            padding-bottom: 0.5rem;
+        }
+
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+
+        .code-block code {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .highlight-box {
+            background-color: var(--Primary-25);
+            border-left: 4px solid var(--Primary-600);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--Primary-25);
+            border-radius: var(--radius);
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--Primary-600);
+        }
+
+        .related-terms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .related-term {
+            background-color: var(--Primary-100);
+            color: var(--Primary-600);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .related-term:hover {
+            background-color: var(--Primary-600);
+            color: white;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--Primary-600) 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-content p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: white;
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--Primary-25);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background-color: white;
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .term-title {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <div class="breadcrumb margin-top-80">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index">Home</a>
+                <span>›</span>
+                <a href="index">Glossary</a>
+                <span>›</span>
+                <span>Ember.js</span>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="term-header">
+            <h1 class="term-title">Ember.js</h1>
+            <span class="term-category">JavaScript Framework</span>
+        </div>
+
+        <div class="content-grid">
+            <div class="main-content">
+                <div class="definition">
+                    <strong>Ember.js</strong> is an ambitious JavaScript framework designed for building scalable single-page web applications. It follows the convention-over-configuration principle and provides a complete solution with everything needed to build rich UIs that work on any device.
+                </div>
+
+                <div class="section">
+                    <h2>Key Features</h2>
+                    <ul>
+                        <li><strong>Convention over Configuration:</strong> Reduces decision fatigue with sensible defaults</li>
+                        <li><strong>Ember CLI:</strong> Powerful command-line interface for project management</li>
+                        <li><strong>Two-way Data Binding:</strong> Automatic synchronization between model and view</li>
+                        <li><strong>Ember Data:</strong> Built-in data persistence library</li>
+                        <li><strong>Router:</strong> Sophisticated URL-driven application state management</li>
+                        <li><strong>Templates:</strong> Handlebars-based templating system</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Basic Example</h2>
+                    <pre class="code-block">
+                        <code>
+// app/routes/application.js
+import Route from '@ember/routing/route';
+
+export default class ApplicationRoute extends Route {
+  model() {
+    return {
+      title: 'Welcome to Ember.js',
+      users: ['Alice', 'Bob', 'Charlie']
+    };
+  }
+}
+
+// app/templates/application.hbs
+&lt;h1&gt;{{model.title}}&lt;/h1&gt;
+&lt;ul&gt;
+  {{#each model.users as |user|}}
+    &lt;li&gt;{{user}}&lt;/li&gt;
+  {{/each}}
+&lt;/ul&gt;
+
+// app/components/user-profile.js
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+
+export default class UserProfileComponent extends Component {
+  @action
+  updateProfile() {
+    // Handle profile update
+    console.log('Profile updated!');
+  }
+}
+                        </code>
+                    </pre>
+                </div>
+
+                <div class="section">
+                    <h2>Ember CLI Commands</h2>
+                    <pre class="code-block">
+                        <code>
+# Create new Ember application
+ember new my-app
+
+# Generate component
+ember generate component user-profile
+
+# Generate route
+ember generate route users
+
+# Generate model
+ember generate model user
+
+# Run development server
+ember serve
+
+# Build for production
+ember build --environment=production
+                        </code>
+                    </pre>
+                </div>
+
+                <div class="section">
+                    <h2>Career Impact</h2>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">$95K+</div>
+                            <div>Average Salary</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">15K+</div>
+                            <div>Job Openings</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">85%</div>
+                            <div>Enterprise Usage</div>
+                        </div>
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <strong>Career Opportunities:</strong> Ember.js developers are highly valued for building complex, maintainable applications. The framework's emphasis on conventions makes it popular in enterprise environments where consistency and scalability are crucial.
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Learning Path</h2>
+                    <ol>
+                        <li>Master JavaScript fundamentals and ES6+ features</li>
+                        <li>Learn Handlebars templating system</li>
+                        <li>Understand Ember's routing and data flow</li>
+                        <li>Practice with Ember CLI and project structure</li>
+                        <li>Build projects using Ember Data for API integration</li>
+                        <li>Explore advanced topics like services and dependency injection</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="info-card">
+                    <h3>Quick Facts</h3>
+                    <ul>
+                        <li><strong>Created:</strong> 2011</li>
+                        <li><strong>Developer:</strong> Yehuda Katz & Tom Dale</li>
+                        <li><strong>Type:</strong> JavaScript Framework</li>
+                        <li><strong>License:</strong> MIT</li>
+                        <li><strong>Latest Version:</strong> 4.x</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>Use Cases</h3>
+                    <ul>
+                        <li>Large-scale web applications</li>
+                        <li>Enterprise software</li>
+                        <li>Content management systems</li>
+                        <li>E-commerce platforms</li>
+                        <li>Dashboard applications</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>Related Terms</h3>
+                    <div class="related-terms">
+                        <a href="javascript" class="related-term">JavaScript</a>
+                        <a href="handlebars" class="related-term">Handlebars</a>
+                        <a href="spa" class="related-term">SPA</a>
+                        <a href="mvc" class="related-term">MVC</a>
+                        <a href="cli" class="related-term">CLI</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Master Ember.js with Lead With Skills</h2>
+                <p>Join thousands of developers who've advanced their careers with our comprehensive Ember.js courses and expert mentorship.</p>
+                <div class="cta-buttons">
+                    <a href="../courses" class="btn btn-primary">Explore Courses</a>
+                    <a href="../mentorship" class="btn btn-secondary">Get Mentorship</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

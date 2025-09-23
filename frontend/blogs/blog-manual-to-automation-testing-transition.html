@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    <link rel="icon" href="/images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Transition from Manual Testing to Full-Stack Automation Testing | Lead With Skills</title>
+    <meta name="description" content="Complete roadmap for transitioning from manual testing to full-stack automation testing. Learn essential skills, tools, and frameworks with expert mentorship guidance.">
+    <meta name="keywords" content="manual to automation testing, full-stack automation testing, testing career transition, automation testing roadmap, selenium testing, API testing">
+    <link rel="canonical" href="https://www.leadwithskills.com/blog-manual-to-automation-testing-transition">
+    <link rel="stylesheet" href="/styles/styles.css">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How to Transition from Manual Testing to Full-Stack Automation Testing",
+        "description": "Complete roadmap for transitioning from manual testing to full-stack automation testing with essential skills, tools, and frameworks.",
+        "image": "https://www.leadwithskills.com/images/automation-testing-transition.jpg",
+        "author": {
+            "@type": "Organization",
+            "name": "Lead With Skills",
+            "url": "https://www.leadwithskills.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Lead With Skills",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.leadwithskills.com/images/logo.avif"
+            }
+        },
+        "datePublished": "2025-01-15",
+        "dateModified": "2025-01-15",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.leadwithskills.com/blog-manual-to-automation-testing-transition"
+        },
+        "keywords": ["manual to automation testing", "full-stack automation testing", "testing career transition", "automation testing roadmap"]
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #007bff;
+        }
+
+        .cta-button {
+            background: #007bff;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #0056b3;
+        }
+
+        /* Blog Content Styles */
+        .blog-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .blog-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .blog-meta {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .blog-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 20px;
+        }
+
+        .blog-content h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin: 2.5rem 0 1rem 0;
+            font-weight: 600;
+        }
+
+        .blog-content h3 {
+            color: #34495e;
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+        }
+
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .blog-content ul, .blog-content ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .blog-content li {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            background: #f8f9fa;
+            border-left: 4px solid #007bff;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .skill-card {
+            background: #fff;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .skill-card h4 {
+            color: #007bff;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .roadmap-step {
+            background: #fff;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            position: relative;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .step-number {
+            background: #007bff;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+        }
+
+        .roadmap-step h4 {
+            color: #2c3e50;
+            margin-top: 10px;
+            margin-bottom: 1rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            background: #fff;
+            color: #667eea;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-btn.secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-btn.secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #3498db;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: #3498db;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 1rem;
+            text-align: center;
+            color: #bdc3c7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .blog-header h1 {
+                font-size: 2rem;
+            }
+
+            .blog-content {
+                padding: 2rem 20px;
+            }
+
+            .skill-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <a href="/"><img src="/images/logo.avif" alt="Lead With Skills Logo"/></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+<li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <section class="blog-header margin-top-60">
+        <div class="container">
+            <h1>How to Transition from Manual Testing to Full-Stack Automation Testing</h1>
+            <div class="blog-meta">
+                Published on January 15, 2025 | 12 min read | Career Transition Guide
+            </div>
+        </div>
+    </section>
+
+    <main class="blog-content">
+        <p>The testing landscape has evolved dramatically, and while manual testing remains crucial, automation testing skills have become essential for career growth. If you're a manual tester looking to transition into full-stack automation testing, this comprehensive guide will provide you with a clear roadmap to make that transition successfully.</p>
+
+        <div class="highlight-box">
+            <strong>Key Takeaway:</strong> Transitioning from manual to automation testing doesn't mean abandoning your manual testing expertise—it means enhancing it with powerful automation skills that make you a more versatile and valuable testing professional.
+        </div>
+
+        <h2>Why Make the Transition to Automation Testing?</h2>
+        
+        <p>The demand for automation testing professionals has grown exponentially. Here's why this transition is worth considering:</p>
+
+        <ul>
+            <li><strong>Higher Salary Potential:</strong> Automation testers earn 40-60% more than manual testers on average</li>
+            <li><strong>Career Growth:</strong> Opens doors to senior testing roles, test architect positions, and DevOps opportunities</li>
+            <li><strong>Industry Demand:</strong> 85% of companies are actively seeking automation testing professionals</li>
+            <li><strong>Efficiency Impact:</strong> Automation reduces testing time by 70-80% for regression testing</li>
+            <li><strong>Future-Proofing:</strong> Automation skills are essential in modern software development practices</li>
+        </ul>
+
+        <h2>Understanding Full-Stack Automation Testing</h2>
+
+        <p>Full-stack automation testing involves automating tests across all layers of an application:</p>
+
+        <div class="skill-grid">
+            <div class="skill-card">
+                <h4>Frontend Automation</h4>
+                <p>UI testing using tools like Selenium, Cypress, or Playwright to automate user interactions and validate frontend functionality.</p>
+            </div>
+            <div class="skill-card">
+                <h4>API/Backend Automation</h4>
+                <p>Testing REST APIs, GraphQL endpoints, and backend services using tools like Postman, REST Assured, or Newman.</p>
+            </div>
+            <div class="skill-card">
+                <h4>Database Testing</h4>
+                <p>Validating data integrity, CRUD operations, and database performance using SQL queries and specialized tools.</p>
+            </div>
+            <div class="skill-card">
+                <h4>Mobile Automation</h4>
+                <p>Testing mobile applications using frameworks like Appium for both Android and iOS platforms.</p>
+            </div>
+        </div>
+
+        <h2>Essential Skills for Full-Stack Automation Testing</h2>
+
+        <h3>Programming Languages</h3>
+        <ul>
+            <li><strong>Java:</strong> Most popular for Selenium automation and enterprise applications</li>
+            <li><strong>Python:</strong> Excellent for beginners, great for API testing and data validation</li>
+            <li><strong>JavaScript:</strong> Essential for modern web automation with Cypress and Playwright</li>
+            <li><strong>C#:</strong> Popular in Microsoft environments and with Selenium WebDriver</li>
+        </ul>
+
+        <h3>Automation Tools and Frameworks</h3>
+        <ul>
+            <li><strong>Selenium WebDriver:</strong> Industry standard for web automation</li>
+            <li><strong>Cypress:</strong> Modern JavaScript-based testing framework</li>
+            <li><strong>Playwright:</strong> Cross-browser automation tool by Microsoft</li>
+            <li><strong>REST Assured:</strong> Java library for API testing</li>
+            <li><strong>Postman/Newman:</strong> API testing and automation</li>
+            <li><strong>Appium:</strong> Mobile automation framework</li>
+        </ul>
+
+        <h3>Additional Technical Skills</h3>
+        <ul>
+            <li><strong>Version Control:</strong> Git and GitHub for code management</li>
+            <li><strong>CI/CD Integration:</strong> Jenkins, Azure DevOps, or GitHub Actions</li>
+            <li><strong>Test Management:</strong> TestNG, JUnit, or pytest frameworks</li>
+            <li><strong>Reporting:</strong> Allure, ExtentReports, or custom reporting solutions</li>
+            <li><strong>Database Knowledge:</strong> SQL for database validation</li>
+        </ul>
+
+        <h2>Step-by-Step Transition Roadmap</h2>
+
+        <div class="roadmap-step">
+            <div class="step-number">1</div>
+            <h4>Foundation Building (Months 1-2)</h4>
+            <p><strong>Focus:</strong> Learn programming fundamentals and basic automation concepts.</p>
+            <ul>
+                <li>Choose a programming language (Java or Python recommended for beginners)</li>
+                <li>Learn basic programming concepts: variables, loops, conditions, functions</li>
+                <li>Understand OOP concepts: classes, objects, inheritance, polymorphism</li>
+                <li>Practice coding with simple programs and exercises</li>
+            </ul>
+        </div>
+
+        <div class="roadmap-step">
+            <div class="step-number">2</div>
+            <h4>Web Automation Mastery (Months 3-4)</h4>
+            <p><strong>Focus:</strong> Master Selenium WebDriver for web application testing.</p>
+            <ul>
+                <li>Learn Selenium WebDriver basics and browser interactions</li>
+                <li>Practice element identification strategies (XPath, CSS selectors)</li>
+                <li>Implement Page Object Model (POM) design pattern</li>
+                <li>Handle dynamic elements, alerts, and frames</li>
+                <li>Create data-driven test frameworks</li>
+            </ul>
+        </div>
+
+        <div class="roadmap-step">
+            <div class="step-number">3</div>
+            <h4>API Testing Expertise (Months 5-6)</h4>
+            <p><strong>Focus:</strong> Learn API testing and backend validation.</p>
+            <ul>
+                <li>Understand REST API concepts and HTTP methods</li>
+                <li>Learn Postman for manual API testing</li>
+                <li>Implement API automation using REST Assured or requests library</li>
+                <li>Practice JSON/XML parsing and validation</li>
+                <li>Learn authentication methods (OAuth, JWT, API keys)</li>
+            </ul>
+        </div>
+
+        <div class="roadmap-step">
+            <div class="step-number">4</div>
+            <h4>Framework Development (Months 7-8)</h4>
+            <p><strong>Focus:</strong> Build comprehensive test automation frameworks.</p>
+            <ul>
+                <li>Design hybrid frameworks combining web and API testing</li>
+                <li>Implement reporting mechanisms (Allure, ExtentReports)</li>
+                <li>Add logging and error handling capabilities</li>
+                <li>Create configuration management for different environments</li>
+                <li>Implement parallel execution strategies</li>
+            </ul>
+        </div>
+
+        <div class="roadmap-step">
+            <div class="step-number">5</div>
+            <h4>CI/CD Integration (Months 9-10)</h4>
+            <p><strong>Focus:</strong> Integrate automation with DevOps practices.</p>
+            <ul>
+                <li>Learn Git version control and collaboration workflows</li>
+                <li>Set up Jenkins or Azure DevOps pipelines</li>
+                <li>Configure automated test execution on code commits</li>
+                <li>Implement test result notifications and reporting</li>
+                <li>Practice containerization with Docker</li>
+            </ul>
+        </div>
+
+        <div class="roadmap-step">
+            <div class="step-number">6</div>
+            <h4>Advanced Specialization (Months 11-12)</h4>
+            <p><strong>Focus:</strong> Specialize in advanced testing areas.</p>
+            <ul>
+                <li>Mobile automation with Appium</li>
+                <li>Performance testing with JMeter or LoadRunner</li>
+                <li>Security testing automation</li>
+                <li>Cloud testing platforms (BrowserStack, Sauce Labs)</li>
+                <li>AI/ML testing approaches</li>
+            </ul>
+        </div>
+
+        <h2>Common Challenges and How to Overcome Them</h2>
+
+        <h3>Programming Learning Curve</h3>
+        <p><strong>Challenge:</strong> Many manual testers find programming intimidating.</p>
+        <p><strong>Solution:</strong> Start with Python for its simple syntax, practice daily with small programs, and focus on testing-specific programming concepts first.</p>
+
+        <h3>Tool Selection Confusion</h3>
+        <p><strong>Challenge:</strong> Too many automation tools and frameworks to choose from.</p>
+        <p><strong>Solution:</strong> Start with industry standards (Selenium + Java/Python), then expand based on project requirements and market demand.</p>
+
+        <h3>Framework Design Complexity</h3>
+        <p><strong>Challenge:</strong> Building maintainable and scalable automation frameworks.</p>
+        <p><strong>Solution:</strong> Learn design patterns (Page Object Model, Factory Pattern), follow coding best practices, and study existing open-source frameworks.</p>
+
+        <h3>Keeping Up with Technology</h3>
+        <p><strong>Challenge:</strong> Rapid evolution of automation tools and practices.</p>
+        <p><strong>Solution:</strong> Join testing communities, follow industry blogs, attend webinars, and continuously practice with new tools.</p>
+
+        <h2>Building Your Automation Testing Portfolio</h2>
+
+        <p>Create a strong portfolio to showcase your automation skills:</p>
+
+        <ul>
+            <li><strong>GitHub Repository:</strong> Maintain clean, well-documented automation projects</li>
+            <li><strong>Framework Showcase:</strong> Demonstrate different types of automation frameworks</li>
+            <li><strong>Real-world Projects:</strong> Automate testing for popular websites or APIs</li>
+            <li><strong>Documentation:</strong> Write clear README files and technical documentation</li>
+            <li><strong>Continuous Learning:</strong> Show progression through different complexity levels</li>
+        </ul>
+
+        <h2>Career Opportunities After Transition</h2>
+
+        <p>Successfully transitioning to automation testing opens numerous career paths:</p>
+
+        <div class="skill-grid">
+            <div class="skill-card">
+                <h4>Senior Automation Engineer</h4>
+                <p>Lead automation initiatives, mentor junior testers, and design comprehensive testing strategies.</p>
+            </div>
+            <div class="skill-card">
+                <h4>Test Architect</h4>
+                <p>Design enterprise-level testing frameworks and establish testing standards across organizations.</p>
+            </div>
+            <div class="skill-card">
+                <h4>DevOps Engineer</h4>
+                <p>Integrate testing into CI/CD pipelines and work on infrastructure automation.</p>
+            </div>
+            <div class="skill-card">
+                <h4>Quality Engineering Manager</h4>
+                <p>Lead quality engineering teams and drive quality initiatives at the organizational level.</p>
+            </div>
+        </div>
+
+        <h2>Salary Expectations and Market Demand</h2>
+
+        <p>The financial benefits of transitioning to automation testing are significant:</p>
+
+        <ul>
+            <li><strong>Entry-level Automation Tester:</strong> ₹4-7 LPA</li>
+            <li><strong>Mid-level Automation Engineer:</strong> ₹8-15 LPA</li>
+            <li><strong>Senior Automation Engineer:</strong> ₹16-25 LPA</li>
+            <li><strong>Test Architect/Lead:</strong> ₹26-40 LPA</li>
+            <li><strong>Quality Engineering Manager:</strong> ₹35-60 LPA</li>
+        </ul>
+
+        <div class="highlight-box">
+            <strong>Industry Insight:</strong> Companies like Google, Microsoft, Amazon, and leading Indian IT firms are actively hiring automation testing professionals. The demand is expected to grow by 25% annually over the next five years.
+        </div>
+
+        <h2>Getting Started: Your Next Steps</h2>
+
+        <p>Ready to begin your transition? Here's your immediate action plan:</p>
+
+        <ol>
+            <li><strong>Assess Your Current Skills:</strong> Identify gaps between your manual testing knowledge and automation requirements</li>
+            <li><strong>Choose Your Learning Path:</strong> Select a programming language and automation tool combination</li>
+            <li><strong>Set Up Your Environment:</strong> Install necessary tools and IDEs</li>
+            <li><strong>Start Small:</strong> Begin with simple automation scripts for familiar applications</li>
+            <li><strong>Join Communities:</strong> Connect with automation testing professionals and communities</li>
+            <li><strong>Seek Mentorship:</strong> Find experienced automation engineers who can guide your journey</li>
+            <li><strong>Practice Consistently:</strong> Dedicate time daily to coding and automation practice</li>
+        </ol>
+
+        <h2>Conclusion</h2>
+
+        <p>Transitioning from manual testing to full-stack automation testing is a rewarding career move that opens doors to higher salaries, better opportunities, and cutting-edge technology work. While the journey requires dedication and continuous learning, your existing manual testing expertise provides a strong foundation for understanding application behavior and identifying potential issues.</p>
+
+        <p>Remember, automation doesn't replace the critical thinking and domain knowledge you've developed as a manual tester—it amplifies your impact and efficiency. With the right guidance, structured learning approach, and consistent practice, you can successfully make this transition and thrive in the automation testing field.</p>
+
+        <p>The key is to start now, stay consistent, and never stop learning. The future of testing is automated, and there's never been a better time to be part of this exciting transformation.</p>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Start Your Automation Testing Journey?</h2>
+            <p>Join thousands of professionals who have successfully transitioned to automation testing with expert guidance and mentorship.</p>
+            <div class="cta-buttons">
+                <a href="/mentorship" class="cta-btn">Get 1:1 Mentorship</a>
+                <a href="/courses" class="cta-btn secondary">Explore Automation Courses</a>
+            </div>
+        </div>
+    </section>
+
+            <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+    <h3>Programs</h3>
+    <!-- Technical & Product -->
+    <a href="/courses/technical-product-manager">Technical Product Manager</a>
+    <a href="/courses/ai-in-product-management">AI in Product Management</a>
+
+    <!-- Testing -->
+    <a href="/courses/manual-testing-fundamentals">Manual Testing Fundamentals</a>
+    <a href="/courses/manual-and-full-stack-automation-testing">Manual & Full Stack Automation Testing</a>
+
+    <!-- Web Development -->
+    <a href="/courses/web-designing-and-development/index">Web Designing & Development</a>
+    <a href="/courses/web-designing-and-development/html-mastery">HTML Mastery</a>
+    <a href="/courses/web-designing-and-development/css-mastery">CSS Mastery</a>
+    <a href="/courses/web-designing-and-development/javascript-mastery">JavaScript Mastery</a>
+    <a href="/courses/web-designing-and-development/angular-training">Angular Training</a>
+    <a href="/courses/web-designing-and-development/nodejs-mastery">Node.js Mastery</a>
+    <a href="/courses/full-stack-development">Full Stack Developer Program</a>
+
+    <!-- AI & Marketing -->
+    
+    
+    
+</div>
+
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="/about-us">About Lead With Skills</a>
+                    <a href="/mentorship">Our Mentors</a>
+                    <a href="/success-stories">Success Stories</a>
+                    <a href="/careers">Careers</a>
+                    
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    
+                    <a href="/contact-us">Contact Us</a><a href="/glossary">Glossary</a>
+                    <a href="/communities">Community</a>
+                    <a href="/terms-and-conditions">Terms of Service</a>
+                    <a href="/privacy-policy">Privacy Policy</a>
+                    <a href="/refund-policy">Refund/Cancellation Policy</a>
+                    
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <a href="https://www.linkedin.com/company/leadwithskills">LinkedIn</a>
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lead With Skills. All rights reserved. Built for ambitious professionals.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

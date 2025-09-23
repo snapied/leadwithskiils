@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap - CSS Framework | Lead With Skills Glossary</title>
+    <meta name="description" content="Learn about Bootstrap, the popular CSS framework for responsive web development. Discover career opportunities and master frontend development with Lead With Skills.">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/bootstrap">
+    <style>
+        
+
+        .breadcrumb {    
+            padding: 1rem 0;
+            background-color: var(--card);
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem 0;
+        }
+
+        .term-header {
+            background: linear-gradient(135deg, var(--Primary-25) 0%, var(--Primary-100) 100%);
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 3rem;
+            border-radius: var(--radius);
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .main-content {
+            background-color: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-card {
+            background-color: var(--card);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .info-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+
+        .code-block code {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .related-terms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .related-term {
+            background-color: var(--Primary-25);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 1rem;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .related-term:hover {
+            background-color: var(--Primary-100);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--Primary-600) 100%);
+            color: var(--primary-foreground);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            background-color: var(--primary-foreground);
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-button.secondary {
+            background-color: transparent;
+            color: var(--primary-foreground);
+            border: 2px solid var(--primary-foreground);
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .term-title {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .cta-content h2 {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <div class="breadcrumb margin-top-80">
+        <div class="container">
+            <a href="../index">Home</a> > <a href="index">Glossary</a> > Bootstrap
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="term-header">
+                <h1 class="term-title">Bootstrap</h1>
+                <span class="term-category">CSS Framework</span>
+            </div>
+
+            <div class="content-grid">
+                <div class="main-content">
+                    <h2>What is Bootstrap?</h2>
+                    <p>Bootstrap is a free and open-source CSS framework that provides pre-built components, utilities, and responsive grid systems for rapid web development. Originally developed by Twitter, Bootstrap has become one of the most popular frontend frameworks, enabling developers to create responsive, mobile-first websites quickly and efficiently.</p>
+
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li><strong>Responsive Grid System:</strong> 12-column flexible grid system</li>
+                        <li><strong>Pre-built Components:</strong> Buttons, forms, navigation, modals, and more</li>
+                        <li><strong>CSS Utilities:</strong> Spacing, typography, and layout utilities</li>
+                        <li><strong>JavaScript Plugins:</strong> Interactive components like carousels and dropdowns</li>
+                        <li><strong>Customizable:</strong> Sass variables and mixins for customization</li>
+                        <li><strong>Browser Compatibility:</strong> Works across all modern browsers</li>
+                    </ul>
+
+                    <h3>Bootstrap Grid Example</h3>
+                    <pre class="code-block">
+                        <code>
+&lt;div class="container"&gt;<br>
+&nbsp;&nbsp;&lt;div class="row"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-md-6"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Column 1&lt;/h2&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-md-6"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Column 2&lt;/h2&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+&nbsp;&nbsp;&lt;/div&gt;<br>
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                    <h3>Bootstrap Button Components</h3>
+                    <pre class="code-block">
+                        <code>
+&lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;<br>
+&lt;button type="button" class="btn btn-secondary"&gt;Secondary&lt;/button&gt;<br>
+&lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;<br>
+&lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt;
+                        </code>
+                    </pre>
+
+                    <h3>Career Impact</h3>
+                    <p>Bootstrap skills are highly valued in the job market, with frontend developers earning competitive salaries. Companies appreciate developers who can rapidly prototype and build responsive interfaces using Bootstrap's component library.</p>
+
+                    <h3>Learning Path</h3>
+                    <ol>
+                        <li>Master HTML and CSS fundamentals</li>
+                        <li>Learn Bootstrap grid system and components</li>
+                        <li>Practice building responsive layouts</li>
+                        <li>Explore Bootstrap customization with Sass</li>
+                        <li>Build real-world projects using Bootstrap</li>
+                        <li>Learn Bootstrap 5 new features and utilities</li>
+                    </ol>
+                </div>
+
+                <div class="sidebar">
+                    <div class="info-card">
+                        <h3>Quick Facts</h3>
+                        <ul>
+                            <li><strong>Type:</strong> CSS Framework</li>
+                            <li><strong>First Release:</strong> 2011</li>
+                            <li><strong>Current Version:</strong> Bootstrap 5</li>
+                            <li><strong>License:</strong> MIT License</li>
+                            <li><strong>File Size:</strong> ~27KB (minified CSS)</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Career Opportunities</h3>
+                        <ul>
+                            <li><strong>Frontend Developer:</strong> $65,000 - $120,000</li>
+                            <li><strong>UI Developer:</strong> $60,000 - $110,000</li>
+                            <li><strong>Web Designer:</strong> $45,000 - $85,000</li>
+                            <li><strong>Full-Stack Developer:</strong> $70,000 - $140,000</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Related Terms</h3>
+                        <div class="related-terms">
+                            <a href="css" class="related-term">CSS</a>
+                            <a href="html" class="related-term">HTML</a>
+                            <a href="javascript" class="related-term">JavaScript</a>
+                            <a href="responsive-design" class="related-term">Responsive Design</a>
+                            <a href="sass" class="related-term">Sass</a>
+                            <a href="frontend-development" class="related-term">Frontend Development</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Master Bootstrap with Lead With Skills</h2>
+                <p>Join thousands of developers who have accelerated their careers with our comprehensive Bootstrap courses and expert mentorship.</p>
+                <div class="cta-buttons">
+                    <a href="../courses" class="cta-button">Explore Courses</a>
+                    <a href="../mentorship" class="cta-button secondary">Get Mentorship</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Lead With Skills. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub - Tech Glossary | Lead With Skills</title>
+    <meta name="description" content="Learn about GitHub - a web-based platform for version control and collaboration using Git, essential for software development and project management.">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/github">
+    <style>
+        
+
+        .breadcrumb {    
+            background-color: var(--card);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb-nav {width:fit-content;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .breadcrumb-nav a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb-nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        .term-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            display: inline-block;
+            background-color: var(--Primary-100);
+            color: var(--Primary-600);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .main-content {
+            background-color: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-card {
+            background-color: var(--card);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .sidebar-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .definition {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: var(--Primary-25);
+            border-left: 4px solid var(--Primary-600);
+            border-radius: var(--radius);
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .section h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+
+        .highlight-box {
+            background-color: var(--Primary-25);
+            border: 1px solid var(--Primary-100);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--Primary-25);
+            border-radius: var(--radius);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--Primary-600);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .related-terms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .related-term {
+            background-color: var(--Primary-100);
+            color: var(--Primary-600);
+            padding: 0.3rem 0.8rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .related-term:hover {
+            background-color: var(--Primary-600);
+            color: var(--primary-foreground);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--Primary-600) 100%);
+            color: var(--primary-foreground);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-foreground);
+            color: var(--primary);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-foreground);
+            border: 2px solid var(--primary-foreground);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .term-title {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <div class="breadcrumb margin-top-80">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index">Home</a>
+                <span>›</span>
+                <a href="index">Glossary</a>
+                <span>›</span>
+                <span>GitHub</span>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="term-header">
+            <h1 class="term-title">GitHub</h1>
+            <span class="term-category">Version Control Platform</span>
+        </div>
+
+        <div class="content-grid">
+            <div class="main-content">
+                <div class="definition">
+                    <strong>GitHub</strong> is a web-based platform that provides hosting for software development and version control using Git. It offers distributed version control, source code management, and collaboration features for developers and teams.
+                </div>
+
+                <div class="section">
+                    <h2>What is GitHub?</h2>
+                    <p>GitHub is the world's largest platform for hosting and collaborating on code. Built on top of Git version control system, it provides a web interface for managing repositories, tracking changes, collaborating with team members, and deploying applications.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Key Features</h2>
+                    <div class="highlight-box">
+                        <h3>Repositories</h3>
+                        <p>Storage spaces for your project files, including code, documentation, and version history.</p>
+                        
+                        <h3>Pull Requests</h3>
+                        <p>Propose changes to code, review modifications, and merge updates collaboratively.</p>
+                        
+                        <h3>Issues</h3>
+                        <p>Track bugs, feature requests, and project tasks with labels, assignees, and milestones.</p>
+                        
+                        <h3>Actions</h3>
+                        <p>Automate workflows for CI/CD, testing, and deployment directly from your repository.</p>
+                        
+                        <h3>Pages</h3>
+                        <p>Host static websites directly from your GitHub repository for free.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Essential Git Commands</h2>
+                    <pre class="code-block">
+# Clone a repository
+git clone https://github.com/username/repository.git
+
+# Check status
+git status
+
+# Add files to staging
+git add .
+git add filename.js
+
+# Commit changes
+git commit -m "Add new feature"
+
+# Push to GitHub
+git push origin main
+
+# Pull latest changes
+git pull origin main
+
+# Create and switch to new branch
+git checkout -b feature-branch
+
+# Merge branches
+git merge feature-branch
+                    </pre>
+                </div>
+
+                <div class="section">
+                    <h2>GitHub Workflow</h2>
+                    <ol style="margin-left: 2rem;">
+                        <li><strong>Fork:</strong> Create a copy of a repository to your account</li>
+                        <li><strong>Clone:</strong> Download the repository to your local machine</li>
+                        <li><strong>Branch:</strong> Create a new branch for your feature or fix</li>
+                        <li><strong>Commit:</strong> Save your changes with descriptive messages</li>
+                        <li><strong>Push:</strong> Upload your changes to GitHub</li>
+                        <li><strong>Pull Request:</strong> Request to merge your changes</li>
+                        <li><strong>Review:</strong> Team members review and approve changes</li>
+                        <li><strong>Merge:</strong> Integrate approved changes into main branch</li>
+                    </ol>
+                </div>
+
+                <div class="section">
+                    <h2>Career Impact</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">100M+</div>
+                            <div class="stat-label">GitHub Users</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">90%</div>
+                            <div class="stat-label">Fortune 100 Companies</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">330M+</div>
+                            <div class="stat-label">Repositories</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="sidebar-card">
+                    <h3>Quick Facts</h3>
+                    <ul style="list-style: none;">
+                        <li><strong>Founded:</strong> 2008</li>
+                        <li><strong>Owner:</strong> Microsoft</li>
+                        <li><strong>Based on:</strong> Git Version Control</li>
+                        <li><strong>Pricing:</strong> Free & Paid Plans</li>
+                        <li><strong>Primary Use:</strong> Code Hosting</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>Learning Path</h3>
+                    <ol style="margin-left: 1.5rem;">
+                        <li>Create GitHub Account</li>
+                        <li>Learn Git Basics</li>
+                        <li>Create First Repository</li>
+                        <li>Practice Commits & Pushes</li>
+                        <li>Master Branching</li>
+                        <li>Collaborate with Pull Requests</li>
+                    </ol>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>Related Terms</h3>
+                    <div class="related-terms">
+                        <a href="git" class="related-term">Git</a>
+                        <a href="version-control" class="related-term">Version Control</a>
+                        <a href="devops" class="related-term">DevOps</a>
+                        <a href="web-development" class="related-term">Web Development</a>
+                    </div>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>Popular Features</h3>
+                    <ul style="list-style: none;">
+                        <li>• GitHub Copilot (AI Assistant)</li>
+                        <li>• GitHub Actions (CI/CD)</li>
+                        <li>• GitHub Pages (Hosting)</li>
+                        <li>• GitHub Codespaces (Cloud IDE)</li>
+                        <li>• GitHub Security (Vulnerability Scanning)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Master Git & GitHub</h2>
+                <p>Learn essential version control skills that every developer needs with our comprehensive courses</p>
+                <div class="cta-buttons">
+                    <a href="../courses" class="btn btn-primary">Explore Courses</a>
+                    <a href="../mentorship" class="btn btn-secondary">Get Mentorship</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker - Tech Glossary | Lead With Skills</title>
+    <meta name="description" content="Learn about Docker containerization technology, deployment strategies, and career opportunities. Master containerization with Lead With Skills courses.">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/docker">
+    <style>
+        
+
+        .breadcrumb {    
+            padding: 1rem 0;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .term-header {
+            background: linear-gradient(135deg, var(--Primary-25), var(--Primary-100));
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            background: var(--primary);
+            color: var(--primary-foreground);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+
+        .content-section {
+            padding: 3rem 0;
+        }
+
+        .definition-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--Primary-100);
+            padding-bottom: 0.5rem;
+        }
+
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--Primary-600);
+        }
+
+        .related-terms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .related-term {
+            background: var(--Primary-25);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .related-term:hover {
+            background: var(--Primary-100);
+        }
+
+        .cta-section {
+            background: var(--primary);
+            color: var(--primary-foreground);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--Primary-600);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            background: var(--card);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--muted);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .term-title {
+                font-size: 2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumb margin-top-80">
+            <a href="../index">Home</a> > <a href="index">Glossary</a> > Docker
+        </div>
+    </div>
+
+    <section class="term-header">
+        <div class="container">
+            <h1 class="term-title">Docker</h1>
+            <span class="term-category">Containerization</span>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="definition-card">
+                <h2 class="section-title">Definition</h2>
+                <p>Docker is a containerization platform that enables developers to package applications and their dependencies into lightweight, portable containers. These containers can run consistently across different environments, from development laptops to production servers, solving the "it works on my machine" problem.</p>
+            </div>
+
+            <div class="definition-card">
+                <h2 class="section-title">Key Concepts</h2>
+                <ul>
+                    <li><strong>Containers:</strong> Lightweight, standalone packages that include everything needed to run an application</li>
+                    <li><strong>Images:</strong> Read-only templates used to create containers</li>
+                    <li><strong>Dockerfile:</strong> Text file containing instructions to build Docker images</li>
+                    <li><strong>Registry:</strong> Storage and distribution system for Docker images (Docker Hub)</li>
+                    <li><strong>Orchestration:</strong> Managing multiple containers with tools like Docker Compose</li>
+                </ul>
+            </div>
+
+            <div class="definition-card">
+                <h2 class="section-title">Example Dockerfile</h2>
+                <pre class="code-block">
+# Use official Node.js runtime as base image
+FROM node:18-alpine
+
+# Set working directory in container
+WORKDIR /app
+
+# Copy package.json and package-lock.json
+COPY package*.json ./
+
+# Install dependencies
+RUN npm ci --only=production
+
+# Copy application code
+COPY . .
+
+# Expose port 3000
+EXPOSE 3000
+
+# Define environment variable
+ENV NODE_ENV=production
+
+# Run the application
+CMD ["npm", "start"]
+                </pre>
+            </div>
+
+            <div class="definition-card">
+                <h2 class="section-title">Docker Commands</h2>
+                <pre class="code-block">
+# Build an image from Dockerfile
+docker build -t myapp:latest .
+
+# Run a container
+docker run -d -p 3000:3000 --name myapp-container myapp:latest
+
+# List running containers
+docker ps
+
+# Stop a container
+docker stop myapp-container
+
+# Remove a container
+docker rm myapp-container
+
+# Pull an image from registry
+docker pull nginx:latest
+
+# View container logs
+docker logs myapp-container
+
+# Execute command in running container
+docker exec -it myapp-container /bin/sh
+                </pre>
+            </div>
+
+            <div class="definition-card">
+                <h2 class="section-title">Career Impact</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">$85K+</div>
+                        <p>Average DevOps Engineer Salary</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">78%</div>
+                        <p>Of Companies Use Containerization</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">25K+</div>
+                        <p>Docker-Related Job Openings</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="definition-card">
+                <h2 class="section-title">Benefits of Docker</h2>
+                <ul>
+                    <li><strong>Consistency:</strong> Applications run the same across all environments</li>
+                    <li><strong>Portability:</strong> Containers run on any system that supports Docker</li>
+                    <li><strong>Efficiency:</strong> Lightweight compared to virtual machines</li>
+                    <li><strong>Scalability:</strong> Easy to scale applications horizontally</li>
+                    <li><strong>Isolation:</strong> Applications are isolated from each other</li>
+                    <li><strong>Version Control:</strong> Images can be versioned and rolled back</li>
+                </ul>
+            </div>
+
+            <div class="definition-card">
+                <h2 class="section-title">Docker Ecosystem</h2>
+                <ul>
+                    <li><strong>Docker Compose:</strong> Multi-container application orchestration</li>
+                    <li><strong>Docker Swarm:</strong> Native clustering and orchestration</li>
+                    <li><strong>Docker Hub:</strong> Cloud-based registry service</li>
+                    <li><strong>Docker Desktop:</strong> Development environment for Mac and Windows</li>
+                    <li><strong>Kubernetes:</strong> Advanced container orchestration platform</li>
+                </ul>
+            </div>
+
+            <div class="definition-card">
+                <h2 class="section-title">Learning Path</h2>
+                <ol>
+                    <li>Understand containerization concepts and benefits</li>
+                    <li>Install Docker and learn basic commands</li>
+                    <li>Create your first Dockerfile and build images</li>
+                    <li>Learn Docker networking and volumes</li>
+                    <li>Master Docker Compose for multi-container apps</li>
+                    <li>Explore container registries and image management</li>
+                    <li>Study container orchestration with Kubernetes</li>
+                    <li>Learn Docker security best practices</li>
+                </ol>
+            </div>
+
+            <div class="definition-card">
+                <h2 class="section-title">Related Terms</h2>
+                <div class="related-terms">
+                    <a href="kubernetes" class="related-term">Kubernetes</a>
+                    <a href="devops" class="related-term">DevOps</a>
+                    <a href="microservices" class="related-term">Microservices</a>
+                    <a href="containerization" class="related-term">Containerization</a>
+                    <a href="ci-cd" class="related-term">CI/CD</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Master Docker & DevOps</h2>
+            <p>Join thousands of professionals who've advanced their careers with Lead With Skills. Learn Docker, containerization, and modern DevOps practices from industry experts.</p>
+            <div class="cta-buttons">
+                <a href="../courses" class="btn btn-primary">Explore DevOps Courses</a>
+                <a href="../mentorship" class="btn btn-secondary">Get 1:1 Mentorship</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Lead With Skills. All rights reserved. | Empowering careers through technology education.</p>
+        </div>
+    </footer>
+</body>
+</html>

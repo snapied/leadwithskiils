@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apache Cordova - Lead With Skills Glossary</title>
+    <meta name="description" content="Learn about Apache Cordova, a mobile application development framework. Comprehensive guide covering features, benefits, and career opportunities.">
+    <meta name="keywords" content="Apache Cordova, PhoneGap, mobile development, hybrid apps, cross-platform">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/cordova">
+    <style>
+        
+
+        .breadcrumb {    
+            background-color: var(--card);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb-nav {width:fit-content;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .breadcrumb-nav a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb-nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        .term-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            display: inline-block;
+            background-color: var(--Primary-100);
+            color: var(--Primary-600);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .main-content {
+            background-color: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-card {
+            background-color: var(--card);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .info-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+
+        .info-list strong {
+            color: var(--primary);
+        }
+
+        h2 {
+            color: var(--primary);
+            margin: 2rem 0 1rem 0;
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            color: var(--primary);
+            margin: 1.5rem 0 1rem 0;
+            font-size: 1.4rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--foreground);
+        }
+
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+
+        .code-block code {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .highlight-box {
+            background-color: var(--Primary-25);
+            border-left: 4px solid var(--Primary-600);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+
+        .related-terms {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .related-term {
+            background-color: var(--card);
+            padding: 1rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--foreground);
+            transition: all 0.3s;
+        }
+
+        .related-term:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .related-term h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--Primary-600) 100%);
+            color: var(--primary-foreground);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-content h2 {
+            color: var(--primary-foreground);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-foreground);
+            color: var(--primary);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-foreground);
+            border-color: var(--primary-foreground);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .term-title {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <div class="breadcrumb margin-top-80">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="/">Home</a>
+                <span>›</span>
+                <a href="/glossary/">Glossary</a>
+                <span>›</span>
+                <span>Apache Cordova</span>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="term-header">
+            <h1 class="term-title">Apache Cordova</h1>
+            <span class="term-category">Mobile Development Framework</span>
+        </div>
+
+        <div class="content-grid">
+            <div class="main-content">
+                <h2>What is Apache Cordova?</h2>
+                <p>Apache Cordova (formerly PhoneGap) is an open-source mobile development framework that enables developers to build native mobile applications using HTML, CSS, and JavaScript. It acts as a bridge between web technologies and native mobile platforms, allowing developers to create cross-platform mobile apps with a single codebase.</p>
+
+                <div class="highlight-box">
+                    <p><strong>Key Insight:</strong> Cordova wraps your HTML/CSS/JavaScript app in a native container and provides access to device features like camera, GPS, and contacts through JavaScript APIs.</p>
+                </div>
+
+                <h2>Core Features</h2>
+                <h3>1. Cross-Platform Development</h3>
+                <p>Write once, deploy everywhere - supports iOS, Android, Windows Phone, and other platforms.</p>
+
+                <pre class="code-block">
+                    <code>
+// Example: Accessing device camera with Cordova
+document.addEventListener('deviceready', function() {
+    var options = {
+        quality: 75,
+        destinationType: Camera.DestinationType.FILE_URI,
+        sourceType: Camera.PictureSourceType.CAMERA
+    };
+    
+    navigator.camera.getPicture(onSuccess, onFail, options);
+}, false);
+
+function onSuccess(imageURI) {
+    var image = document.getElementById('myImage');
+    image.src = imageURI;
+}
+                    </code>
+                </pre>
+
+                <h3>2. Plugin Architecture</h3>
+                <p>Extensive plugin ecosystem that provides access to native device features and third-party services.</p>
+
+                <h3>3. Native Container</h3>
+                <p>Apps run in a native WebView container, providing access to app stores and native device capabilities.</p>
+
+                <h2>Why Learn Apache Cordova?</h2>
+                <p>Cordova offers several advantages for mobile development:</p>
+                <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+                    <li>Single codebase for multiple platforms</li>
+                    <li>Leverage existing web development skills</li>
+                    <li>Faster development compared to native apps</li>
+                    <li>Access to device features through plugins</li>
+                    <li>Large community and plugin ecosystem</li>
+                </ul>
+
+                <h2>Career Impact</h2>
+                <p>Cordova skills are valuable in mobile development roles:</p>
+                <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+                    <li><strong>Mobile App Developer:</strong> $65,000 - $110,000/year</li>
+                    <li><strong>Hybrid App Developer:</strong> $70,000 - $120,000/year</li>
+                    <li><strong>Full-Stack Mobile Developer:</strong> $75,000 - $130,000/year</li>
+                    <li><strong>Mobile Solutions Architect:</strong> $90,000 - $150,000/year</li>
+                </ul>
+
+                <h2>Learning Path</h2>
+                <p>To master Apache Cordova, follow this structured approach:</p>
+                <ol style="margin-left: 2rem; margin-bottom: 1rem;">
+                    <li>Master HTML, CSS, and JavaScript fundamentals</li>
+                    <li>Learn mobile UI/UX design principles</li>
+                    <li>Understand Cordova architecture and CLI</li>
+                    <li>Practice with device APIs and plugins</li>
+                    <li>Learn platform-specific configurations</li>
+                    <li>Build and deploy complete mobile applications</li>
+                </ol>
+            </div>
+
+            <div class="sidebar">
+                <div class="info-card">
+                    <h3>Quick Facts</h3>
+                    <ul class="info-list">
+                        <li><strong>Type:</strong> Mobile Framework</li>
+                        <li><strong>First Release:</strong> 2009</li>
+                        <li><strong>Current Version:</strong> 12.x</li>
+                        <li><strong>License:</strong> Apache 2.0</li>
+                        <li><strong>Languages:</strong> HTML, CSS, JavaScript</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>Supported Platforms</h3>
+                    <ul class="info-list">
+                        <li>iOS</li>
+                        <li>Android</li>
+                        <li>Windows Phone</li>
+                        <li>BlackBerry</li>
+                        <li>Browser</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>Prerequisites</h3>
+                    <ul class="info-list">
+                        <li>HTML/CSS/JavaScript</li>
+                        <li>Mobile development concepts</li>
+                        <li>Command line basics</li>
+                        <li>Understanding of mobile platforms</li>
+                        <li>Basic knowledge of native development</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h2>Related Terms</h2>
+        <div class="related-terms">
+            <a href="/glossary/ionic" class="related-term">
+                <h4>Ionic</h4>
+                <p>Hybrid mobile app framework</p>
+            </a>
+            <a href="/glossary/react-native" class="related-term">
+                <h4>React Native</h4>
+                <p>Cross-platform mobile framework</p>
+            </a>
+            <a href="/glossary/flutter" class="related-term">
+                <h4>Flutter</h4>
+                <p>Google's mobile UI framework</p>
+            </a>
+            <a href="/glossary/javascript" class="related-term">
+                <h4>JavaScript</h4>
+                <p>Programming language</p>
+            </a>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Master Mobile Development with Cordova</h2>
+                <p>Join thousands of developers who've advanced their careers with our comprehensive mobile development courses.</p>
+                <div class="cta-buttons">
+                    <a href="/courses" class="btn btn-primary">Explore Mobile Courses</a>
+                    <a href="/mentorship" class="btn btn-secondary">Get Personal Mentorship</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Lead With Skills. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

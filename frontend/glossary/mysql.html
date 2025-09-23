@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySQL - Relational Database Management System | Lead With Skills Glossary</title>
+    <meta name="description" content="Learn about MySQL, the world's most popular open-source relational database management system. Master MySQL with Lead With Skills.">
+    <meta name="keywords" content="MySQL, database, RDBMS, SQL, relational database, open source">
+    <link rel="canonical" href="https://leadwithskills.com/glossary/mysql">
+    <style>
+        
+
+        .breadcrumb {    
+            padding: 1rem 0;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .term-header {
+            background: linear-gradient(135deg, var(--Primary-25) 0%, var(--Primary-100) 100%);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .term-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .term-subtitle {
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            padding: 3rem 0;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .main-content h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .main-content h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin: 1.5rem 0 0.5rem 0;
+        }
+
+        .main-content p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .code-block {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+        }
+
+        .code-block pre {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .sidebar {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 2rem;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: var(--Primary-600);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .cta-section {
+            background: var(--primary);
+            color: var(--primary-foreground);
+            padding: 4rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .cta-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--Primary-600);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-foreground);
+            border: 2px solid var(--primary-foreground);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            background: var(--card);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--muted);
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .term-title {
+                font-size: 2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <nav class="container">
+            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/mentorship">Mentorship</a></li>
+                <li><a href="/communities">Community</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+            <a href="/courses" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumb margin-top-80">
+            <a href="/">Home</a> > <a href="/glossary/">Glossary</a> > MySQL
+        </div>
+    </div>
+
+    <section class="term-header">
+        <div class="container">
+            <h1 class="term-title">MySQL</h1>
+            <p class="term-subtitle">The world's most popular open-source relational database management system</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="main-content">
+                    <h2>What is MySQL?</h2>
+                    <p>MySQL is an open-source relational database management system (RDBMS) developed by Oracle Corporation. Originally created by Swedish company MySQL AB in 1995, it has become one of the most widely used database systems in the world. MySQL is known for its reliability, performance, and ease of use, making it a popular choice for web applications, data warehousing, and e-commerce.</p>
+
+                    <p>MySQL uses Structured Query Language (SQL) for accessing and managing data. It supports multiple storage engines, ACID compliance, and provides features like replication, clustering, and partitioning for high availability and scalability.</p>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">12M+</div>
+                            <div class="stat-label">Installations Worldwide</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">$105K</div>
+                            <div class="stat-label">Average MySQL DBA Salary</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">#2</div>
+                            <div class="stat-label">Most Popular Database</div>
+                        </div>
+                    </div>
+
+                    <h2>Key Features</h2>
+                    <h3>ACID Compliance</h3>
+                    <p>MySQL ensures data integrity through Atomicity, Consistency, Isolation, and Durability properties for reliable transactions.</p>
+
+                    <h3>Multiple Storage Engines</h3>
+                    <p>Supports various storage engines like InnoDB, MyISAM, and Memory, each optimized for different use cases.</p>
+
+                    <h3>Replication and Clustering</h3>
+                    <p>Built-in support for master-slave replication and MySQL Cluster for high availability and scalability.</p>
+
+                    <h3>Performance Optimization</h3>
+                    <p>Query optimization, indexing, and caching mechanisms for fast data retrieval and processing.</p>
+
+                    <h2>Basic MySQL Commands</h2>
+                    <pre class="code-block">
+                        <pre>
+-- Create Database
+CREATE DATABASE company_db;
+USE company_db;
+
+-- Create Table
+CREATE TABLE employees (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    department VARCHAR(50),
+    salary DECIMAL(10,2),
+    hire_date DATE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Insert Data
+INSERT INTO employees (name, email, department, salary, hire_date)
+VALUES 
+    ('John Doe', 'john@company.com', 'Engineering', 75000.00, '2023-01-15'),
+    ('Jane Smith', 'jane@company.com', 'Marketing', 65000.00, '2023-02-01');
+                        </pre>
+                    </pre>
+
+                    <h2>Query Examples</h2>
+                    <pre class="code-block">
+                        <pre>
+-- Select with Conditions
+SELECT name, department, salary 
+FROM employees 
+WHERE salary > 60000 
+ORDER BY salary DESC;
+
+-- Join Tables
+SELECT e.name, e.salary, d.department_name
+FROM employees e
+JOIN departments d ON e.department_id = d.id
+WHERE d.department_name = 'Engineering';
+
+-- Aggregate Functions
+SELECT department, 
+       COUNT(*) as employee_count,
+       AVG(salary) as avg_salary,
+       MAX(salary) as max_salary
+FROM employees 
+GROUP BY department
+HAVING COUNT(*) > 5;
+
+-- Update Records
+UPDATE employees 
+SET salary = salary * 1.10 
+WHERE department = 'Engineering' 
+AND hire_date < '2023-01-01';
+                        </pre>
+                    </pre>
+
+                    <h2>Advanced Features</h2>
+                    <pre class="code-block">
+                        <pre>
+-- Create Index for Performance
+CREATE INDEX idx_employee_email ON employees(email);
+CREATE INDEX idx_department_salary ON employees(department, salary);
+
+-- Stored Procedure
+DELIMITER //
+CREATE PROCEDURE GetEmployeesByDepartment(IN dept_name VARCHAR(50))
+BEGIN
+    SELECT * FROM employees 
+    WHERE department = dept_name 
+    ORDER BY name;
+END //
+DELIMITER ;
+
+-- Call Stored Procedure
+CALL GetEmployeesByDepartment('Engineering');
+
+-- Create View
+CREATE VIEW high_earners AS
+SELECT name, department, salary
+FROM employees
+WHERE salary > 80000;
+                        </pre>
+                    </pre>
+
+                    <h2>MySQL in Web Development</h2>
+                    <p>MySQL is commonly used in popular web development stacks:</p>
+                    <ul>
+                        <li><strong>LAMP:</strong> Linux, Apache, MySQL, PHP</li>
+                        <li><strong>MEAN:</strong> MongoDB, Express.js, Angular, Node.js (MySQL as alternative to MongoDB)</li>
+                        <li><strong>WordPress:</strong> Powers millions of websites</li>
+                        <li><strong>E-commerce:</strong> Magento, WooCommerce, Shopify</li>
+                    </ul>
+
+                    <h2>Career Opportunities</h2>
+                    <p>MySQL expertise opens doors to various database-related roles:</p>
+                    <ul>
+                        <li>Database Administrator ($80K - $130K annually)</li>
+                        <li>Backend Developer ($75K - $125K annually)</li>
+                        <li>Data Analyst ($65K - $110K annually)</li>
+                        <li>Database Developer ($70K - $120K annually)</li>
+                        <li>DevOps Engineer ($90K - $140K annually)</li>
+                    </ul>
+
+                    <h2>Learning Path</h2>
+                    <ol>
+                        <li>Learn SQL fundamentals and basic queries</li>
+                        <li>Understand database design and normalization</li>
+                        <li>Master MySQL installation and configuration</li>
+                        <li>Practice with CRUD operations and joins</li>
+                        <li>Learn indexing and query optimization</li>
+                        <li>Explore stored procedures and functions</li>
+                        <li>Study replication and backup strategies</li>
+                        <li>Learn performance tuning and monitoring</li>
+                    </ol>
+                </div>
+
+                <div class="sidebar">
+                    <h3>Related Terms</h3>
+                    <ul>
+                        <li><a href="/glossary/sql">SQL</a></li>
+                        <li><a href="/glossary/database-design">Database Design</a></li>
+                        <li><a href="/glossary/rdbms">RDBMS</a></li>
+                        <li><a href="/glossary/indexing">Database Indexing</a></li>
+                        <li><a href="/glossary/normalization">Database Normalization</a></li>
+                    </ul>
+
+                    <h3>Quick Facts</h3>
+                    <ul>
+                        <li><strong>Created:</strong> 1995 by MySQL AB</li>
+                        <li><strong>Owner:</strong> Oracle Corporation</li>
+                        <li><strong>License:</strong> GPL/Commercial</li>
+                        <li><strong>Latest Version:</strong> 8.0</li>
+                        <li><strong>Companies Using:</strong> Facebook, Twitter, YouTube, Netflix</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Master MySQL with Lead With Skills</h2>
+            <p class="cta-subtitle">Join thousands of developers and DBAs who've advanced their careers with our comprehensive MySQL courses</p>
+            <div class="cta-buttons">
+                <a href="/courses" class="btn btn-primary">Explore MySQL Courses</a>
+                <a href="/mentorship" class="btn btn-secondary">Get 1:1 Mentorship</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Lead With Skills. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
