@@ -106,9 +106,11 @@ waitlistBtns.forEach(btn => {
     });
 });
 
-closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-});
+if(closeBtn) {
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+}
 
 window.addEventListener('click', (e) => {
     if (e.target === modal) {
@@ -116,12 +118,14 @@ window.addEventListener('click', (e) => {
     }
 });
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Thank you for joining our waitlist! We\'ll notify you when the course becomes available.');
-    modal.style.display = 'none';
-    form.reset();
-});
+if(form) {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you for joining our waitlist! We\'ll notify you when the course becomes available.');
+        modal.style.display = 'none';
+        form.reset();
+    });
+}
 
 document.querySelectorAll('.faq-item').forEach(item => {
     const question = item.querySelector('.faq-question');
