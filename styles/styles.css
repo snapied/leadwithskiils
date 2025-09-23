@@ -2427,6 +2427,8 @@ footer {
 .faq-answer {
   display: none;
   padding: 0 24px 24px;
+    max-height: fit-content!important;
+
   border-top: 1px solid #f3f4f6;
 }
 
@@ -3521,7 +3523,7 @@ footer {
 }
 
 .faq-item.active .faq-toggle {
-  transform: rotate(45deg);
+  transform: rotate(0deg);
 }
 
 .faq-question {
@@ -3533,6 +3535,9 @@ footer {
   transition: background-color 0.3s ease;
 }
 
+.container h2 {
+  text-align: center;
+}
 .faq-question:hover {
   background: #f9fafb;
 }
