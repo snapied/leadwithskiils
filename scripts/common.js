@@ -238,10 +238,11 @@ function scrollToCallback() {
             observer.observe(el);
         });
 
-
+        if(form){
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             alert('Thank you for joining our waitlist! We\'ll notify you when the course becomes available.');
             modal.style.display = 'none';
             form.reset();
         });
+}
