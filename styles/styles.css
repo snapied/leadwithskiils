@@ -4348,6 +4348,7 @@ ease!important;
   .instructor-details {
     justify-content: center;
     gap: 24px;
+    flex-direction: column;
   }
 
   .detail-value {
@@ -5345,4 +5346,7 @@ div[id="SIGNUP_BODY_ALL"] select {
 }
 .linkedinLogo {
   width: 18px;
+}
+.margin-top-30 {
+  margin-top: 30px;
 }
