@@ -28,18 +28,29 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <nav class="container">
-            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
-            <ul class="nav-links">
+     <!-- Header -->
+    <header class="navbar">
+        <nav class="nav-container">
+            <div class="nav-logo">
+                <a href="/"><img src="/images/logo.avif" alt="Logo" /></a>
+            </div>
+            
+            <ul class="nav-menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about-us">About</a></li>
                 <li><a href="/courses">Courses</a></li>
                 <li><a href="/mentorship">Mentors</a></li>
                 <li><a href="/communities">Community</a></li>
-<li><a href="/blogs">Blogs</a></li>
+                <li><a href="/blogs">Blogs</a></li>
             </ul>
+            
             <a href="/courses" class="cta-button">Get Started</a>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
     <!-- Hero Section -->
@@ -498,7 +509,7 @@
         });
 
         // Newsletter form
-        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+        document.querySelector('.newsletter-form')?.addEventListener('submit', function(e) {
             e.preventDefault();
             const email = this.querySelector('.email-input').value;
             const button = this.querySelector('.subscribe-btn');
@@ -545,5 +556,5 @@
         window.addEventListener('resize', updateFormLayout);
         updateFormLayout();
     </script>
-</body>
+<script defer src="/scripts/common.js"></script></body>
 </html>

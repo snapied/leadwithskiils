@@ -274,18 +274,29 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <nav class="container">
-            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
-            <ul class="nav-links">
+     <!-- Header -->
+    <header class="navbar">
+        <nav class="nav-container">
+            <div class="nav-logo">
+                <a href="/"><img src="/images/logo.avif" alt="Logo" /></a>
+            </div>
+            
+            <ul class="nav-menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about-us">About</a></li>
                 <li><a href="/courses">Courses</a></li>
                 <li><a href="/mentorship">Mentors</a></li>
                 <li><a href="/communities">Community</a></li>
-<li><a href="/blogs">Blogs</a></li>
+                <li><a href="/blogs">Blogs</a></li>
             </ul>
+            
             <a href="/courses" class="cta-button">Get Started</a>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
@@ -1792,6 +1803,6 @@ transform:scale(0.90);-webkit-transform:scale(0.90);transform-origin:50% 50%;-we
         </button>
     </div>
 
-    <script defer src="/scripts/common.js"></script>
-</body>
+    
+<script defer src="/scripts/common.js"></script></body>
 </html>

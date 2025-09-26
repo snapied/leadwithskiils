@@ -119,18 +119,29 @@
 <body>
     <!-- Header -->
     <!-- Header -->
-    <header>
-        <nav class="container">
-            <div class="logo"><a href="/"><img src="/images/logo.avif"/></a></div>
-            <ul class="nav-links">
+     <!-- Header -->
+    <header class="navbar">
+        <nav class="nav-container">
+            <div class="nav-logo">
+                <a href="/"><img src="/images/logo.avif" alt="Logo" /></a>
+            </div>
+            
+            <ul class="nav-menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about-us">About</a></li>
                 <li><a href="/courses">Courses</a></li>
                 <li><a href="/mentorship">Mentors</a></li>
                 <li><a href="/communities">Community</a></li>
-<li><a href="/blogs">Blogs</a></li>
+                <li><a href="/blogs">Blogs</a></li>
             </ul>
+            
             <a href="/courses" class="cta-button">Get Started</a>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
     <!-- Hero Section -->
@@ -637,7 +648,7 @@
         });
 
         // Newsletter form
-        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+        document.querySelector('.newsletter-form')?.addEventListener('submit', function(e) {
             e.preventDefault();
             const email = this.querySelector('.email-input').value;
             const button = this.querySelector('.subscribe-btn');
@@ -666,24 +677,6 @@
                 this.style.boxShadow = 'none';
             });
         });
-
-        // Intersection observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in-up');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.course-main-card, .stat-item, .advantage-item').forEach(el => {
-            observer.observe(el);
-        });
     </script>
-</body>
+<script defer src="/scripts/common.js"></script></body>
 </html>
