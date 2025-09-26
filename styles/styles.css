@@ -15,6 +15,7 @@
   --Primary-100: #c6f6d5;
   --Primary-600: #158e5e;
   --radius: 0.5rem;
+  --gradient: linear-gradient(135deg, #00353b 0%, #158e5e 100%);
 }
 
 /* ===== MERGED CSS FROM BOTH FILES ===== */
@@ -185,10 +186,6 @@ main {
   margin-bottom: 20px;
   color: var(--primary);
   letter-spacing: -0.02em;
-}
-
-.hero-text .highlight {
-  color: var(--primary);
 }
 
 .hero-text p {
@@ -1065,7 +1062,8 @@ main {
 }
 
 .hero-text .highlight {
-  color: var(--primary);
+  color: var(--Primary-600);
+  font-weight: 700;
 }
 
 .hero-text p {
