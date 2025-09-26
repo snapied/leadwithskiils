@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6-Month Internship + Coaching Program — LeadWithSkills</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --background: #ffffff;
+      --foreground: #111827;
+      --card: #f9fafb;
+      --card-foreground: #111827;
+      --primary: #00353b;
+      --primary-foreground: #ffffff;
+      --secondary: #00353b;
+      --secondary-foreground: #ffffff;
+      --muted: #6b7280;
+      --accent: #00353b;
+      --border: #e5e7eb;
+      --Primary-25: #f0f8ed;
+      --Primary-100: #c6f6d5;
+      --Primary-600: #158e5e;
+      --radius: 0.5rem;
+      --gradient: linear-gradient(135deg, #00353b 0%, #158e5e 100%);
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--foreground);
+      background-color: var(--background);
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Styles */
+    header {
+      background: var(--gradient);
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .logo-container {
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      height: 80px;
+      width: auto;
+      filter: brightness(0) invert(1);
+    }
+
+    .header-content h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .header-content p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-color: var(--Primary-25);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero h2 {
+      color: var(--primary);
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--foreground);
+    }
+
+    /* Program Cards */
+    .programs-section {
+      margin-bottom: 50px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+      color: var(--primary);
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 25px;
+    }
+
+    .program-card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .program-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .program-card h3 {
+      color: var(--primary);
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .program-card p {
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-weight: 700;
+      color: var(--Primary-600);
+      font-size: 1.2rem;
+      margin: 15px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--gradient);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+
+    /* Logistics & Benefits */
+    .info-sections {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-bottom: 50px;
+    }
+
+    .info-card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .info-card h2 {
+      color: var(--primary);
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .info-card ul {
+      list-style-type: none;
+    }
+
+    .info-card li {
+      margin-bottom: 10px;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .info-card li:before {
+      content: "✓";
+      color: var(--Primary-600);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    /* Mentors Section */
+    .mentors-section {
+      margin-bottom: 50px;
+    }
+
+    .mentors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .mentor-card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .mentor-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .mentor-card h3 {
+      color: var(--primary);
+      font-size: 1.3rem;
+      margin-bottom: 5px;
+    }
+
+    .mentor-card .title {
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .mentor-card .experience {
+      background: var(--Primary-25);
+      color: var(--Primary-600);
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      background: var(--gradient);
+      color: white;
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .contact-section h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .contact-section p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-btn {
+      background: white;
+      color: var(--primary);
+      padding: 12px 30px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+
+    .contact-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-content h1 {
+        font-size: 2rem;
+      }
+      
+      .programs-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .info-sections {
+        grid-template-columns: 1fr;
+      }
+      
+      .mentors-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo-container">
+        <!-- Insert your logo here -->
+        <img src="/images/logo_.png" alt="LeadWithSkills" class="logo">
+      </div>
+      <div class="header-content">
+        <h1>6-Month Internship + Coaching Program</h1>
+        <p>Transforming college students into job-ready professionals through live mentorship and hands-on training</p>
+        <p>
+          <a href="https://www.leadwithskills.com" class="btn" target="_blank">Visit Website</a>
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <h2>Bridging the Gap Between Academia and Industry</h2>
+      <p>We address a critical challenge in the tech industry: the readiness gap of new graduates. Our battle-tested 6-Month Internship + Coaching Program is engineered to transform motivated students into confident, job-ready professionals. Graduates don't just earn a certificate; they gain proven, hands-on experience that employers value.</p>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs-section">
+      <h2 class="section-title">Our Industry-Ready Programs</h2>
+      <div class="programs-grid">
+        <!-- Program 1 -->
+        <div class="program-card">
+          <h3>Manual & Full Stack Automation Testing</h3>
+          <p><strong>Skills Mastered:</strong> Manual testing fundamentals, Selenium automation, API testing, enterprise QA practices</p>
+          <p><strong>Career Outcome:</strong> Proficiency in industry-standard QA processes and automation tools</p>
+          <div class="price">Special Student Price: <s>₹35,399</s> <strong>₹499/month</strong></div>
+          <a href="https://www.leadwithskills.com/courses/manual-and-full-stack-automation-testing" class="btn" target="_blank">View Course Details</a>
+        </div>
+
+        <!-- Program 2 -->
+        <div class="program-card">
+          <h3>Full Stack Developer (AI-Powered)</h3>
+          <p><strong>Skills Mastered:</strong> Modern web apps with Angular & Node.js, Databases, Cloud, AI API integration</p>
+          <p><strong>Career Outcome:</strong> Build AI-integrated, production-grade applications</p>
+          <div class="price">Special Student Price: <s>₹42,499</s> <strong>₹599/month</strong></div>
+          <a href="https://www.leadwithskills.com/courses/full-stack-development" class="btn" target="_blank">View Course Details</a>
+        </div>
+
+        <!-- Program 3 -->
+        <div class="program-card">
+          <h3>Advanced Web Development</h3>
+          <p><strong>Skills Mastered:</strong> HTML5, CSS3, JavaScript, Node.js – responsive frontends and powerful backends</p>
+          <p><strong>Career Outcome:</strong> Strong full-stack foundations to build real projects</p>
+          <div class="price">Special Student Price: <s>₹42,196</s> <strong>₹499/month</strong></div>
+          <a href="https://www.leadwithskills.com/courses" class="btn" target="_blank">Explore Related Courses</a>
+        </div>
+
+        <!-- Program 4 -->
+        <div class="program-card">
+          <h3>Certified Digital Marketing Master Course</h3>
+          <p><strong>Skills Mastered:</strong> SEO, social media strategy, campaign management, analytics</p>
+          <p><strong>Career Outcome:</strong> Ability to run result-driven online campaigns for businesses</p>
+          <div class="price">Special Student Price: <s>₹34,999</s> <strong>₹799/month</strong></div>
+          <a href="https://www.leadwithskills.com/courses/certified-digital-marketing-course" class="btn" target="_blank">View Course Details</a>
+        </div>
+
+        <!-- Program 5 -->
+        <div class="program-card">
+          <h3>Technical Product Manager</h3>
+          <p><strong>Skills Mastered:</strong> Product strategy, API & developer tools, data-driven decision making</p>
+          <p><strong>Career Outcome:</strong> Prepare for technical product leadership roles</p>
+          <div class="price">Special Student Price: <s>₹24,999</s> <strong>₹699/month</strong></div>
+          <a href="https://www.leadwithskills.com/courses/technical-product-manager" class="btn" target="_blank">View Course Details</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logistics & Benefits -->
+    <section class="info-sections">
+      <div class="info-card">
+        <h2>Program Logistics</h2>
+        <ul>
+          <li><strong>Live Interactive Learning:</strong> No pre-recorded content. Real-time sessions with industry experts</li>
+          <li><strong>Flexible Scheduling:</strong> Morning and evening batches designed around college timetables</li>
+          <li><strong>Secure Payment:</strong> Managed via our secure partner portal</li>
+          <li><strong>Industry Certification:</strong> Certificates from Snapied or Shorterloop upon successful completion</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h2>Why Choose LeadWithSkills?</h2>
+        <ul>
+          <li><strong>Industry Leaders as Mentors:</strong> Learn from active CTOs, CEOs, and senior product leaders</li>
+          <li><strong>Deep Practical Learning:</strong> 200+ hours of hands-on training and portfolio projects</li>
+          <li><strong>Personal Coaching:</strong> Resume help, mock interviews, and 1:1 mentor sessions</li>
+          <li><strong>100% Job Support:</strong> Placement assistance through our industry network</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h2>Next Steps</h2>
+        <ul>
+          <li><strong>Introductory Call:</strong> 20-30 minute discussion to finalize batches and start dates</li>
+          <li><strong>Student Registration:</strong> Share Excel sheet with interested student details</li>
+          <li><strong>Secure Payment:</strong> HR team provides secure payment link</li>
+          <li><strong>Program Kickoff:</strong> Batch scheduling, mentor allocation, and orientation</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Mentors Section -->
+    <section class="mentors-section">
+      <h2 class="section-title">Learn From Industry Experts</h2>
+      <div class="mentors-grid">
+        <!-- Mentor 1 -->
+        <div class="mentor-card">
+          <img src="/images/devendra-singh-bhandari.jpeg" alt="Devendra Singh Bhandari" class="mentor-photo">
+          <h3>Devendra Singh Bhandari</h3>
+          <p class="title">Consultant | Scaling WordPress Solutions</p>
+          <p>15+ years of full-stack experience helping teams build scalable, high-impact web solutions</p>
+          <div class="experience">15+ Years Experience</div>
+        </div>
+
+        <!-- Mentor 2 -->
+        <div class="mentor-card">
+          <img src="/images/girish.jpeg" alt="Girish Joshi" class="mentor-photo">
+          <h3>Girish Joshi</h3>
+          <p class="title">Lead Software Test Engineer | Certified Scrum Master</p>
+          <p>18+ years in quality assurance, mentoring cross-functional QA teams and improving testing practices</p>
+          <div class="experience">18+ Years Experience</div>
+        </div>
+
+        <!-- Mentor 3 -->
+        <div class="mentor-card">
+          <img src="/images/dinesh.png" alt="Dinesh Rawat" class="mentor-photo">
+          <h3>Dinesh Rawat</h3>
+          <p class="title">Chief Technology Officer</p>
+          <p>15+ years driving innovation in enterprise-level web applications, mentoring 1000+ students</p>
+          <div class="experience">15+ Years Experience</div>
+        </div>
+
+        <!-- Mentor 4 -->
+        <div class="mentor-card">
+          <img src="/images/anushka.jpeg" alt="Anushka Litoria" class="mentor-photo">
+          <h3>Anushka Litoria</h3>
+          <p class="title">Content Marketing & Customer Success Professional</p>
+          <p>8+ years in digital marketing, driving growth across SEO/SEM, social media, and performance campaigns</p>
+          <div class="experience">8+ Years Experience</div>
+        </div>
+
+        <!-- Mentor 5 -->
+        <div class="mentor-card">
+          <img src="/images/renu.jpeg" alt="Renu" class="mentor-photo">
+          <h3>Renu</h3>
+          <p class="title">Digital Marketer | Social Media Strategist</p>
+          <p>9+ years in digital marketing, social media strategy, and content writing for leading IT brands</p>
+          <div class="experience">9+ Years Experience</div>
+        </div>
+
+        <!-- Mentor 6 -->
+        <div class="mentor-card">
+          <img src="/images/deepika.png" alt="Deepika Patial" class="mentor-photo">
+          <h3>Deepika Patial</h3>
+          <p class="title">Senior Frontend Developer | Team Lead</p>
+          <p>10+ years specializing in web development, building engaging user experiences and mentoring developers</p>
+          <div class="experience">10+ Years Experience</div>
+        </div>
+
+
+       <!-- Mentor 6 -->
+        <div class="mentor-card">
+          <img src="/images/chhavi.jpeg" alt="Deepika Patial" class="mentor-photo">
+          <h3>Deepika Patial</h3>
+          <p class="title">Senior Full Stack Developer</p>
+          <p>Chhavi Kohli is an enthusiastic MEAN stack developer with over 7 years of experience in the Web & IT industry, delivering high-quality web applications.</p>
+          <div class="experience">7+ Years Experience</div>
+        </div>
+
+                <div class="mentor-card">
+          <img src="/images/kshitij.png" alt="Deepika Patial" class="mentor-photo">
+          <h3>Kshitij Kohli</h3>
+          <p class="title">Senior Full Stack Developer</p>
+          <p>Kshitij is a Senior QA Engineer and Testing Coach with over 9 years of experience in manual and automated testing.
+
+</p>
+          <div class="experience">9+ Years Experience</div>
+        </div>
+      </div>
+
+             <!-- Mentor 6 -->
+
+      </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <h2>Ready to Transform Your Students' Careers?</h2>
+      <p>Let's schedule a quick call to discuss how we can partner to make your students industry-ready.</p>
+      <a href="mailto:hello@leadwithskills.com" class="contact-btn">Schedule Introductory Call</a>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>Participants receive certificates from Snapied / Shorterloop • Live training • Internship & job support</p>
+      <p><strong>Contact:</strong> hello@leadwithskills.com</p>
+      <p><strong>Mob.:</strong> 9897647775</p>
+      <p>© 2025 LeadWithSkills. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
