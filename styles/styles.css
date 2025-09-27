@@ -72,11 +72,13 @@ body {
   font-weight: 400;
   overflow-x: hidden;
 }
+
 .special-program {
-  color: #a0ffcd!important;
-    font-weight: 500!important;
+  color: #a0ffcd !important;
+  font-weight: 500 !important;
 
 }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -85,7 +87,7 @@ body {
 
 /* Simplified header with less bulk */
 header {
-  background: rgba(255, 255, 255, 0.95)!important;
+  background: rgba(255, 255, 255, 0.95) !important;
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
   position: fixed;
@@ -826,11 +828,12 @@ nav {
   width: 90%;
   position: relative;
   max-width: 45%;
-      height: 85%!important;
-    overflow: auto;
+  height: 85% !important;
+  overflow: auto;
 }
+
 .modal-content #SIGNUP_BODY {
-  padding-top: 0!important;
+  padding-top: 0 !important;
 }
 
 .modal-content #REQUIRED_FIELD_TEXT {
@@ -838,12 +841,13 @@ nav {
 }
 
 .modal-content #privacyNotes {
-    display: none;
+  display: none;
 }
 
 .modal-content .large_form_1_css {
-  background-color: #fff!important
+  background-color: #fff !important
 }
+
 .close {
   position: absolute;
   right: 20px;
@@ -966,9 +970,11 @@ nav {
     transform: translateY(0);
   }
 }
+
 main.main-content {
   margin-top: 85px;
 }
+
 .testimonial-card {
   position: relative;
   height: 180px;
@@ -1064,14 +1070,12 @@ main.main-content {
 }
 
 .hero-text .highlight {
-
-
-background-clip: text;
-   background-clip: text;
-    background-image: linear-gradient(90deg, #f6c800, #00965b 100%);
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    font-weight: 700;
+  background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(90deg, #ff4d4d, #ff9900);
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: 700;
 
   font-weight: 700;
 }
@@ -2451,7 +2455,7 @@ footer {
 .faq-answer {
   display: none;
   padding: 0 24px 24px;
-    max-height: fit-content!important;
+  max-height: fit-content !important;
 
   border-top: 1px solid #f3f4f6;
 }
@@ -2465,23 +2469,24 @@ footer {
 }
 
 .modal-content #zcWebOptin {
-  background: var(--Primary-600)!important;
-    color: white!important;
-    padding: 15px 40px!important;
-    font-size: 1.2rem!important;
-    border: none!important;
-    border-radius: 50px!important;
-    cursor: pointer!important;
-    text-decoration: none!important;
-    display: inline-block!important;
-    transition: transform 0.3s 
-ease!important;
+  background: var(--Primary-600) !important;
+  color: white !important;
+  padding: 15px 40px !important;
+  font-size: 1.2rem !important;
+  border: none !important;
+  border-radius: 50px !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  transition: transform 0.3s ease !important;
 }
+
 @media (max-width: 1280px) {
   .modal-content {
     max-width: 70%;
   }
 }
+
 /* Responsive styles for new hero */
 @media (max-width: 768px) {
   .courses-hero-new {
@@ -3580,6 +3585,7 @@ ease!important;
 .container h2 {
   text-align: center;
 }
+
 .faq-question:hover {
   background: #f9fafb;
 }
@@ -5265,7 +5271,7 @@ div[changetype="SIGNUP_DESCRIPTION"] {
 
 div[name="SIGNUP_FORM_LABEL"] {
   color: #374151 !important;
-    font-size: 16px !important;
+  font-size: 16px !important;
 
 }
 
@@ -5333,127 +5339,136 @@ div[id="SIGNUP_BODY_ALL"] select {
 #apply .large_form_1_css {
   background-color: transparent !important;
 }
+
 #apply #SIGNUP_HEADING {
-  display: none!important;
+  display: none !important;
 }
+
 #apply input[type="button"] {
-      background: var(--primary)!important;
-          color: var(--primary-foreground)!important;
-          border: 0px!important;
-          padding: 10px 20px!important;
+  background: var(--primary) !important;
+  color: var(--primary-foreground) !important;
+  border: 0px !important;
+  padding: 10px 20px !important;
 }
-#apply div[name="SIGNUP_FORM_LABEL"]{
-  width: 35%!important;
+
+#apply div[name="SIGNUP_FORM_LABEL"] {
+  width: 35% !important;
 }
+
 #apply div[id="SIGNUP_BODY"] {
-  padding-top: 0!important;
+  padding-top: 0 !important;
 }
+
 .special {
-  color: #ffff00!important;
-  font-weight: 500!important;
+  color: #ffff00 !important;
+  font-weight: 500 !important;
 }
+
 .linkedinLogo {
   width: 18px;
 }
+
 .margin-top-30 {
   margin-top: 30px;
 }
 
 /* Hamburger Menu Styles */
 .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 4px;
-    width: 30px;
-    height: 24px;
-    background: transparent;
-    border: none;
-    padding: 0;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
 .hamburger span {
-    width: 100%;
-    height: 3px;
-    background: var(--primary);
-    transition: all 0.3s ease;
-    border-radius: 2px;
+  width: 100%;
+  height: 3px;
+  background: var(--primary);
+  transition: all 0.3s ease;
+  border-radius: 2px;
 }
 
 /* Show hamburger on mobile */
 @media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-    
-    /* Make sure nav-menu is hidden by default on mobile */
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 85px;
-        flex-direction: column;
-        background-color: white;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        padding: 2rem 0;
-        gap: 0;
-    }
+  .hamburger {
+    display: flex;
+  }
 
-    .nav-menu.active {
-        left: 0;
-    }
+  /* Make sure nav-menu is hidden by default on mobile */
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 85px;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    padding: 2rem 0;
+    gap: 0;
+  }
 
-    .nav-menu li {
-        margin: 1rem 0;
-    }
+  .nav-menu.active {
+    left: 0;
+  }
 
-    /* Hamburger animation */
-    .hamburger.active span:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
-    }
+  .nav-menu li {
+    margin: 1rem 0;
+  }
 
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
+  /* Hamburger animation */
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
 
-    .hamburger.active span:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
-    }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
 }
 
 /* Make sure the navigation container has proper structure */
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 /* Update your existing nav styles to use the correct classes */
 nav .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 32px;
+  display: flex;
+  list-style: none;
+  gap: 32px;
 }
 
 /* Hide regular nav links on mobile, show hamburger */
 @media (max-width: 768px) {
   .nav-logo img {
-    height: 60px!important;
+    height: 60px !important;
   }
-    nav .nav-links {
-        display: none;
-    }
-    
-    .hamburger {
-        display: flex;
-    }
+
+  nav .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }
+
 .hero-section .container .cta-button {
-  padding: 20px 30px!important;
+  padding: 20px 30px !important;
 }
