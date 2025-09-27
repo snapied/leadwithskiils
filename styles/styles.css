@@ -966,11 +966,13 @@ nav {
     transform: translateY(0);
   }
 }
-
+main.main-content {
+  margin-top: 85px;
+}
 .testimonial-card {
   position: relative;
   height: 180px;
-  border-radius: 12px;
+  border-radius: 6px;
   overflow: hidden;
   background-size: cover;
   background-position: center;
