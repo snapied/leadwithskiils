@@ -5454,3 +5454,6 @@ nav .nav-links {
         display: flex;
     }
 }
+.hero-section .container .cta-button {
+  padding: 20px 30px!important;
+}
