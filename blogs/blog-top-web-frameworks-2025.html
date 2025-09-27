@@ -55,20 +55,6 @@
     <style>
         
         
-        .cta-button {
-            background: #007bff;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: background 0.3s;
-        }
-        
-        .cta-button:hover {
-            background: #0056b3;
-        }
-        
         /* Hero Section */
         .hero-section {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -377,20 +363,29 @@
     </style>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">
-                <a href="/"><img src="/images/logo.avif" alt="Lead With Skills Logo"/></a>
+        <!-- Header -->
+    <header class="navbar">
+        <nav class="nav-container">
+            <div class="nav-logo">
+                <a href="/"><img src="/images/logo.avif" alt="Logo" /></a>
             </div>
-            <ul class="nav-links">
+
+            <ul class="nav-menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about-us">About</a></li>
                 <li><a href="/courses">Courses</a></li>
                 <li><a href="/mentorship">Mentors</a></li>
                 <li><a href="/communities">Community</a></li>
-<li><a href="/blogs">Blogs</a></li>
+                <li><a href="/blogs">Blogs</a></li>
             </ul>
+
             <a href="/courses" class="cta-button">Get Started</a>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 

@@ -7,7 +7,7 @@
     <meta name="description" content="Learn how to build responsive websites using Angular and Node.js. Complete guide covering responsive design principles, Angular components, and Node.js backend integration.">
     <meta name="keywords" content="responsive web design with Angular and Node.js, Angular responsive design, Node.js backend, full-stack development, mobile-first design">
     <link rel="canonical" href="https://www.leadwithskills.com/blog-responsive-websites-angular-nodejs">
-    
+    <link rel="stylesheet" href="/styles/styles.css">
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Building Responsive Websites with Angular and Node.js">
     <meta property="og:description" content="Master responsive web development with Angular and Node.js. Learn best practices, implementation strategies, and career opportunities.">
@@ -108,19 +108,7 @@
             color: #007bff;
         }
         
-        .cta-button {
-            background: #007bff;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: background 0.3s;
-        }
         
-        .cta-button:hover {
-            background: #0056b3;
-        }
         
         /* Blog Content Styles */
         .blog-hero {
@@ -339,20 +327,29 @@
     </style>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">
-                <a href="/"><img src="/images/logo.avif" alt="Lead With Skills"/></a>
+        <!-- Header -->
+    <header class="navbar">
+        <nav class="nav-container">
+            <div class="nav-logo">
+                <a href="/"><img src="/images/logo.avif" alt="Logo" /></a>
             </div>
-            <ul class="nav-links">
+
+            <ul class="nav-menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about-us">About</a></li>
                 <li><a href="/courses">Courses</a></li>
                 <li><a href="/mentorship">Mentors</a></li>
                 <li><a href="/communities">Community</a></li>
-<li><a href="/blogs">Blogs</a></li>
+                <li><a href="/blogs">Blogs</a></li>
             </ul>
+
             <a href="/courses" class="cta-button">Get Started</a>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
