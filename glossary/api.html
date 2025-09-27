@@ -1,23 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="/styles/styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API (Application Programming Interface) - Complete Guide | Lead With Skills</title>
-    <meta name="description" content="Learn API (Application Programming Interface) - protocols and tools for building software applications. Master API development with Lead With Skills.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Learn API (Application Programming Interface) - protocols and tools for building software applications. Master API development with Lead With Skills.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="canonical" href="https://leadwithskills.com/glossary/api">
-    <style>
-        
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="API (Application Programming Interface) - Complete Guide | Lead With Skills">
+    <meta property="og:description"
+        content="Learn API (Application Programming Interface) - protocols and tools for building software applications. Master API development with Lead With Skills.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://leadwithskills.com/glossary/api">
+    <meta property="og:image" content="https://leadwithskills.com/images/cover.png">
+    <meta property="og:site_name" content="Lead With Skills">
 
+    <!-- Article Specific Tags -->
+    <meta property="article:section" content="Development">
+    <meta property="article:tag" content="API">
+    <meta property="article:tag" content="Application Programming Interface">
+    <meta property="article:tag" content="REST API">
+    <meta property="article:tag" content="Web Development">
+    <meta property="article:tag" content="Programming">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="API (Application Programming Interface) - Complete Guide | Lead With Skills">
+    <meta name="twitter:description"
+        content="Learn API - protocols and tools for building software applications. Master API development with expert guidance.">
+    <meta name="twitter:image" content="https://leadwithskills.com/images/cover.png">
+    <style>
         /* Breadcrumb */
-        .breadcrumb {    
+        .breadcrumb {
             background: var(--card);
             padding: 1rem 0;
             border-bottom: 1px solid var(--border);
         }
 
-        .breadcrumb-nav {width:fit-content;
+        .breadcrumb-nav {
+            width: fit-content;
             display: flex;
             align-items: center;
             gap: 0.5rem;
@@ -193,7 +220,8 @@
             flex-wrap: wrap;
         }
 
-        .cta-primary, .cta-secondary {
+        .cta-primary,
+        .cta-secondary {
             padding: 1rem 2rem;
             border-radius: var(--radius);
             text-decoration: none;
@@ -236,11 +264,11 @@
             .term-title {
                 font-size: 2rem;
             }
-            
+
             .nav-links {
                 display: none;
             }
-            
+
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
@@ -248,14 +276,15 @@
         }
     </style>
 </head>
+
 <body>
-        <!-- Header -->
+    <!-- Header -->
     <header class="navbar">
         <nav class="nav-container">
             <div class="nav-logo">
                 <a href="/"><img src="/images/logo.avif" alt="Logo" /></a>
             </div>
-            
+
             <ul class="nav-menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about-us">About</a></li>
@@ -264,9 +293,9 @@
                 <li><a href="/communities">Community</a></li>
                 <li><a href="/blogs">Blogs</a></li>
             </ul>
-            
+
             <a href="/courses" class="cta-button">Get Started</a>
-            
+
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -289,15 +318,20 @@
                 <h1 class="term-title">API (Application Programming Interface)</h1>
                 <span class="term-category">Development</span>
                 <div class="term-definition">
-                    A set of protocols, routines, and tools for building software applications that specifies how software components should interact and enables communication between different systems.
+                    A set of protocols, routines, and tools for building software applications that specifies how
+                    software components should interact and enables communication between different systems.
                 </div>
             </div>
 
             <div class="content-section">
                 <h2>What is an API?</h2>
-                <p>An Application Programming Interface (API) is a contract between different software applications that defines how they can communicate with each other. Think of an API as a waiter in a restaurant - it takes your order (request), communicates it to the kitchen (server), and brings back your food (response).</p>
-                
-                <p>APIs enable different software systems to work together by providing a standardized way to access data and functionality without needing to understand the internal workings of the system.</p>
+                <p>An Application Programming Interface (API) is a contract between different software applications that
+                    defines how they can communicate with each other. Think of an API as a waiter in a restaurant - it
+                    takes your order (request), communicates it to the kitchen (server), and brings back your food
+                    (response).</p>
+
+                <p>APIs enable different software systems to work together by providing a standardized way to access
+                    data and functionality without needing to understand the internal workings of the system.</p>
 
                 <div class="highlight-box">
                     <h4>Key Components of an API:</h4>
@@ -313,40 +347,44 @@
 
             <div class="content-section">
                 <h2>Types of APIs</h2>
-                
+
                 <h3>1. REST APIs</h3>
-                <p>Representational State Transfer (REST) APIs are the most common type, using standard HTTP methods and following specific architectural principles.</p>
+                <p>Representational State Transfer (REST) APIs are the most common type, using standard HTTP methods and
+                    following specific architectural principles.</p>
 
                 <h3>2. GraphQL APIs</h3>
-                <p>A query language for APIs that allows clients to request exactly the data they need, reducing over-fetching and under-fetching of data.</p>
+                <p>A query language for APIs that allows clients to request exactly the data they need, reducing
+                    over-fetching and under-fetching of data.</p>
 
                 <h3>3. SOAP APIs</h3>
-                <p>Simple Object Access Protocol (SOAP) APIs use XML messaging and are known for their strict standards and security features.</p>
+                <p>Simple Object Access Protocol (SOAP) APIs use XML messaging and are known for their strict standards
+                    and security features.</p>
 
                 <h3>4. WebSocket APIs</h3>
-                <p>Enable real-time, bidirectional communication between client and server, perfect for chat applications and live updates.</p>
+                <p>Enable real-time, bidirectional communication between client and server, perfect for chat
+                    applications and live updates.</p>
             </div>
 
             <div class="content-section">
                 <h2>API Example</h2>
                 <p>Here's a simple example of making an API request to fetch user data:</p>
-                
+
                 <div class="code-example">
-// JavaScript fetch API example
-fetch('https://api.example.com/users/123', {
-  method: 'GET',
-  headers: {
-    'Authorization': 'Bearer your-token-here',
-    'Content-Type': 'application/json'
-  }
-})
-.then(response => response.json())
-.then(data => {
-  console.log('User data:', data);
-})
-.catch(error => {
-  console.error('Error:', error);
-});
+                    // JavaScript fetch API example
+                    fetch('https://api.example.com/users/123', {
+                    method: 'GET',
+                    headers: {
+                    'Authorization': 'Bearer your-token-here',
+                    'Content-Type': 'application/json'
+                    }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                    console.log('User data:', data);
+                    })
+                    .catch(error => {
+                    console.error('Error:', error);
+                    });
                 </div>
             </div>
 
@@ -356,7 +394,8 @@ fetch('https://api.example.com/users/123', {
                     <li><strong>Use Clear Naming:</strong> Make endpoint names intuitive and consistent</li>
                     <li><strong>Version Your APIs:</strong> Use versioning to maintain backward compatibility</li>
                     <li><strong>Implement Authentication:</strong> Secure your APIs with proper authentication</li>
-                    <li><strong>Handle Errors Gracefully:</strong> Provide meaningful error messages and status codes</li>
+                    <li><strong>Handle Errors Gracefully:</strong> Provide meaningful error messages and status codes
+                    </li>
                     <li><strong>Document Thoroughly:</strong> Create comprehensive API documentation</li>
                     <li><strong>Rate Limiting:</strong> Implement rate limiting to prevent abuse</li>
                     <li><strong>Use HTTPS:</strong> Always encrypt data in transit</li>
@@ -368,7 +407,8 @@ fetch('https://api.example.com/users/123', {
                 <p>API knowledge is essential for various tech roles:</p>
                 <ul>
                     <li><strong>Backend Developer:</strong> ₹6-15 LPA - Design and build APIs</li>
-                    <li><strong>Full-Stack Developer:</strong> ₹8-20 LPA - Work with both API creation and consumption</li>
+                    <li><strong>Full-Stack Developer:</strong> ₹8-20 LPA - Work with both API creation and consumption
+                    </li>
                     <li><strong>API Developer:</strong> ₹7-18 LPA - Specialize in API design and development</li>
                     <li><strong>Integration Engineer:</strong> ₹8-16 LPA - Connect different systems via APIs</li>
                     <li><strong>DevOps Engineer:</strong> ₹10-22 LPA - Manage API deployments and monitoring</li>
@@ -386,7 +426,9 @@ fetch('https://api.example.com/users/123', {
         </div>
     </main>
 
-    
-    
-<script defer src="/scripts/common.js"></script></body>
+
+
+    <script defer src="/scripts/common.js"></script>
+</body>
+
 </html>

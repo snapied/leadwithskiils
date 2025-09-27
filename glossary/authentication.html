@@ -1,17 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="/styles/styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Authentication - Tech Glossary | Lead With Skills</title>
-    <meta name="description" content="Learn about authentication - the process of verifying user identity in software systems. Master security concepts with Lead With Skills.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Learn about authentication - the process of verifying user identity in software systems. Master security concepts with Lead With Skills.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="canonical" href="https://leadwithskills.com/glossary/authentication">
-    <style>
-        
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Authentication - Tech Glossary | Lead With Skills">
+    <meta property="og:description"
+        content="Learn about authentication - the process of verifying user identity in software systems. Master security concepts with Lead With Skills.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://leadwithskills.com/glossary/authentication">
+    <meta property="og:image" content="https://leadwithskills.com/images/cover.png">
+    <meta property="og:site_name" content="Lead With Skills">
 
+    <!-- Article Specific Tags -->
+    <meta property="article:section" content="Security">
+    <meta property="article:tag" content="Authentication">
+    <meta property="article:tag" content="Security">
+    <meta property="article:tag" content="JWT">
+    <meta property="article:tag" content="OAuth">
+    <meta property="article:tag" content="Web Security">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Authentication - Tech Glossary | Lead With Skills">
+    <meta name="twitter:description"
+        content="Learn about authentication - verifying user identity in software systems. Master security concepts with expert guidance.">
+    <meta name="twitter:image" content="https://leadwithskills.com/images/cover.png">
+    <style>
         /* Breadcrumb */
-        .breadcrumb {    
+        .breadcrumb {
             background: var(--card);
             padding: 1rem 0;
             border-bottom: 1px solid var(--border);
@@ -165,7 +191,8 @@
             flex-wrap: wrap;
         }
 
-        .cta-primary, .cta-secondary {
+        .cta-primary,
+        .cta-secondary {
             padding: 1rem 2rem;
             border-radius: var(--radius);
             text-decoration: none;
@@ -209,15 +236,15 @@
             .term-title {
                 font-size: 2rem;
             }
-            
+
             .nav-links {
                 display: none;
             }
-            
+
             .content-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
@@ -225,14 +252,15 @@
         }
     </style>
 </head>
+
 <body>
-        <!-- Header -->
+    <!-- Header -->
     <header class="navbar">
         <nav class="nav-container">
             <div class="nav-logo">
                 <a href="/"><img src="/images/logo.avif" alt="Logo" /></a>
             </div>
-            
+
             <ul class="nav-menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about-us">About</a></li>
@@ -241,9 +269,9 @@
                 <li><a href="/communities">Community</a></li>
                 <li><a href="/blogs">Blogs</a></li>
             </ul>
-            
+
             <a href="/courses" class="cta-button">Get Started</a>
-            
+
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -266,7 +294,8 @@
                 <h1 class="term-title">Authentication</h1>
                 <span class="term-category">Security</span>
                 <p class="term-definition">
-                    The process of verifying the identity of a user, device, or system before granting access to protected resources or applications.
+                    The process of verifying the identity of a user, device, or system before granting access to
+                    protected resources or applications.
                 </p>
             </div>
 
@@ -275,7 +304,9 @@
                 <div class="content-grid">
                     <div class="content-card">
                         <h3 class="card-title">Core Concept</h3>
-                        <p>Authentication answers the question "Who are you?" by verifying that users are who they claim to be. It's the first line of defense in application security, typically involving credentials like usernames, passwords, or biometric data.</p>
+                        <p>Authentication answers the question "Who are you?" by verifying that users are who they claim
+                            to be. It's the first line of defense in application security, typically involving
+                            credentials like usernames, passwords, or biometric data.</p>
                     </div>
                     <div class="content-card">
                         <h3 class="card-title">Authentication vs Authorization</h3>
@@ -373,11 +404,14 @@ const authenticateToken = (req, res, next) => {
                 <div class="content-grid">
                     <div class="content-card">
                         <h3 class="card-title">OAuth 2.0</h3>
-                        <p>Industry-standard protocol for authorization, commonly used for "Login with Google/Facebook" functionality. Allows third-party applications to access user data without exposing passwords.</p>
+                        <p>Industry-standard protocol for authorization, commonly used for "Login with Google/Facebook"
+                            functionality. Allows third-party applications to access user data without exposing
+                            passwords.</p>
                     </div>
                     <div class="content-card">
                         <h3 class="card-title">OpenID Connect</h3>
-                        <p>Authentication layer built on top of OAuth 2.0. Provides identity verification and user information exchange between applications and identity providers.</p>
+                        <p>Authentication layer built on top of OAuth 2.0. Provides identity verification and user
+                            information exchange between applications and identity providers.</p>
                     </div>
                 </div>
             </section>
@@ -409,7 +443,9 @@ const authenticateToken = (req, res, next) => {
         </div>
     </section>
 
-    
-    
-<script defer src="/scripts/common.js"></script></body>
+
+
+    <script defer src="/scripts/common.js"></script>
+</body>
+
 </html>

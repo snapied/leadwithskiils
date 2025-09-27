@@ -1,22 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/styles/styles.css"/>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="/styles/styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apache Spark - Lead With Skills Glossary</title>
-    <meta name="description" content="Learn about Apache Spark, a unified analytics engine for large-scale data processing. Comprehensive guide covering features, benefits, and career opportunities.">
+    <meta name="description"
+        content="Learn about Apache Spark, a unified analytics engine for large-scale data processing. Comprehensive guide covering features, benefits, and career opportunities.">
     <meta name="keywords" content="Apache Spark, big data, data processing, analytics engine, distributed computing">
     <link rel="canonical" href="https://leadwithskills.com/glossary/apache-spark">
-    <style>
-        
 
-        .breadcrumb {    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Apache Spark - Lead With Skills Glossary">
+    <meta property="og:description"
+        content="Learn about Apache Spark, a unified analytics engine for large-scale data processing. Comprehensive guide covering features, benefits, and career opportunities.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://leadwithskills.com/glossary/apache-spark">
+    <meta property="og:image" content="https://leadwithskills.com/images/cover.png">
+    <meta property="og:site_name" content="Lead With Skills">
+
+    <!-- Article Specific Tags -->
+    <meta property="article:section" content="Big Data Analytics">
+    <meta property="article:tag" content="Apache Spark">
+    <meta property="article:tag" content="Big Data">
+    <meta property="article:tag" content="Data Processing">
+    <meta property="article:tag" content="Analytics Engine">
+    <meta property="article:tag" content="Distributed Computing">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Apache Spark - Lead With Skills Glossary">
+    <meta name="twitter:description"
+        content="Learn about Apache Spark, a unified analytics engine for large-scale data processing. Comprehensive guide with career opportunities.">
+    <meta name="twitter:image" content="https://leadwithskills.com/images/cover.png">
+    <style>
+        .breadcrumb {
             background-color: var(--card);
             padding: 1rem 0;
             border-bottom: 1px solid var(--border);
         }
 
-        .breadcrumb-nav {width:fit-content;
+        .breadcrumb-nav {
+            width: fit-content;
             display: flex;
             align-items: center;
             gap: 0.5rem;
@@ -262,14 +289,15 @@
         }
     </style>
 </head>
+
 <body>
-     <!-- Header -->
+    <!-- Header -->
     <header class="navbar">
         <nav class="nav-container">
             <div class="nav-logo">
                 <a href="/"><img src="/images/logo.avif" alt="Logo" /></a>
             </div>
-            
+
             <ul class="nav-menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about-us">About</a></li>
@@ -278,9 +306,9 @@
                 <li><a href="/communities">Community</a></li>
                 <li><a href="/blogs">Blogs</a></li>
             </ul>
-            
+
             <a href="/courses" class="cta-button">Get Started</a>
-            
+
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -310,15 +338,22 @@
         <div class="content-grid">
             <div class="main-content">
                 <h2>What is Apache Spark?</h2>
-                <p>Apache Spark is a unified analytics engine for large-scale data processing. It provides high-level APIs in Java, Scala, Python, and R, and an optimized engine that supports general execution graphs. It also supports a rich set of higher-level tools including Spark SQL for SQL and structured data processing, MLlib for machine learning, GraphX for graph processing, and Structured Streaming for incremental computation and stream processing.</p>
+                <p>Apache Spark is a unified analytics engine for large-scale data processing. It provides high-level
+                    APIs in Java, Scala, Python, and R, and an optimized engine that supports general execution graphs.
+                    It also supports a rich set of higher-level tools including Spark SQL for SQL and structured data
+                    processing, MLlib for machine learning, GraphX for graph processing, and Structured Streaming for
+                    incremental computation and stream processing.</p>
 
                 <div class="highlight-box">
-                    <p><strong>Key Insight:</strong> Apache Spark can run programs up to 100x faster than Hadoop MapReduce in memory, or 10x faster on disk, making it ideal for iterative algorithms and interactive data mining.</p>
+                    <p><strong>Key Insight:</strong> Apache Spark can run programs up to 100x faster than Hadoop
+                        MapReduce in memory, or 10x faster on disk, making it ideal for iterative algorithms and
+                        interactive data mining.</p>
                 </div>
 
                 <h2>Core Components</h2>
                 <h3>1. Spark Core</h3>
-                <p>The foundation of the platform that provides basic I/O functionalities, task scheduling, and memory management.</p>
+                <p>The foundation of the platform that provides basic I/O functionalities, task scheduling, and memory
+                    management.</p>
 
                 <pre class="code-block">
                     <code>
@@ -338,7 +373,8 @@ counts.saveAsTextFile("hdfs://...")
                 <p>Module for working with structured data using SQL queries and DataFrame API.</p>
 
                 <h3>3. MLlib</h3>
-                <p>Machine learning library providing algorithms for classification, regression, clustering, and collaborative filtering.</p>
+                <p>Machine learning library providing algorithms for classification, regression, clustering, and
+                    collaborative filtering.</p>
 
                 <h3>4. GraphX</h3>
                 <p>API for graphs and graph-parallel computation with built-in graph algorithms.</p>
@@ -416,7 +452,8 @@ counts.saveAsTextFile("hdfs://...")
         <div class="container">
             <div class="cta-content">
                 <h2>Master Big Data with Apache Spark</h2>
-                <p>Join thousands of data professionals who've advanced their careers with our comprehensive big data and analytics courses.</p>
+                <p>Join thousands of data professionals who've advanced their careers with our comprehensive big data
+                    and analytics courses.</p>
                 <div class="cta-buttons">
                     <a href="/courses" class="btn btn-primary">Explore Data Science Courses</a>
                     <a href="/mentorship" class="btn btn-secondary">Get Personal Mentors</a>
@@ -425,6 +462,8 @@ counts.saveAsTextFile("hdfs://...")
         </div>
     </section>
 
-    
-<script defer src="/scripts/common.js"></script></body>
+
+    <script defer src="/scripts/common.js"></script>
+</body>
+
 </html>
