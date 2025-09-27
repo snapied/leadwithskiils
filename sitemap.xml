@@ -9,257 +9,262 @@
 
 <url>
   <loc>https://www.leadwithskills.com/</loc>
-  <lastmod>2025-09-23T10:51:09+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:01+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/about-us</loc>
-  <lastmod>2025-09-23T10:51:10+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:02+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/courses</loc>
-  <lastmod>2025-09-23T10:51:10+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:02+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/mentorship</loc>
-  <lastmod>2025-09-23T10:51:11+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:02+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/communities</loc>
-  <lastmod>2025-09-23T10:51:11+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/blogs</loc>
-  <lastmod>2025-09-23T10:51:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.leadwithskills.com/success-stories</loc>
-  <lastmod>2025-09-23T10:51:11+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/courses/technical-product-manager</loc>
-  <lastmod>2025-09-23T10:51:12+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/courses/manual-testing-fundamentals</loc>
-  <lastmod>2025-09-23T10:51:12+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/courses/web-designing-and-development/angular-training</loc>
-  <lastmod>2025-09-23T10:51:12+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/courses/manual-and-full-stack-automation-testing</loc>
-  <lastmod>2025-09-23T10:51:13+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/courses/full-stack-development</loc>
-  <lastmod>2025-09-23T10:51:13+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/courses/web-designing-and-development/index</loc>
-  <lastmod>2025-09-23T10:51:13+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.leadwithskills.com/courses/certified-digital-marketing-course</loc>
+  <lastmod>2025-09-27T08:00:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/courses/web-designing-and-development/html-mastery</loc>
-  <lastmod>2025-09-23T10:51:13+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/courses/web-designing-and-development/css-mastery</loc>
-  <lastmod>2025-09-23T10:51:14+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/courses/web-designing-and-development/javascript-mastery</loc>
-  <lastmod>2025-09-23T10:51:14+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:06+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/courses/web-designing-and-development/nodejs-mastery</loc>
-  <lastmod>2025-09-23T10:51:14+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.leadwithskills.com/success-stories</loc>
+  <lastmod>2025-09-27T08:00:06+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/careers</loc>
-  <lastmod>2025-09-23T10:51:15+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:06+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/commission</loc>
-  <lastmod>2025-09-23T10:51:15+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/internships</loc>
-  <lastmod>2025-09-23T10:51:15+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/contact-us</loc>
-  <lastmod>2025-09-23T10:51:16+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/glossary</loc>
-  <lastmod>2025-09-23T10:51:16+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/terms-and-conditions</loc>
-  <lastmod>2025-09-23T10:51:16+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/privacy-policy</loc>
-  <lastmod>2025-09-23T10:51:16+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/refund-policy</loc>
-  <lastmod>2025-09-23T10:51:17+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/blogs/blog-ai-powered-user-interfaces</loc>
-  <lastmod>2025-09-23T10:51:17+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:08+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/blogs/blog-understanding-generative-ai-beginners</loc>
-  <lastmod>2025-09-23T10:51:17+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/blogs/blog-prompt-engineering-ai-optimization</loc>
-  <lastmod>2025-09-23T10:51:17+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/blogs/blog-ai-product-development-tips</loc>
-  <lastmod>2025-09-23T10:51:18+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/blogs/blog-top-web-frameworks-2025</loc>
-  <lastmod>2025-09-23T10:51:18+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/blogs/blog-mastering-html5-web-development</loc>
-  <lastmod>2025-09-23T10:51:18+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/blogs/blog-css3-techniques-web-designers</loc>
-  <lastmod>2025-09-23T10:51:18+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/blogs/blog-javascript-es6-features-2025</loc>
-  <lastmod>2025-09-23T10:51:19+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/blogs/blog-scalable-nodejs-backend-systems</loc>
-  <lastmod>2025-09-23T10:51:19+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/blogs/blog-complete-fullstack-developer-guide</loc>
-  <lastmod>2025-09-23T10:51:19+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/blogs/blog-responsive-websites-angular-nodejs</loc>
-  <lastmod>2025-09-23T10:51:19+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/blogs/blog-fullstack-developer-portfolio-tips</loc>
-  <lastmod>2025-09-23T10:51:20+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/blogs/blog-manual-testing-demand-2025</loc>
-  <lastmod>2025-09-23T10:51:20+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/blogs/blog-manual-to-automation-testing-transition</loc>
-  <lastmod>2025-09-23T10:51:20+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:12+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/blogs/blog-fullstack-automation-tester-roadmap</loc>
-  <lastmod>2025-09-23T10:51:21+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:12+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/blogs/blog-api-testing-beginners-guide</loc>
-  <lastmod>2025-09-23T10:51:21+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:12+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/blogs/blog-technical-product-manager-transition</loc>
-  <lastmod>2025-09-23T10:51:21+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:12+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/blogs/blog-technical-product-manager-skills</loc>
-  <lastmod>2025-09-23T10:51:21+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:13+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/blogs/blog-ai-product-management-decision-making</loc>
-  <lastmod>2025-09-23T10:51:21+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:13+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/blogs/blog-mentorship-career-changes</loc>
-  <lastmod>2025-09-23T10:51:22+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:13+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/blogs/blog-mentorship-tech-leadership</loc>
-  <lastmod>2025-09-23T10:51:22+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/blogs/blog-mentorship-success-stories</loc>
-  <lastmod>2025-09-23T10:51:22+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/blogs/blog-digital-marketing-sustainable-brands</loc>
-  <lastmod>2025-09-23T10:51:22+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:15+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/job-business-development-manager</loc>
-  <lastmod>2025-09-23T10:51:23+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:15+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/job-educator-technical</loc>
-  <lastmod>2025-09-23T10:51:23+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:15+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.leadwithskills.com/job-content-writer</loc>
-  <lastmod>2025-09-23T10:51:24+00:00</lastmod>
+  <lastmod>2025-09-27T08:00:16+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
